@@ -1,6 +1,0 @@
-framework module Pods_DreamTests {
-  umbrella header "Pods-DreamTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
