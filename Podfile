@@ -6,6 +6,7 @@ target 'Dream' do
   use_frameworks!
 
   # Pods for Dream
+  pod 'Alamofire'
 
   target 'DreamTests' do
     inherit! :search_paths
