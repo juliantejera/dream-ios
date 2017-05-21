@@ -83,7 +83,7 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         }
     }
     
-    func displayNetworkError(errors: [String]) {
+    private func displayNetworkError(errors: [String]) {
         let title = "Oops!"
         let defaultMessage = "There's been an error creating your account"
         let message = errors.isEmpty ? defaultMessage : errors.joined(separator: "\n")
@@ -93,7 +93,7 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func displayValidationErrors(validator: AccountRegistrationViewModelValidator) {
+    private func displayValidationErrors(validator: AccountRegistrationViewModelValidator) {
         let title = "Validation errors"
         let message = validator.errors.joined(separator: "\n")
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)

@@ -17,6 +17,7 @@
 		B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906976D1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift */; };
 		B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906976F1ECFF15D0045E34E /* DateExtension.swift */; };
 		B90697721ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */; };
+		B90697741ED13CB80045E34E /* MockUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697731ED13CB80045E34E /* MockUITextField.swift */; };
 		B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */; };
 		B90AC44C1EC76904007C0FA4 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC44B1EC76904007C0FA4 /* XCTestCaseExtension.swift */; };
 		B90AC44F1EC76D2A007C0FA4 /* errors_parser_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */; };
@@ -72,6 +73,7 @@
 		B906976D1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelExtension.swift; sourceTree = "<group>"; };
 		B906976F1ECFF15D0045E34E /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewControllerSpec.swift; sourceTree = "<group>"; };
+		B90697731ED13CB80045E34E /* MockUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUITextField.swift; sourceTree = "<group>"; };
 		B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsParserSpec.swift; sourceTree = "<group>"; };
 		B90AC44B1EC76904007C0FA4 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 		B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errors_parser_valid.json; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B90697611ECFE38C0045E34E /* MockNetworkClient.swift */,
+				B90697731ED13CB80045E34E /* MockUITextField.swift */,
 			);
 			name = "Mocks & Spies";
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B924DAE21EA3AE48009F1FF8 /* EmailValidatorSpec.swift in Sources */,
+				B90697741ED13CB80045E34E /* MockUITextField.swift in Sources */,
 				B90697601ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift in Sources */,
 				B924DAEA1EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift in Sources */,
 				B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */,

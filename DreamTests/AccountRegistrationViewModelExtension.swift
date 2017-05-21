@@ -11,7 +11,7 @@ import Foundation
 
 extension AccountRegistrationViewModel {
     
-    static func create(birthdate: Date = Date()) -> AccountRegistrationViewModel {
+    static func create(birthdate: Date = Date(timeIntervalSince1970: 0)) -> AccountRegistrationViewModel {
         return AccountRegistrationViewModel(email: "jt@gmail.com", password: "password", passwordConfirmation: "password", birthdate: birthdate)
     }
     
