@@ -87,18 +87,18 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         let title = "Oops!"
         let defaultMessage = "There's been an error creating your account"
         let message = errors.isEmpty ? defaultMessage : errors.joined(separator: "\n")
-
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
+        self.present(createAlertController(title: title, message: message), animated: true, completion: nil)
     }
     
     private func displayValidationErrors(validator: AccountRegistrationViewModelValidator) {
         let title = "Validation errors"
         let message = validator.errors.joined(separator: "\n")
+        self.present(createAlertController(title: title, message: message), animated: true, completion: nil)
+    }
+    
+    private func createAlertController(title: String, message: String) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
