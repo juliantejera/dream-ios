@@ -10,8 +10,13 @@ import Foundation
 
 struct ErrorsParser: Parser {
     
+    private struct Keys {
+        static let errors = "errors"
+        static let fullMessages = "full_messages"
+    }
+    
     func parse(from dictionary: [AnyHashable : Any]) -> [String]? {
-        guard let errorsDictionary = dictionary["errors"] as? [String: Any], let errors = errorsDictionary["full_messages"] as? [String] else {
+        guard let errorsDictionary = dictionary[Keys.errors] as? [String: Any], let errors = errorsDictionary[Keys.fullMessages] as? [String] else {
             return nil
         }
         
