@@ -22,7 +22,6 @@ class DreamNetworkClient: NetworkClient {
     func request(method: HTTPMethod, path: String, parameters: [String : Any]?, callback: @escaping (NetworkClientResult<Any>) -> Void) {
         
         let request = self.sessionManager.request(path, method: method, parameters: parameters, headers: headers)
-        print(request)
         request.responseJSON { (dataResponse) in
             switch dataResponse.result {
             case .success(let value):
