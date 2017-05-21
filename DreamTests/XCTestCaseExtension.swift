@@ -8,7 +8,7 @@
 
 import XCTest
 
-class DreamTestClass {}
+private class DreamTestClass {}
 
 extension XCTestCase {
     
