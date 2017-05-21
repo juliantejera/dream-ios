@@ -184,7 +184,6 @@
 				TargetAttributes = {
 					B98652EF1E2B1D87004CCC50 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = VDYWQG4YL7;
 						ProvisioningStyle = Automatic;
 					};
 					B98653031E2B1D87004CCC50 = {
@@ -473,7 +472,7 @@
 			baseConfigurationReference = F4FA317C5521CF2D10618D99 /* Pods-Dream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VDYWQG4YL7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Dream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.Dream;
@@ -487,7 +486,7 @@
 			baseConfigurationReference = D480BA1425D9C401DF9023A9 /* Pods-Dream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VDYWQG4YL7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Dream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.Dream;
@@ -547,6 +546,7 @@
 				B986530F1E2B1D87004CCC50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B98653101E2B1D87004CCC50 /* Build configuration list for PBXNativeTarget "DreamTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +555,7 @@
 				B98653121E2B1D87004CCC50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
