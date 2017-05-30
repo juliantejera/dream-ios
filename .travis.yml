@@ -1,3 +1,6 @@
-language: objective-c
-xcode_workspace: Dream.xcworkspace
-xcode_scheme: Dream
+language: swift
+osx_image: xcode8.3
+before_script:
+  - gem install xcpretty
+script:
+  - xcodebuild -scheme Dream -workspace Dream.xcworkspace -sdk iphonesimulator -destination 'name=iPhone 6S,OS=10.3' build test CODE_SIGNING_REQUIRED=NO | xcpretty
