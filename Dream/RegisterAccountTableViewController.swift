@@ -99,6 +99,7 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
     private func createAlertController(title: String, message: String) -> UIAlertController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        return alertController
     }
     
     // MARK: - Table view data source
