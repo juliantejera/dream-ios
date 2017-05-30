@@ -1,0 +1,17 @@
+{
+    "status": "success",
+    "data": {
+        "id": 3,
+        "email": "jtejera27@gmail.com",
+        "provider": "email",
+        "uid": "jtejera27@gmail.com",
+        "name": null,
+        "nickname": null,
+        "image": null,
+        "created_at": "2017-05-20T02:51:38.864Z",
+        "updated_at": "2017-05-20T02:51:39.029Z",
+        "latitude": null,
+        "longitude": null,
+        "birthdate": "1988-05-20"
+    }
+}

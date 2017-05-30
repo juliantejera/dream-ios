@@ -8,12 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		AC63F989F32C65CFCE6693B5 /* Pods_DreamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0F128E21AEC89E72875A97 /* Pods_DreamTests.framework */; };
+		B90697601ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906975F1ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift */; };
+		B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697611ECFE38C0045E34E /* MockNetworkClient.swift */; };
+		B90697641ECFE6F50045E34E /* authentication_network_manager_register_success.json in Resources */ = {isa = PBXBuildFile; fileRef = B90697631ECFE6F50045E34E /* authentication_network_manager_register_success.json */; };
+		B90697661ECFE74D0045E34E /* authentication_network_manager_register_failure.json in Resources */ = {isa = PBXBuildFile; fileRef = B90697651ECFE74D0045E34E /* authentication_network_manager_register_failure.json */; };
+		B90697681ECFED790045E34E /* NetworkClientResultAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697671ECFED790045E34E /* NetworkClientResultAssertions.swift */; };
+		B906976B1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906976A1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift */; };
+		B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906976D1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift */; };
+		B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906976F1ECFF15D0045E34E /* DateExtension.swift */; };
+		B90697721ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */; };
+		B90697741ED13CB80045E34E /* MockUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697731ED13CB80045E34E /* MockUITextField.swift */; };
+		B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */; };
+		B90AC44C1EC76904007C0FA4 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC44B1EC76904007C0FA4 /* XCTestCaseExtension.swift */; };
+		B90AC44F1EC76D2A007C0FA4 /* errors_parser_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */; };
+		B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */; };
+		B924DAD81EA324BA009F1FF8 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAD71EA324BA009F1FF8 /* Validator.swift */; };
+		B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAD91EA32546009F1FF8 /* AdultAgeValidator.swift */; };
+		B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DADB1EA32594009F1FF8 /* CompositeValidatorSpec.swift */; };
+		B924DADE1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DADD1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift */; };
+		B924DAE01EA3ACDE009F1FF8 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DADF1EA3ACDE009F1FF8 /* EmailValidator.swift */; };
+		B924DAE21EA3AE48009F1FF8 /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE11EA3AE48009F1FF8 /* EmailValidatorSpec.swift */; };
+		B924DAE41EA3B296009F1FF8 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE31EA3B296009F1FF8 /* PasswordValidator.swift */; };
+		B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE51EA3B741009F1FF8 /* PasswordValidatorSpec.swift */; };
+		B924DAE81EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE71EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift */; };
+		B924DAEA1EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE91EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift */; };
+		B924DAED1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAEC1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift */; };
+		B924DAF01EA45D13009F1FF8 /* AccountRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAEF1EA45D13009F1FF8 /* AccountRegistrationViewModel.swift */; };
+		B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */; };
+		B924DAF41EAD9EEE009F1FF8 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF31EAD9EEE009F1FF8 /* Serializer.swift */; };
+		B924DAF61EB19796009F1FF8 /* ErrorsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */; };
 		B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F31E2B1D87004CCC50 /* AppDelegate.swift */; };
 		B98652F61E2B1D87004CCC50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F51E2B1D87004CCC50 /* ViewController.swift */; };
 		B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652F71E2B1D87004CCC50 /* Main.storyboard */; };
 		B98652FB1E2B1D87004CCC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98652FA1E2B1D87004CCC50 /* Assets.xcassets */; };
 		B98652FE1E2B1D87004CCC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652FC1E2B1D87004CCC50 /* LaunchScreen.storyboard */; };
-		B98653091E2B1D87004CCC50 /* DreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98653081E2B1D87004CCC50 /* DreamTests.swift */; };
+		B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */; };
+		B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */; };
+		B9FD3B5E1E9FCF0B0018BEE6 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */; };
+		B9FD3B601E9FCFD90018BEE6 /* DreamNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */; };
+		B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B651EA034580018BEE6 /* Parser.swift */; };
+		B9FD3B6A1EA034BE0018BEE6 /* AuthenticationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B691EA034BE0018BEE6 /* AuthenticationNetworkManager.swift */; };
 		E760BC172B56F44040980AAF /* Pods_Dream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B597A76F5CB82F739CB97ECA /* Pods_Dream.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +64,35 @@
 /* Begin PBXFileReference section */
 		3641C53DA38C11F675C59BDC /* Pods-DreamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamTests/Pods-DreamTests.release.xcconfig"; sourceTree = "<group>"; };
 		B597A76F5CB82F739CB97ECA /* Pods_Dream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B906975F1ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationNetworkManagerSpec.swift; sourceTree = "<group>"; };
+		B90697611ECFE38C0045E34E /* MockNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
+		B90697631ECFE6F50045E34E /* authentication_network_manager_register_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authentication_network_manager_register_success.json; sourceTree = "<group>"; };
+		B90697651ECFE74D0045E34E /* authentication_network_manager_register_failure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authentication_network_manager_register_failure.json; sourceTree = "<group>"; };
+		B90697671ECFED790045E34E /* NetworkClientResultAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientResultAssertions.swift; sourceTree = "<group>"; };
+		B906976A1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelSerializerSpec.swift; sourceTree = "<group>"; };
+		B906976D1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelExtension.swift; sourceTree = "<group>"; };
+		B906976F1ECFF15D0045E34E /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewControllerSpec.swift; sourceTree = "<group>"; };
+		B90697731ED13CB80045E34E /* MockUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUITextField.swift; sourceTree = "<group>"; };
+		B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsParserSpec.swift; sourceTree = "<group>"; };
+		B90AC44B1EC76904007C0FA4 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
+		B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errors_parser_valid.json; sourceTree = "<group>"; };
+		B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelSerializer.swift; sourceTree = "<group>"; };
+		B924DAD71EA324BA009F1FF8 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		B924DAD91EA32546009F1FF8 /* AdultAgeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdultAgeValidator.swift; sourceTree = "<group>"; };
+		B924DADB1EA32594009F1FF8 /* CompositeValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeValidatorSpec.swift; sourceTree = "<group>"; };
+		B924DADD1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdultAgeValidatorSpec.swift; sourceTree = "<group>"; };
+		B924DADF1EA3ACDE009F1FF8 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		B924DAE11EA3AE48009F1FF8 /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
+		B924DAE31EA3B296009F1FF8 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		B924DAE51EA3B741009F1FF8 /* PasswordValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidatorSpec.swift; sourceTree = "<group>"; };
+		B924DAE71EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordConfirmationValidator.swift; sourceTree = "<group>"; };
+		B924DAE91EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordConfirmationValidatorSpec.swift; sourceTree = "<group>"; };
+		B924DAEC1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelValidator.swift; sourceTree = "<group>"; };
+		B924DAEF1EA45D13009F1FF8 /* AccountRegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModel.swift; sourceTree = "<group>"; };
+		B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAuthTableViewController.swift; sourceTree = "<group>"; };
+		B924DAF31EAD9EEE009F1FF8 /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
+		B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsParser.swift; sourceTree = "<group>"; };
 		B98652F01E2B1D87004CCC50 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98652F31E2B1D87004CCC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B98652F51E2B1D87004CCC50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,8 +101,13 @@
 		B98652FD1E2B1D87004CCC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B98652FF1E2B1D87004CCC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98653041E2B1D87004CCC50 /* DreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B98653081E2B1D87004CCC50 /* DreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTests.swift; sourceTree = "<group>"; };
 		B986530A1E2B1D87004CCC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
+		B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamNetworkClient.swift; sourceTree = "<group>"; };
+		B9FD3B651EA034580018BEE6 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		B9FD3B691EA034BE0018BEE6 /* AuthenticationNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationNetworkManager.swift; sourceTree = "<group>"; };
 		D480BA1425D9C401DF9023A9 /* Pods-Dream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dream/Pods-Dream.release.xcconfig"; sourceTree = "<group>"; };
 		DF0F128E21AEC89E72875A97 /* Pods_DreamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4FA317C5521CF2D10618D99 /* Pods-Dream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dream/Pods-Dream.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +154,117 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B90697691ECFEFE90045E34E /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				B906976A1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift */,
+			);
+			name = Serializers;
+			sourceTree = "<group>";
+		};
+		B906976C1ECFF0710045E34E /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				B906976D1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
+		B90AC4451EC76590007C0FA4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B90AC4461EC76692007C0FA4 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		B90AC4491EC768D1007C0FA4 /* Mocks & Spies */ = {
+			isa = PBXGroup;
+			children = (
+				B90697611ECFE38C0045E34E /* MockNetworkClient.swift */,
+				B90697731ED13CB80045E34E /* MockUITextField.swift */,
+			);
+			name = "Mocks & Spies";
+			sourceTree = "<group>";
+		};
+		B90AC44A1EC768F1007C0FA4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B90AC44B1EC76904007C0FA4 /* XCTestCaseExtension.swift */,
+				B906976F1ECFF15D0045E34E /* DateExtension.swift */,
+				B90697671ECFED790045E34E /* NetworkClientResultAssertions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		B90AC44D1EC76CD1007C0FA4 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */,
+				B90697631ECFE6F50045E34E /* authentication_network_manager_register_success.json */,
+				B90697651ECFE74D0045E34E /* authentication_network_manager_register_failure.json */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
+		B90AC4501EC77010007C0FA4 /* Network Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B906975F1ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift */,
+			);
+			name = "Network Managers";
+			sourceTree = "<group>";
+		};
+		B90AC4511EC7702C007C0FA4 /* Serializer */ = {
+			isa = PBXGroup;
+			children = (
+				B924DAF31EAD9EEE009F1FF8 /* Serializer.swift */,
+				B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */,
+			);
+			name = Serializer;
+			sourceTree = "<group>";
+		};
+		B924DAD61EA324A5009F1FF8 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				B924DAD71EA324BA009F1FF8 /* Validator.swift */,
+				B924DAD91EA32546009F1FF8 /* AdultAgeValidator.swift */,
+				B924DAE31EA3B296009F1FF8 /* PasswordValidator.swift */,
+				B924DAE71EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift */,
+				B924DADF1EA3ACDE009F1FF8 /* EmailValidator.swift */,
+				B924DAEC1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
+		B924DAEB1EA3BBF0009F1FF8 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				B924DAE11EA3AE48009F1FF8 /* EmailValidatorSpec.swift */,
+				B924DADB1EA32594009F1FF8 /* CompositeValidatorSpec.swift */,
+				B924DAE51EA3B741009F1FF8 /* PasswordValidatorSpec.swift */,
+				B924DADD1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift */,
+				B924DAE91EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
+		B924DAEE1EA45CFD009F1FF8 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				B924DAEF1EA45D13009F1FF8 /* AccountRegistrationViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
 		B98652E71E2B1D87004CCC50 = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +289,14 @@
 			isa = PBXGroup;
 			children = (
 				B98652F31E2B1D87004CCC50 /* AppDelegate.swift */,
-				B98652F51E2B1D87004CCC50 /* ViewController.swift */,
-				B98652F71E2B1D87004CCC50 /* Main.storyboard */,
+				B924DAEE1EA45CFD009F1FF8 /* View Models */,
+				B924DAD61EA324A5009F1FF8 /* Validators */,
+				B9FD3B641EA034470018BEE6 /* Models */,
+				B90AC4511EC7702C007C0FA4 /* Serializer */,
+				B9FD3B611EA0342F0018BEE6 /* Parsers */,
+				B9FD3B5C1E9FCEFB0018BEE6 /* Networking */,
+				B9CC9BC71E2DD83F00153BBE /* View Controllers */,
+				B9CC9BC61E2DD82B00153BBE /* Storyboards */,
 				B98652FA1E2B1D87004CCC50 /* Assets.xcassets */,
 				B98652FC1E2B1D87004CCC50 /* LaunchScreen.storyboard */,
 				B98652FF1E2B1D87004CCC50 /* Info.plist */,
@@ -122,10 +307,63 @@
 		B98653071E2B1D87004CCC50 /* DreamTests */ = {
 			isa = PBXGroup;
 			children = (
-				B98653081E2B1D87004CCC50 /* DreamTests.swift */,
+				B90AC44D1EC76CD1007C0FA4 /* Fixtures */,
+				B906976C1ECFF0710045E34E /* Factories */,
+				B90AC44A1EC768F1007C0FA4 /* Helpers */,
+				B90AC4491EC768D1007C0FA4 /* Mocks & Spies */,
+				B90AC4501EC77010007C0FA4 /* Network Managers */,
+				B90AC4461EC76692007C0FA4 /* Parsers */,
+				B90AC4451EC76590007C0FA4 /* View Controllers */,
+				B90697691ECFEFE90045E34E /* Serializers */,
+				B924DAEB1EA3BBF0009F1FF8 /* Validators */,
 				B986530A1E2B1D87004CCC50 /* Info.plist */,
 			);
 			path = DreamTests;
+			sourceTree = "<group>";
+		};
+		B9CC9BC61E2DD82B00153BBE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */,
+				B98652F71E2B1D87004CCC50 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B9CC9BC71E2DD83F00153BBE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B98652F51E2B1D87004CCC50 /* ViewController.swift */,
+				B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */,
+				B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B9FD3B5C1E9FCEFB0018BEE6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */,
+				B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */,
+				B9FD3B691EA034BE0018BEE6 /* AuthenticationNetworkManager.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		B9FD3B611EA0342F0018BEE6 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				B9FD3B651EA034580018BEE6 /* Parser.swift */,
+				B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		B9FD3B641EA034470018BEE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */,
 				B98652FE1E2B1D87004CCC50 /* LaunchScreen.storyboard in Resources */,
 				B98652FB1E2B1D87004CCC50 /* Assets.xcassets in Resources */,
 				B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */,
@@ -228,6 +467,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90AC44F1EC76D2A007C0FA4 /* errors_parser_valid.json in Resources */,
+				B90697641ECFE6F50045E34E /* authentication_network_manager_register_success.json in Resources */,
+				B90697661ECFE74D0045E34E /* authentication_network_manager_register_failure.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +574,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				B98652F61E2B1D87004CCC50 /* ViewController.swift in Sources */,
+				B924DAD81EA324BA009F1FF8 /* Validator.swift in Sources */,
+				B924DAE41EA3B296009F1FF8 /* PasswordValidator.swift in Sources */,
+				B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */,
+				B924DAE81EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift in Sources */,
+				B924DAF41EAD9EEE009F1FF8 /* Serializer.swift in Sources */,
+				B924DAF61EB19796009F1FF8 /* ErrorsParser.swift in Sources */,
+				B924DAF01EA45D13009F1FF8 /* AccountRegistrationViewModel.swift in Sources */,
+				B9FD3B601E9FCFD90018BEE6 /* DreamNetworkClient.swift in Sources */,
+				B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */,
+				B924DAE01EA3ACDE009F1FF8 /* EmailValidator.swift in Sources */,
 				B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */,
+				B9FD3B5E1E9FCF0B0018BEE6 /* NetworkClient.swift in Sources */,
+				B924DAED1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift in Sources */,
+				B9FD3B6A1EA034BE0018BEE6 /* AuthenticationNetworkManager.swift in Sources */,
+				B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */,
+				B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */,
+				B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +598,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B98653091E2B1D87004CCC50 /* DreamTests.swift in Sources */,
+				B924DAE21EA3AE48009F1FF8 /* EmailValidatorSpec.swift in Sources */,
+				B90697741ED13CB80045E34E /* MockUITextField.swift in Sources */,
+				B90697601ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift in Sources */,
+				B924DAEA1EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift in Sources */,
+				B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */,
+				B90697681ECFED790045E34E /* NetworkClientResultAssertions.swift in Sources */,
+				B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */,
+				B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */,
+				B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */,
+				B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */,
+				B90AC44C1EC76904007C0FA4 /* XCTestCaseExtension.swift in Sources */,
+				B906976B1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift in Sources */,
+				B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */,
+				B924DADE1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift in Sources */,
+				B90697721ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

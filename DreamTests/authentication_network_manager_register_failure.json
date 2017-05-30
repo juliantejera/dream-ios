@@ -1,0 +1,25 @@
+{
+    "status": "error",
+    "data": {
+        "id": null,
+        "provider": "email",
+        "uid": "",
+        "name": null,
+        "nickname": null,
+        "image": null,
+        "email": "jtejera27@gmail.com",
+        "created_at": null,
+        "updated_at": null,
+        "latitude": null,
+        "longitude": null,
+        "birthdate": "1988-05-20"
+    },
+    "errors": {
+        "email": [
+                  "already in use"
+                  ],
+        "full_messages": [
+                          "Email already in use"
+                          ]
+    }
+}
