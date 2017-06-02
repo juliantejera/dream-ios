@@ -22,7 +22,7 @@ class RegisterAccountTableViewControllerSpec: QuickSpec {
             var window: UIWindow!
             
             beforeEach {
-                let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+                let storyboard = UIStoryboard.auth
                 controller = storyboard.instantiateViewController(withIdentifier: "RegisterAccountTableViewController") as? RegisterAccountTableViewController
                 window = UIWindow()
                 window.makeKeyAndVisible()

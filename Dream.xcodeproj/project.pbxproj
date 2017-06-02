@@ -44,6 +44,11 @@
 		B98652FE1E2B1D87004CCC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652FC1E2B1D87004CCC50 /* LaunchScreen.storyboard */; };
 		B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */; };
 		B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */; };
+		B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */; };
+		B9E75B391EE105FA00A137FF /* SignInTableViewControllerSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */; };
+		B9E75B3F1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B3E1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift */; };
+		B9E75B411EE108BB00A137FF /* SignInTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B401EE108BB00A137FF /* SignInTableViewControllerTests.swift */; };
+		B9E75B461EE10ABC00A137FF /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B451EE10ABC00A137FF /* UIStoryboardExtension.swift */; };
 		B9FD3B5E1E9FCF0B0018BEE6 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */; };
 		B9FD3B601E9FCFD90018BEE6 /* DreamNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */; };
 		B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B651EA034580018BEE6 /* Parser.swift */; };
@@ -104,6 +109,11 @@
 		B986530A1E2B1D87004CCC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
+		B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewController.swift; sourceTree = "<group>"; };
+		B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewControllerSections.swift; sourceTree = "<group>"; };
+		B9E75B3E1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewControllerSectionsTests.swift; sourceTree = "<group>"; };
+		B9E75B401EE108BB00A137FF /* SignInTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewControllerTests.swift; sourceTree = "<group>"; };
+		B9E75B451EE10ABC00A137FF /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamNetworkClient.swift; sourceTree = "<group>"; };
 		B9FD3B651EA034580018BEE6 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -174,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */,
+				B9E75B401EE108BB00A137FF /* SignInTableViewControllerTests.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -289,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				B98652F31E2B1D87004CCC50 /* AppDelegate.swift */,
+				B9E75B421EE1098E00A137FF /* Extensions */,
 				B924DAEE1EA45CFD009F1FF8 /* View Models */,
 				B924DAD61EA324A5009F1FF8 /* Validators */,
 				B9FD3B641EA034470018BEE6 /* Models */,
@@ -307,16 +319,17 @@
 		B98653071E2B1D87004CCC50 /* DreamTests */ = {
 			isa = PBXGroup;
 			children = (
-				B90AC44D1EC76CD1007C0FA4 /* Fixtures */,
 				B906976C1ECFF0710045E34E /* Factories */,
+				B90AC44D1EC76CD1007C0FA4 /* Fixtures */,
 				B90AC44A1EC768F1007C0FA4 /* Helpers */,
+				B986530A1E2B1D87004CCC50 /* Info.plist */,
 				B90AC4491EC768D1007C0FA4 /* Mocks & Spies */,
+				B9E75B3D1EE106FC00A137FF /* Models */,
 				B90AC4501EC77010007C0FA4 /* Network Managers */,
 				B90AC4461EC76692007C0FA4 /* Parsers */,
-				B90AC4451EC76590007C0FA4 /* View Controllers */,
 				B90697691ECFEFE90045E34E /* Serializers */,
 				B924DAEB1EA3BBF0009F1FF8 /* Validators */,
-				B986530A1E2B1D87004CCC50 /* Info.plist */,
+				B90AC4451EC76590007C0FA4 /* View Controllers */,
 			);
 			path = DreamTests;
 			sourceTree = "<group>";
@@ -336,8 +349,25 @@
 				B98652F51E2B1D87004CCC50 /* ViewController.swift */,
 				B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */,
 				B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */,
+				B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B9E75B3D1EE106FC00A137FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9E75B3E1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B9E75B421EE1098E00A137FF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B9E75B451EE10ABC00A137FF /* UIStoryboardExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		B9FD3B5C1E9FCEFB0018BEE6 /* Networking */ = {
@@ -362,6 +392,7 @@
 		B9FD3B641EA034470018BEE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -578,6 +609,7 @@
 				B924DAE41EA3B296009F1FF8 /* PasswordValidator.swift in Sources */,
 				B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */,
 				B924DAE81EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift in Sources */,
+				B9E75B391EE105FA00A137FF /* SignInTableViewControllerSections.swift in Sources */,
 				B924DAF41EAD9EEE009F1FF8 /* Serializer.swift in Sources */,
 				B924DAF61EB19796009F1FF8 /* ErrorsParser.swift in Sources */,
 				B924DAF01EA45D13009F1FF8 /* AccountRegistrationViewModel.swift in Sources */,
@@ -585,9 +617,11 @@
 				B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */,
 				B924DAE01EA3ACDE009F1FF8 /* EmailValidator.swift in Sources */,
 				B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */,
+				B9E75B461EE10ABC00A137FF /* UIStoryboardExtension.swift in Sources */,
 				B9FD3B5E1E9FCF0B0018BEE6 /* NetworkClient.swift in Sources */,
 				B924DAED1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift in Sources */,
 				B9FD3B6A1EA034BE0018BEE6 /* AuthenticationNetworkManager.swift in Sources */,
+				B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */,
 				B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */,
 				B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */,
 				B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */,
@@ -599,6 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B924DAE21EA3AE48009F1FF8 /* EmailValidatorSpec.swift in Sources */,
+				B9E75B3F1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift in Sources */,
 				B90697741ED13CB80045E34E /* MockUITextField.swift in Sources */,
 				B90697601ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift in Sources */,
 				B924DAEA1EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift in Sources */,
@@ -608,6 +643,7 @@
 				B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */,
 				B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */,
 				B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */,
+				B9E75B411EE108BB00A137FF /* SignInTableViewControllerTests.swift in Sources */,
 				B90AC44C1EC76904007C0FA4 /* XCTestCaseExtension.swift in Sources */,
 				B906976B1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift in Sources */,
 				B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */,
