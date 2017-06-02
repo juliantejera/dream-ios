@@ -53,6 +53,8 @@
 		B9E75B4A1EE1112F00A137FF /* SignInViewModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B491EE1112F00A137FF /* SignInViewModelValidator.swift */; };
 		B9E75B4C1EE1119500A137FF /* SignInViewModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B4B1EE1119500A137FF /* SignInViewModelValidatorTests.swift */; };
 		B9E75B4E1EE1123400A137FF /* SignInViewModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B4D1EE1123400A137FF /* SignInViewModelExtension.swift */; };
+		B9E75B501EE1141800A137FF /* SignInViewModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B4F1EE1141800A137FF /* SignInViewModelSerializer.swift */; };
+		B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B511EE1147400A137FF /* SignInViewModelSerializerTests.swift */; };
 		B9FD3B5E1E9FCF0B0018BEE6 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */; };
 		B9FD3B601E9FCFD90018BEE6 /* DreamNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */; };
 		B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD3B651EA034580018BEE6 /* Parser.swift */; };
@@ -122,6 +124,8 @@
 		B9E75B491EE1112F00A137FF /* SignInViewModelValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModelValidator.swift; sourceTree = "<group>"; };
 		B9E75B4B1EE1119500A137FF /* SignInViewModelValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModelValidatorTests.swift; sourceTree = "<group>"; };
 		B9E75B4D1EE1123400A137FF /* SignInViewModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModelExtension.swift; sourceTree = "<group>"; };
+		B9E75B4F1EE1141800A137FF /* SignInViewModelSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModelSerializer.swift; sourceTree = "<group>"; };
+		B9E75B511EE1147400A137FF /* SignInViewModelSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModelSerializerTests.swift; sourceTree = "<group>"; };
 		B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DreamNetworkClient.swift; sourceTree = "<group>"; };
 		B9FD3B651EA034580018BEE6 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				B906976A1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift */,
+				B9E75B511EE1147400A137FF /* SignInViewModelSerializerTests.swift */,
 			);
 			name = Serializers;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			children = (
 				B924DAF31EAD9EEE009F1FF8 /* Serializer.swift */,
 				B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */,
+				B9E75B4F1EE1141800A137FF /* SignInViewModelSerializer.swift */,
 			);
 			name = Serializer;
 			sourceTree = "<group>";
@@ -624,6 +630,7 @@
 				B9E75B391EE105FA00A137FF /* SignInTableViewControllerSections.swift in Sources */,
 				B9E75B4A1EE1112F00A137FF /* SignInViewModelValidator.swift in Sources */,
 				B924DAF41EAD9EEE009F1FF8 /* Serializer.swift in Sources */,
+				B9E75B501EE1141800A137FF /* SignInViewModelSerializer.swift in Sources */,
 				B924DAF61EB19796009F1FF8 /* ErrorsParser.swift in Sources */,
 				B9E75B481EE1108C00A137FF /* SignInViewModel.swift in Sources */,
 				B924DAF01EA45D13009F1FF8 /* AccountRegistrationViewModel.swift in Sources */,
@@ -654,6 +661,7 @@
 				B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */,
 				B9E75B4E1EE1123400A137FF /* SignInViewModelExtension.swift in Sources */,
 				B90697681ECFED790045E34E /* NetworkClientResultAssertions.swift in Sources */,
+				B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */,
 				B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */,
 				B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */,
 				B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */,
