@@ -22,6 +22,7 @@ class SignInTableViewController: UITableViewController {
         }
     }
     
+    var viewModel = SignInViewModel(email: "", password: "")
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.keyboardDismissMode = .onDrag
