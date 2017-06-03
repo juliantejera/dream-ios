@@ -7,6 +7,7 @@ target 'Dream' do
 
   # Pods for Dream
   pod 'Alamofire'
+  pod 'KeychainAccess'
 
   target 'DreamTests' do
     inherit! :search_paths

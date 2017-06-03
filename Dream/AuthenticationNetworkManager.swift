@@ -21,14 +21,11 @@ struct AuthenticationNetworkManager {
     }
     
     func register(user: AccountRegistrationViewModel, callback: @escaping (NetworkClientResult<Any>) -> Void) {
-        
         let serializer = AccountRegistrationViewModelSerializer()
         let parameters: [String: Any] = serializer.serialize(from: user)
-        
         client.request(method: .post, path: path, parameters: parameters) { (result) in
             callback(result)
         }
-        
     }
     
     func signIn(user: SignInViewModel, callback: @escaping (NetworkClientResult<Any>) -> Void) {
