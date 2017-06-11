@@ -23,6 +23,7 @@
 		B90AC44F1EC76D2A007C0FA4 /* errors_parser_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */; };
 		B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */; };
 		B9224C7E1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224C7D1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift */; };
+		B9224C801EECD052005DBEED /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224C7F1EECD052005DBEED /* UIViewControllerExtension.swift */; };
 		B924DAD81EA324BA009F1FF8 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAD71EA324BA009F1FF8 /* Validator.swift */; };
 		B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAD91EA32546009F1FF8 /* AdultAgeValidator.swift */; };
 		B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DADB1EA32594009F1FF8 /* CompositeValidatorSpec.swift */; };
@@ -103,6 +104,7 @@
 		B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errors_parser_valid.json; sourceTree = "<group>"; };
 		B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelSerializer.swift; sourceTree = "<group>"; };
 		B9224C7D1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC6750BearerTokenSerializerTests.swift; sourceTree = "<group>"; };
+		B9224C7F1EECD052005DBEED /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		B924DAD71EA324BA009F1FF8 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		B924DAD91EA32546009F1FF8 /* AdultAgeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdultAgeValidator.swift; sourceTree = "<group>"; };
 		B924DADB1EA32594009F1FF8 /* CompositeValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeValidatorSpec.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 			children = (
 				B9E75B451EE10ABC00A137FF /* UIStoryboardExtension.swift */,
 				B9E75B6B1EE440E500A137FF /* DictionaryExtension.swift */,
+				B9224C7F1EECD052005DBEED /* UIViewControllerExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */,
 				B924DAE01EA3ACDE009F1FF8 /* EmailValidator.swift in Sources */,
 				B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */,
+				B9224C801EECD052005DBEED /* UIViewControllerExtension.swift in Sources */,
 				B9E75B461EE10ABC00A137FF /* UIStoryboardExtension.swift in Sources */,
 				B9FD3B5E1E9FCF0B0018BEE6 /* NetworkClient.swift in Sources */,
 				B924DAED1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift in Sources */,

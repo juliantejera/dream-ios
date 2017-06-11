@@ -41,11 +41,11 @@ class SignInTableViewController: UITableViewController {
                 case .success(let response):
                     print(response)
                 case .failure(let errors):
-                    self.displayNetworkError(errors: errors)
+                    self.presentAlertController(title: "🙈", errors: errors)
                 }
             }
         } else {
-            displayValidationErrors(errors: validator.errors)
+            self.presentAlertController(title: "Validation errors", errors: validator.errors)
         }
     }
     
@@ -59,25 +59,5 @@ class SignInTableViewController: UITableViewController {
         return SignInTableViewControllerSections(rawValue: section)!.numberOfRows
     }
     
-    // MARK: - Error messages
-    
-    private func displayNetworkError(errors: [String]) {
-        let title = "Oops!"
-        let defaultMessage = "There's been an error signing in"
-        let message = errors.isEmpty ? defaultMessage : errors.joined(separator: "\n")
-        self.present(createAlertController(title: title, message: message), animated: true, completion: nil)
-    }
-    
-    private func displayValidationErrors(errors: [String]) {
-        let title = "Validation errors"
-        let message = errors.joined(separator: "\n")
-        self.present(createAlertController(title: title, message: message), animated: true, completion: nil)
-    }
-    
-    private func createAlertController(title: String, message: String) -> UIAlertController {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-        return alertController
-    }
 
 }

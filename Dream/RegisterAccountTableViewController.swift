@@ -75,31 +75,12 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
                 case .success(_):
                     self.delegate?.registerAccountTableViewControllerDidCreateAccount(controller: self)
                 case .failure(let errors):
-                    self.displayNetworkError(errors: errors)
+                    self.presentAlertController(title: "🙈", errors: errors)
                 }
             }
         } else {
-            displayValidationErrors(validator: validator)
+            self.presentAlertController(title: "Validation errors", errors: validator.errors)
         }
-    }
-    
-    private func displayNetworkError(errors: [String]) {
-        let title = "Oops!"
-        let defaultMessage = "There's been an error creating your account"
-        let message = errors.isEmpty ? defaultMessage : errors.joined(separator: "\n")
-        self.present(createAlertController(title: title, message: message), animated: true, completion: nil)
-    }
-    
-    private func displayValidationErrors(validator: AccountRegistrationViewModelValidator) {
-        let title = "Validation errors"
-        let message = validator.errors.joined(separator: "\n")
-        self.present(createAlertController(title: title, message: message), animated: true, completion: nil)
-    }
-    
-    private func createAlertController(title: String, message: String) -> UIAlertController {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-        return alertController
     }
     
     // MARK: - Table view data source
