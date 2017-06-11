@@ -34,12 +34,24 @@ class SignInTableViewController: UITableViewController {
     var manager = AuthenticationNetworkManager(client: DreamNetworkClient())
     weak var delegate: SignInTableViewControllerDelegate?
     
+    lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.center = self.tableView.center
+        self.view.addSubview(activityIndicatorView)
+        return activityIndicatorView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.keyboardDismissMode = .onDrag
     }
     
     @IBAction func signIn() {
+        guard !activityIndicatorView.isAnimating else {
+            return
+        }
+        
         let validator = SignInViewModelValidator(viewModel: viewModel)
         
         guard validator.isValid else {
@@ -47,6 +59,7 @@ class SignInTableViewController: UITableViewController {
             return
         }
         
+        activityIndicatorView.startAnimating()
         manager.signIn(user: viewModel) { (result) in
             switch result {
             case .success(_):
@@ -54,6 +67,8 @@ class SignInTableViewController: UITableViewController {
             case .failure(let errors):
                 self.presentAlertController(title: "🙈", errors: errors)
             }
+            
+            self.activityIndicatorView.stopAnimating()
         }
 
     }

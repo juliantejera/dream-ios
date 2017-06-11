@@ -94,6 +94,16 @@ class SignInTableViewControllerTests: XCTestCase {
         XCTAssertEqual(delegate.didSignIn, 1)
     }
     
+    func testSignIn_AnimatesTheActivityIndicatorView() {
+        controller.viewModel = SignInViewModel.create()
+        client.onRequest = {
+            XCTAssert(self.controller.activityIndicatorView.isAnimating)
+        }
+        
+        controller.signIn()
+        XCTAssertFalse(self.controller.activityIndicatorView.isAnimating)
+    }
+        
     func testTextFieldDidChangeUpdatesTheViewModel() {
         let viewModel = SignInViewModel.create()
         controller.emailTextField.text = viewModel.email
