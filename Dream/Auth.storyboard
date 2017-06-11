@@ -206,7 +206,7 @@
             </objects>
             <point key="canvasLocation" x="1983" y="-11"/>
         </scene>
-        <!--Sign In Table View Controller-->
+        <!--Enter Credentials-->
         <scene sceneID="rZD-Yq-2JU">
             <objects>
                 <tableViewController storyboardIdentifier="SignInTableViewController" id="6Md-bl-jYJ" customClass="SignInTableViewController" customModule="Dream" customModuleProvider="target" sceneMemberID="viewController">
@@ -215,10 +215,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Credentials" id="KVJ-if-P8j">
+                            <tableViewSection id="KVJ-if-P8j">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="eZo-he-rnO">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eZo-he-rnO" id="fun-dX-2HZ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -247,7 +247,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="DNT-HI-BIt">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DNT-HI-BIt" id="Vhq-pO-DmD">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -280,7 +280,7 @@
                             <tableViewSection id="Clj-Tf-oH6">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="sa6-dB-4Dq">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="159" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sa6-dB-4Dq" id="Ps1-IG-cxk">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -310,6 +310,7 @@
                             <outlet property="delegate" destination="6Md-bl-jYJ" id="djk-cB-HcK"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Enter Credentials" id="m9L-92-zl0"/>
                     <connections>
                         <outlet property="emailTextField" destination="9au-T0-3Pn" id="teX-ej-QbJ"/>
                         <outlet property="passwordTextField" destination="B4D-HX-KCd" id="ELn-JV-ERB"/>
