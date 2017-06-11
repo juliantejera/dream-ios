@@ -17,3 +17,8 @@ func JTAssertNotNilAndUnwrap<T>(_ value: T?, message: String = "Unexpected nil v
     }
     return value
 }
+
+
+func JTAssertIdentical<T : AnyObject>(_ expression1: T?, _ expression2: T?, _ message: @autoclosure () -> String = "Expected the values to be identical", file: StaticString = #file, line: UInt = #line) {
+    XCTAssertTrue(expression1 === expression2)
+}

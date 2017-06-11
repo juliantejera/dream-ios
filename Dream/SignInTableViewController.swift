@@ -10,15 +10,19 @@ import UIKit
 
 class SignInTableViewController: UITableViewController {
     
-    @IBOutlet private weak var emailTextField: UITextField! {
+    @IBOutlet weak var emailTextField: UITextField! {
         didSet {
             emailTextField.keyboardType = .emailAddress
+            emailTextField.returnKeyType = .next
+            emailTextField.delegate = self
         }
     }
     
-    @IBOutlet private weak var passwordTextField: UITextField! {
+    @IBOutlet weak var passwordTextField: UITextField! {
         didSet {
             passwordTextField.isSecureTextEntry = true
+            passwordTextField.returnKeyType = .send
+            passwordTextField.delegate = self 
         }
     }
     
@@ -59,5 +63,20 @@ class SignInTableViewController: UITableViewController {
         return SignInTableViewControllerSections(rawValue: section)!.numberOfRows
     }
     
+}
 
+extension SignInTableViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            signIn()
+        default:
+            break
+        }
+        
+        return true
+    }
+    
 }
