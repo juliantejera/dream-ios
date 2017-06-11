@@ -9,7 +9,7 @@
 import UIKit
 
 
-class HomeAuthTableViewController: UITableViewController, RegisterAccountTableViewControllerDelegate {
+class HomeAuthTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
@@ -21,16 +21,27 @@ class HomeAuthTableViewController: UITableViewController, RegisterAccountTableVi
         return 2
     }
     
-    // MARK: - RegisterAccountTableViewControllerDelegate
-    func registerAccountTableViewControllerDidCreateAccount(controller: RegisterAccountTableViewController) {
-//        _ = self.navigationController?.popViewController(animated: false)
-    }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let destination = segue.destination as? RegisterAccountTableViewController, segue.identifier == "RegisterAccountTableViewControllerSegue" {
+        if let destination = segue.destination as? RegisterAccountTableViewController {
+            destination.delegate = self
+        } else if let destination = segue.destination as? SignInTableViewController {
             destination.delegate = self
         }
+    }
+}
+
+
+extension HomeAuthTableViewController: RegisterAccountTableViewControllerDelegate {
+    
+    func registerAccountTableViewControllerDidCreateAccount(controller: RegisterAccountTableViewController) {
+        _ = self.navigationController?.popViewController(animated: false)
+    }
+    
+}
+
+extension HomeAuthTableViewController: SignInTableViewControllerDelegate {
+    
+    func signInTableViewControllerDidSignIn(_ controller: SignInTableViewController) {
+        
     }
 }
