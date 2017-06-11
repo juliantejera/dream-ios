@@ -36,6 +36,17 @@ class ErrorsParserSpec: QuickSpec {
                     }
                 }
                 
+                context("when we are getting an error message from the sign in endpoint") {
+                    beforeEach {
+                        errors = parser.parse(from: ["errors": ["hello world"]])
+                    }
+                    
+                    it("returns the correct error messages") {
+                        expect(errors).to(equal(["hello world"]))
+                    }
+                }
+
+                
                 context("when the dictionary is not valid") {
                     beforeEach {
                         errors = parser.parse(from: [:])

@@ -16,11 +16,13 @@ struct ErrorsParser: Parser {
     }
     
     func parse(from dictionary: [AnyHashable : Any]) -> [String]? {
-        guard let errorsDictionary = dictionary[Keys.errors] as? [String: Any], let errors = errorsDictionary[Keys.fullMessages] as? [String] else {
-            return nil
+        if let errorsDictionary = dictionary[Keys.errors] as? [String: Any], let errors = errorsDictionary[Keys.fullMessages] as? [String]  {
+            return errors
+        } else if let errors = dictionary[Keys.errors] as? [String] {
+            return errors
         }
         
-        return errors
+        return nil
     }
     
 }

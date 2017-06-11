@@ -1,0 +1,14 @@
+{
+    "data": {
+        "id": 3,
+        "email": "jtejera27@gmail.com",
+        "provider": "email",
+        "uid": "jtejera27@gmail.com",
+        "name": null,
+        "nickname": null,
+        "image": null,
+        "latitude": null,
+        "longitude": null,
+        "birthdate": "1988-05-20"
+    }
+}

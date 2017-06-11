@@ -15,11 +15,12 @@ class MockNetworkClient: NetworkClient {
     var response: Any?
     var errors = [String]()
     var parameters: [String: Any]?
+    var onRequest: (() -> Void)?
     
     func request(method: HTTPMethod, path: String, parameters: [String: Any]?, callback: @escaping (NetworkClientResult<Any>) -> Void) {
-        
+        onRequest?()
         self.parameters = parameters
-        if let response = response {
+        if let response = response, errors.isEmpty {
             callback(.success(response))
         } else {
             callback(.failure(errors))

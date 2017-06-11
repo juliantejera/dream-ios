@@ -55,6 +55,13 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         }
     }
     
+    lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicatorView = self.createActivityIndicatorView()
+        self.view.addSubview(activityIndicatorView)
+        return activityIndicatorView
+    }()
+
+    
     private func configure(textField: UITextField) {
         textField.autocorrectionType = .no
         textField.delegate = self
@@ -68,38 +75,28 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
     }
     
     @IBAction func registerAccount(_ sender: UIBarButtonItem) {
-        let validator = AccountRegistrationViewModelValidator(viewModel: viewModel)
-        if validator.isValid {
-            manager.register(user: viewModel) { (result) in
-                switch result {
-                case .success(_):
-                    self.delegate?.registerAccountTableViewControllerDidCreateAccount(controller: self)
-                case .failure(let errors):
-                    self.displayNetworkError(errors: errors)
-                }
-            }
-        } else {
-            displayValidationErrors(validator: validator)
+        guard !activityIndicatorView.isAnimating else {
+            return
         }
-    }
-    
-    private func displayNetworkError(errors: [String]) {
-        let title = "Oops!"
-        let defaultMessage = "There's been an error creating your account"
-        let message = errors.isEmpty ? defaultMessage : errors.joined(separator: "\n")
-        self.present(createAlertController(title: title, message: message), animated: true, completion: nil)
-    }
-    
-    private func displayValidationErrors(validator: AccountRegistrationViewModelValidator) {
-        let title = "Validation errors"
-        let message = validator.errors.joined(separator: "\n")
-        self.present(createAlertController(title: title, message: message), animated: true, completion: nil)
-    }
-    
-    private func createAlertController(title: String, message: String) -> UIAlertController {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-        return alertController
+        
+        let validator = AccountRegistrationViewModelValidator(viewModel: viewModel)
+        
+        guard validator.isValid else {
+            self.presentAlertController(title: "Validation errors", errors: validator.errors)
+            return
+        }
+        
+        activityIndicatorView.startAnimating()
+        manager.register(user: viewModel) { (result) in
+            switch result {
+            case .success(_):
+                self.delegate?.registerAccountTableViewControllerDidCreateAccount(controller: self)
+            case .failure(let errors):
+                self.presentAlertController(title: "🙈", errors: errors)
+            }
+            
+            self.activityIndicatorView.stopAnimating()
+        }
     }
     
     // MARK: - Table view data source
