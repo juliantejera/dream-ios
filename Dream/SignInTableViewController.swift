@@ -35,9 +35,7 @@ class SignInTableViewController: UITableViewController {
     weak var delegate: SignInTableViewControllerDelegate?
     
     lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        activityIndicatorView.hidesWhenStopped = true
-        activityIndicatorView.center = self.tableView.center
+        let activityIndicatorView = self.createActivityIndicatorView()
         self.view.addSubview(activityIndicatorView)
         return activityIndicatorView
     }()

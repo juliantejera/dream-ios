@@ -10,6 +10,13 @@ import UIKit
 
 extension UIViewController {
     
+    func createActivityIndicatorView() -> UIActivityIndicatorView {
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.center = self.view.center
+        return activityIndicatorView
+    }
+    
     func presentAlertController(title: String, errors: [String]) {
         let message = errors.joined(separator: "\n")
         self.present(createAlertController(title: title, message: message), animated: true, completion: nil)

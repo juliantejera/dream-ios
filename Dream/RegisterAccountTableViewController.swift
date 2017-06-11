@@ -55,6 +55,13 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         }
     }
     
+    lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicatorView = self.createActivityIndicatorView()
+        self.view.addSubview(activityIndicatorView)
+        return activityIndicatorView
+    }()
+
+    
     private func configure(textField: UITextField) {
         textField.autocorrectionType = .no
         textField.delegate = self
@@ -68,18 +75,27 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
     }
     
     @IBAction func registerAccount(_ sender: UIBarButtonItem) {
+        guard !activityIndicatorView.isAnimating else {
+            return
+        }
+        
         let validator = AccountRegistrationViewModelValidator(viewModel: viewModel)
-        if validator.isValid {
-            manager.register(user: viewModel) { (result) in
-                switch result {
-                case .success(_):
-                    self.delegate?.registerAccountTableViewControllerDidCreateAccount(controller: self)
-                case .failure(let errors):
-                    self.presentAlertController(title: "🙈", errors: errors)
-                }
-            }
-        } else {
+        
+        guard validator.isValid else {
             self.presentAlertController(title: "Validation errors", errors: validator.errors)
+            return
+        }
+        
+        activityIndicatorView.startAnimating()
+        manager.register(user: viewModel) { (result) in
+            switch result {
+            case .success(_):
+                self.delegate?.registerAccountTableViewControllerDidCreateAccount(controller: self)
+            case .failure(let errors):
+                self.presentAlertController(title: "🙈", errors: errors)
+            }
+            
+            self.activityIndicatorView.stopAnimating()
         }
     }
     
