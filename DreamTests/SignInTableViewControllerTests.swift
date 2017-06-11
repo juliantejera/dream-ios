@@ -14,6 +14,7 @@ class SignInTableViewControllerTests: XCTestCase {
     var window: UIWindow!
     var controller: SignInTableViewController!
     var client: MockNetworkClient!
+    var delegate: MockSignInTableViewControllerDelegate!
     
     override func setUp() {
         super.setUp()
@@ -24,6 +25,8 @@ class SignInTableViewControllerTests: XCTestCase {
         client = MockNetworkClient()
         client.response = self.fixture(name: "authentication_network_manager_sign_in_success")
         controller.manager = AuthenticationNetworkManager(client: client)
+        delegate = MockSignInTableViewControllerDelegate()
+        controller.delegate = delegate
         controller.loadView()
         controller.viewDidLoad()
     }
@@ -74,22 +77,29 @@ class SignInTableViewControllerTests: XCTestCase {
     func testSignIn_whenTheViewModelIsNotValid_ItPresentsAnAlertController() {
         controller.signIn()
         XCTAssert(controller.presentedViewController is UIAlertController)
+        XCTAssertEqual(delegate.didSignIn, 0)
     }
     
     func testSignIn_whenTheViewModelIsValidAndThereIsANetworkError() {
         controller.viewModel = SignInViewModel.create()
-        controller.emailTextField.text = controller.viewModel.email
-        controller.passwordTextField.text = controller.viewModel.password
         client.errors = ["Failure"]
         controller.signIn()
         XCTAssert(controller.presentedViewController is UIAlertController)
+        XCTAssertEqual(delegate.didSignIn, 0)
     }
     
     func testSignIn_whenTheViewModelIsValidAndTheNetworkRequestSucceeds() {
         controller.viewModel = SignInViewModel.create()
-        controller.emailTextField.text = controller.viewModel.email
-        controller.passwordTextField.text = controller.viewModel.password
         controller.signIn()
-        XCTAssertNil(controller.presentedViewController)
+        XCTAssertEqual(delegate.didSignIn, 1)
     }
+    
+    func testTextFieldDidChangeUpdatesTheViewModel() {
+        let viewModel = SignInViewModel.create()
+        controller.emailTextField.text = viewModel.email
+        controller.passwordTextField.text = viewModel.password
+        controller.textFieldDidChange(controller.emailTextField)
+        XCTAssertEqual(controller.viewModel, viewModel)
+    }
+
 }

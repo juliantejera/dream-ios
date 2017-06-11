@@ -12,3 +12,9 @@ struct SignInViewModel {
     var email: String
     var password: String
 }
+
+extension SignInViewModel: Equatable {
+    static func == (lhs: SignInViewModel, rhs: SignInViewModel) -> Bool {
+        return lhs.email == rhs.email && lhs.password == rhs.password
+    }
+}
