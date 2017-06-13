@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Home View Controller-->
         <scene sceneID="35f-bU-zok">
             <objects>
-                <tabBarController id="Oi7-Wk-NlK" sceneMemberID="viewController">
+                <tabBarController id="Oi7-Wk-NlK" customClass="HomeViewController" customModule="Dream" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="B5A-OD-le4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,7 +34,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AR6-8t-REH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123" y="-354"/>
+            <point key="canvasLocation" x="152" y="-381"/>
         </scene>
     </scenes>
 </document>

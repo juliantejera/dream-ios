@@ -53,6 +53,8 @@
 		B977786E1EF006E400A6E250 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B977786D1EF006E400A6E250 /* Home.storyboard */; };
 		B97778701EF007B100A6E250 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977786F1EF007B100A6E250 /* UsersViewController.swift */; };
 		B97778721EF00E0200A6E250 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97778711EF00E0200A6E250 /* Users.storyboard */; };
+		B97778741EF0131000A6E250 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778731EF0131000A6E250 /* AppDelegateTests.swift */; };
+		B97778761EF014A200A6E250 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778751EF014A200A6E250 /* HomeViewController.swift */; };
 		B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F31E2B1D87004CCC50 /* AppDelegate.swift */; };
 		B98652F61E2B1D87004CCC50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F51E2B1D87004CCC50 /* ViewController.swift */; };
 		B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652F71E2B1D87004CCC50 /* Main.storyboard */; };
@@ -148,6 +150,8 @@
 		B977786D1EF006E400A6E250 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B977786F1EF007B100A6E250 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		B97778711EF00E0200A6E250 /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
+		B97778731EF0131000A6E250 /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		B97778751EF014A200A6E250 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B98652F01E2B1D87004CCC50 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98652F31E2B1D87004CCC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B98652F51E2B1D87004CCC50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 				B90697691ECFEFE90045E34E /* Serializers */,
 				B924DAEB1EA3BBF0009F1FF8 /* Validators */,
 				B90AC4451EC76590007C0FA4 /* View Controllers */,
+				B97778731EF0131000A6E250 /* AppDelegateTests.swift */,
 			);
 			path = DreamTests;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 				B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */,
 				B977785D1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift */,
 				B977786F1EF007B100A6E250 /* UsersViewController.swift */,
+				B97778751EF014A200A6E250 /* HomeViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -734,6 +740,7 @@
 				B9E75B541EE18ED500A137FF /* RFC6750BearerToken.swift in Sources */,
 				B924DAE41EA3B296009F1FF8 /* PasswordValidator.swift in Sources */,
 				B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */,
+				B97778761EF014A200A6E250 /* HomeViewController.swift in Sources */,
 				B924DAE81EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift in Sources */,
 				B9E75B391EE105FA00A137FF /* SignInTableViewControllerSections.swift in Sources */,
 				B9E75B4A1EE1112F00A137FF /* SignInViewModelValidator.swift in Sources */,
@@ -770,6 +777,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97778741EF0131000A6E250 /* AppDelegateTests.swift in Sources */,
 				B9224C861EECE3B3005DBEED /* MockSignInTableViewControllerDelegate.swift in Sources */,
 				B9E75B5F1EE2737900A137FF /* RFC6750BearerTokenExtension.swift in Sources */,
 				B924DAE21EA3AE48009F1FF8 /* EmailValidatorSpec.swift in Sources */,
