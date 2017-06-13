@@ -42,6 +42,14 @@
 		B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */; };
 		B924DAF41EAD9EEE009F1FF8 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF31EAD9EEE009F1FF8 /* Serializer.swift */; };
 		B924DAF61EB19796009F1FF8 /* ErrorsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */; };
+		B977785E1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977785D1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift */; };
+		B97778601EEDDDD700A6E250 /* ForgotPasswordParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977785F1EEDDDD700A6E250 /* ForgotPasswordParser.swift */; };
+		B97778621EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778611EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift */; };
+		B97778641EEF752000A6E250 /* authentication_network_manager_forgot_password_success.json in Resources */ = {isa = PBXBuildFile; fileRef = B97778631EEF752000A6E250 /* authentication_network_manager_forgot_password_success.json */; };
+		B97778661EEF762E00A6E250 /* authentication_network_manager_forgot_password_unknown_email.json in Resources */ = {isa = PBXBuildFile; fileRef = B97778651EEF762E00A6E250 /* authentication_network_manager_forgot_password_unknown_email.json */; };
+		B97778681EEF76CA00A6E250 /* ForgotPasswordParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778671EEF76CA00A6E250 /* ForgotPasswordParserTests.swift */; };
+		B977786A1EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778691EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift */; };
+		B977786C1EEF7BF800A6E250 /* MockUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977786B1EEF7BF800A6E250 /* MockUINavigationController.swift */; };
 		B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F31E2B1D87004CCC50 /* AppDelegate.swift */; };
 		B98652F61E2B1D87004CCC50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F51E2B1D87004CCC50 /* ViewController.swift */; };
 		B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652F71E2B1D87004CCC50 /* Main.storyboard */; };
@@ -126,6 +134,14 @@
 		B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAuthTableViewController.swift; sourceTree = "<group>"; };
 		B924DAF31EAD9EEE009F1FF8 /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
 		B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsParser.swift; sourceTree = "<group>"; };
+		B977785D1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
+		B977785F1EEDDDD700A6E250 /* ForgotPasswordParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordParser.swift; sourceTree = "<group>"; };
+		B97778611EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationNetworkManagerTests.swift; sourceTree = "<group>"; };
+		B97778631EEF752000A6E250 /* authentication_network_manager_forgot_password_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authentication_network_manager_forgot_password_success.json; sourceTree = "<group>"; };
+		B97778651EEF762E00A6E250 /* authentication_network_manager_forgot_password_unknown_email.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authentication_network_manager_forgot_password_unknown_email.json; sourceTree = "<group>"; };
+		B97778671EEF76CA00A6E250 /* ForgotPasswordParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordParserTests.swift; sourceTree = "<group>"; };
+		B97778691EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewControllerTests.swift; sourceTree = "<group>"; };
+		B977786B1EEF7BF800A6E250 /* MockUINavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUINavigationController.swift; sourceTree = "<group>"; };
 		B98652F01E2B1D87004CCC50 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98652F31E2B1D87004CCC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B98652F51E2B1D87004CCC50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */,
+				B97778691EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift */,
 				B9E75B401EE108BB00A137FF /* SignInTableViewControllerTests.swift */,
 			);
 			name = "View Controllers";
@@ -244,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */,
+				B97778671EEF76CA00A6E250 /* ForgotPasswordParserTests.swift */,
 				B9E75B5A1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift */,
 			);
 			name = Parsers;
@@ -254,6 +272,7 @@
 			children = (
 				B90697611ECFE38C0045E34E /* MockNetworkClient.swift */,
 				B9E75B651EE2F61200A137FF /* MockKeychainProtocol.swift */,
+				B977786B1EEF7BF800A6E250 /* MockUINavigationController.swift */,
 				B9224C851EECE3B3005DBEED /* MockSignInTableViewControllerDelegate.swift */,
 				B90697731ED13CB80045E34E /* MockUITextField.swift */,
 			);
@@ -280,6 +299,8 @@
 				B9224C811EECDDAA005DBEED /* authentication_network_manager_sign_in_success.json */,
 				B9224C831EECDDC1005DBEED /* authentication_network_manager_sign_in_failure.json */,
 				B90697651ECFE74D0045E34E /* authentication_network_manager_register_failure.json */,
+				B97778631EEF752000A6E250 /* authentication_network_manager_forgot_password_success.json */,
+				B97778651EEF762E00A6E250 /* authentication_network_manager_forgot_password_unknown_email.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -288,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				B906975F1ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift */,
+				B97778611EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift */,
 			);
 			name = "Network Managers";
 			sourceTree = "<group>";
@@ -415,6 +437,7 @@
 				B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */,
 				B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */,
 				B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */,
+				B977785D1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -462,6 +485,7 @@
 				B9FD3B651EA034580018BEE6 /* Parser.swift */,
 				B9E75B551EE18F3500A137FF /* RFC6750BearerTokenParser.swift */,
 				B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */,
+				B977785F1EEDDDD700A6E250 /* ForgotPasswordParser.swift */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -587,6 +611,8 @@
 				B9E75B5D1EE26FF500A137FF /* bearer_token.json in Resources */,
 				B90697641ECFE6F50045E34E /* authentication_network_manager_register_success.json in Resources */,
 				B9224C821EECDDAA005DBEED /* authentication_network_manager_sign_in_success.json in Resources */,
+				B97778661EEF762E00A6E250 /* authentication_network_manager_forgot_password_unknown_email.json in Resources */,
+				B97778641EEF752000A6E250 /* authentication_network_manager_forgot_password_success.json in Resources */,
 				B90697661ECFE74D0045E34E /* authentication_network_manager_register_failure.json in Resources */,
 				B9224C841EECDDC1005DBEED /* authentication_network_manager_sign_in_failure.json in Resources */,
 			);
@@ -701,10 +727,12 @@
 				B9E75B391EE105FA00A137FF /* SignInTableViewControllerSections.swift in Sources */,
 				B9E75B4A1EE1112F00A137FF /* SignInViewModelValidator.swift in Sources */,
 				B924DAF41EAD9EEE009F1FF8 /* Serializer.swift in Sources */,
+				B97778601EEDDDD700A6E250 /* ForgotPasswordParser.swift in Sources */,
 				B9E75B581EE2627E00A137FF /* AuthenticationController.swift in Sources */,
 				B9E75B501EE1141800A137FF /* SignInViewModelSerializer.swift in Sources */,
 				B924DAF61EB19796009F1FF8 /* ErrorsParser.swift in Sources */,
 				B9E75B481EE1108C00A137FF /* SignInViewModel.swift in Sources */,
+				B977785E1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift in Sources */,
 				B924DAF01EA45D13009F1FF8 /* AccountRegistrationViewModel.swift in Sources */,
 				B9FD3B601E9FCFD90018BEE6 /* DreamNetworkClient.swift in Sources */,
 				B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */,
@@ -745,6 +773,8 @@
 				B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */,
 				B9E75B5B1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift in Sources */,
 				B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */,
+				B97778681EEF76CA00A6E250 /* ForgotPasswordParserTests.swift in Sources */,
+				B977786C1EEF7BF800A6E250 /* MockUINavigationController.swift in Sources */,
 				B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */,
 				B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */,
 				B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */,
@@ -752,10 +782,12 @@
 				B90AC44C1EC76904007C0FA4 /* XCTestCaseExtension.swift in Sources */,
 				B906976B1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift in Sources */,
 				B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */,
+				B977786A1EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift in Sources */,
 				B9E75B4C1EE1119500A137FF /* SignInViewModelValidatorTests.swift in Sources */,
 				B9E75B681EE2FA4700A137FF /* CustomTestAssertions.swift in Sources */,
 				B9E75B661EE2F61200A137FF /* MockKeychainProtocol.swift in Sources */,
 				B924DADE1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift in Sources */,
+				B97778621EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift in Sources */,
 				B90697721ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -36,4 +36,25 @@ struct AuthenticationNetworkManager {
             callback(result)
         }
     }
+    
+    func forgotPassword(email: String, callback: @escaping (NetworkClientResult<String>) -> Void) {
+        let parameters = ["email": email, "redirect_url": "dream://"]
+        let forgotPasswordPath = "\(path)/password"
+        client.request(method: .post, path: forgotPasswordPath, parameters: parameters) { (result) in
+            switch result {
+            case .success(let response):
+                callback(self.parseForgotPassword(response: response))
+            case .failure(let errors):
+                callback(.failure(errors))
+            }
+        }
+    }
+    
+    private func parseForgotPassword(response: Any) -> NetworkClientResult<String> {
+        if let dictionary = response as? [AnyHashable: Any], let message = ForgotPasswordParser().parse(from: dictionary) {
+            return .success(message)
+        }
+        
+        return .failure([DreamNetworkClientError.unparsableModel.localizedDescription])
+    }
 }

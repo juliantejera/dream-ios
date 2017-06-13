@@ -302,7 +302,34 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="HDg-ix-Ad0">
+                                        <rect key="frame" x="0.0" y="203" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HDg-ix-Ad0" id="JQt-5d-vaJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPt-rt-J7K">
+                                                    <rect key="frame" x="0.0" y="-1" width="375" height="44"/>
+                                                    <color key="tintColor" red="0.78431372549019607" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Forgot Password?"/>
+                                                    <connections>
+                                                        <action selector="forgotPassword" destination="6Md-bl-jYJ" eventType="touchUpInside" id="CqF-6V-J0Q"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RPt-rt-J7K" firstAttribute="centerY" secondItem="JQt-5d-vaJ" secondAttribute="centerY" id="AfD-vV-nIg"/>
+                                                <constraint firstItem="RPt-rt-J7K" firstAttribute="width" secondItem="JQt-5d-vaJ" secondAttribute="width" id="AfV-a1-66B"/>
+                                                <constraint firstItem="RPt-rt-J7K" firstAttribute="height" secondItem="JQt-5d-vaJ" secondAttribute="height" id="C5X-d5-IzO"/>
+                                                <constraint firstItem="RPt-rt-J7K" firstAttribute="centerX" secondItem="JQt-5d-vaJ" secondAttribute="centerX" id="td8-ZT-GqY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
+                            </tableViewSection>
+                            <tableViewSection id="pO9-6L-EzN">
+                                <cells/>
                             </tableViewSection>
                         </sections>
                         <connections>
@@ -314,11 +341,75 @@
                     <connections>
                         <outlet property="emailTextField" destination="9au-T0-3Pn" id="teX-ej-QbJ"/>
                         <outlet property="passwordTextField" destination="B4D-HX-KCd" id="ELn-JV-ERB"/>
+                        <segue destination="uQg-YE-Jgy" kind="show" identifier="ForgotPasswordTableViewControllerSegue" id="tli-cO-j5c"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8V6-Sa-fDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1981.5999999999999" y="690.40479760119945"/>
+        </scene>
+        <!--Forgot Password-->
+        <scene sceneID="ohy-Oz-x7N">
+            <objects>
+                <tableViewController storyboardIdentifier="ForgotPasswordTableViewController" id="uQg-YE-Jgy" customClass="ForgotPasswordTableViewController" customModule="Dream" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="DiY-Bz-d7L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="59E-QQ-jSq">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="wik-pF-J0c">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wik-pF-J0c" id="rFG-E0-laf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a0-O3-bRQ">
+                                                    <rect key="frame" x="15" y="11" width="41" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2dB-Z3-zAQ">
+                                                    <rect key="frame" x="97" y="13" width="270" height="19"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2dB-Z3-zAQ" secondAttribute="trailing" id="KU2-Gd-qg2"/>
+                                                <constraint firstItem="0a0-O3-bRQ" firstAttribute="top" secondItem="rFG-E0-laf" secondAttribute="topMargin" constant="3" id="Xkw-6U-xZp"/>
+                                                <constraint firstItem="0a0-O3-bRQ" firstAttribute="leading" secondItem="rFG-E0-laf" secondAttribute="leadingMargin" constant="7" id="lL6-Hz-M7f"/>
+                                                <constraint firstItem="2dB-Z3-zAQ" firstAttribute="leading" secondItem="0a0-O3-bRQ" secondAttribute="trailing" constant="41" id="wom-du-pvj"/>
+                                                <constraint firstItem="2dB-Z3-zAQ" firstAttribute="baseline" secondItem="0a0-O3-bRQ" secondAttribute="baseline" id="yUu-V9-9l9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="uQg-YE-Jgy" id="GoG-T1-BTi"/>
+                            <outlet property="delegate" destination="uQg-YE-Jgy" id="9df-1X-gEg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Forgot Password" id="xeO-RK-O3U">
+                        <barButtonItem key="rightBarButtonItem" title="Send" id="I87-Jf-d8F">
+                            <connections>
+                                <action selector="sendForgotPasswordRequest:" destination="uQg-YE-Jgy" id="1Tc-FM-pZe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="2dB-Z3-zAQ" id="bnN-2J-Rry"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0G-aK-odu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2914" y="690"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9ZL-vv-bqm">

@@ -15,12 +15,7 @@ enum SignInTableViewControllerSections: Int {
     static let count: Int = 2
     
     var numberOfRows: Int {
-        switch self {
-        case .credentials:
-            return 2
-        case .signIn:
-            return 1
-        }
+        return 2
     }
     
 }

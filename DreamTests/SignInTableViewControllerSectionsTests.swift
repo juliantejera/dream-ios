@@ -23,7 +23,7 @@ class SignInTableViewControllerSectionsTests: XCTestCase {
     }
     
     func testNumberOfRowsForSignIn() {
-        let actual = 1
+        let actual = 2
         let expected = SignInTableViewControllerSections.signIn.numberOfRows
         XCTAssertEqual(actual, expected)
     }
