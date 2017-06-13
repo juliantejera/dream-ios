@@ -76,5 +76,9 @@ class ForgotPasswordTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+    
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "We will send you an email with further instructions to reset your password"
+    }
 
 }
