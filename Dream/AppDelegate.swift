@@ -12,10 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var authenticationController: AuthenticationController
+    
+    override init() {
+        self.authenticationController = AuthenticationController()
+        super.init()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if authenticationController.extract() != nil {
+            window?.rootViewController = UIStoryboard.home.instantiateInitialViewController()
+        } else {
+            window?.rootViewController = UIStoryboard.auth.instantiateInitialViewController()
+        }
+    
         return true
     }
 

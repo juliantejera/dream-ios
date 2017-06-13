@@ -10,7 +10,11 @@ import UIKit
 
 
 class HomeAuthTableViewController: UITableViewController {
-
+    
+    struct Segues {
+        static let homeTabBarController = "HomeTabBarControllerSegue"
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,6 +46,6 @@ extension HomeAuthTableViewController: RegisterAccountTableViewControllerDelegat
 extension HomeAuthTableViewController: SignInTableViewControllerDelegate {
     
     func signInTableViewControllerDidSignIn(_ controller: SignInTableViewController) {
-        
+        self.performSegue(withIdentifier: Segues.homeTabBarController, sender: nil)
     }
 }

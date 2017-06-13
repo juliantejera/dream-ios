@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Home-->
+        <scene sceneID="ewc-Di-0jq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="tsM-js-SBi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SbD-LM-kX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="-538"/>
+        </scene>
         <!--Home Auth Table View Controller-->
         <scene sceneID="PE2-wc-nsJ">
             <objects>
@@ -75,6 +83,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4Y8-9e-soq"/>
+                    <connections>
+                        <segue destination="tsM-js-SBi" kind="presentation" identifier="HomeTabBarControllerSegue" id="kf9-JS-JrL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggC-0f-KIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
