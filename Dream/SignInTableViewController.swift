@@ -13,6 +13,9 @@ protocol SignInTableViewControllerDelegate: class {
 }
 
 class SignInTableViewController: UITableViewController {
+    struct Segues {
+        static let forgotPasswordTableViewController = "ForgotPasswordTableViewControllerSegue"
+    }
     
     @IBOutlet weak var emailTextField: UITextField! {
         didSet {
@@ -71,6 +74,11 @@ class SignInTableViewController: UITableViewController {
 
     }
     
+    
+    @IBAction func forgotPassword() {
+        self.performSegue(withIdentifier: Segues.forgotPasswordTableViewController, sender: nil)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,6 +87,14 @@ class SignInTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SignInTableViewControllerSections(rawValue: section)!.numberOfRows
+    }
+    
+    // MARK: - Segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ForgotPasswordTableViewController {
+            destination.email = viewModel.email
+        }
     }
     
 }

@@ -112,4 +112,10 @@ class SignInTableViewControllerTests: XCTestCase {
         XCTAssertEqual(controller.viewModel, viewModel)
     }
 
+    func testForgotPasswordPerformsSegueToTheAppropriateViewController() throws {
+        controller.viewModel = SignInViewModel.create()
+        controller.forgotPassword()
+        let forgotPasswordTableViewController = try JTAssertNotNilAndUnwrap(controller.presentedViewController as? ForgotPasswordTableViewController)
+        XCTAssertEqual(forgotPasswordTableViewController.email, controller.viewModel.email)
+    }
 }
