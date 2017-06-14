@@ -17,6 +17,16 @@ class HomeAuthTableViewController: UITableViewController {
         static let signInTableViewController = "SignInTableViewControllerSegue"
     }
     
+    @IBOutlet weak var imageView: UIImageView! {
+        didSet {
+            imageView.layer.cornerRadius = 120.0
+            imageView.layer.masksToBounds = true
+            imageView.layer.borderColor = UIColor.white.cgColor
+            imageView.layer.borderWidth = 3.0
+        }
+    }
+    
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
