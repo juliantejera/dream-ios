@@ -10,12 +10,14 @@ import UIKit
 
 
 class HomeAuthTableViewController: UITableViewController {
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    
+    struct Segues {
+        static let homeViewController = "HomeViewControllerSegue"
+        static let registerAccountTableViewController = "RegisterAccountTableViewControllerSegue"
+        static let signInTableViewController = "SignInTableViewControllerSegue"
     }
+    
+    // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
@@ -42,6 +44,6 @@ extension HomeAuthTableViewController: RegisterAccountTableViewControllerDelegat
 extension HomeAuthTableViewController: SignInTableViewControllerDelegate {
     
     func signInTableViewControllerDidSignIn(_ controller: SignInTableViewController) {
-        
+        self.performSegue(withIdentifier: Segues.homeViewController, sender: nil)
     }
 }

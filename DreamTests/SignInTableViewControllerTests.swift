@@ -18,7 +18,7 @@ class SignInTableViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        controller = UIStoryboard.auth.instantiateViewController(withIdentifier: "SignInTableViewController") as? SignInTableViewController
+        controller = AuthStoryboardFactory.signInTableViewController
         window = UIWindow()
         window.makeKeyAndVisible()
         window.rootViewController = controller
