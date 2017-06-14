@@ -57,6 +57,7 @@
 		B97778761EF014A200A6E250 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778751EF014A200A6E250 /* HomeViewController.swift */; };
 		B97778781EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778771EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift */; };
 		B977787A1EF0CFEC00A6E250 /* AuthStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778791EF0CFEC00A6E250 /* AuthStoryboard.swift */; };
+		B977787C1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977787B1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift */; };
 		B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F31E2B1D87004CCC50 /* AppDelegate.swift */; };
 		B98652F61E2B1D87004CCC50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F51E2B1D87004CCC50 /* ViewController.swift */; };
 		B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652F71E2B1D87004CCC50 /* Main.storyboard */; };
@@ -156,6 +157,7 @@
 		B97778751EF014A200A6E250 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B97778771EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAuthTableViewControllerTests.swift; sourceTree = "<group>"; };
 		B97778791EF0CFEC00A6E250 /* AuthStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStoryboard.swift; sourceTree = "<group>"; };
+		B977787B1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewFactory.swift; sourceTree = "<group>"; };
 		B98652F01E2B1D87004CCC50 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98652F31E2B1D87004CCC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B98652F51E2B1D87004CCC50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 				B9E75B571EE2627E00A137FF /* AuthenticationController.swift */,
 				B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */,
 				B9E75B531EE18ED500A137FF /* RFC6750BearerToken.swift */,
+				B977787B1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				B924DAED1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift in Sources */,
 				B9FD3B6A1EA034BE0018BEE6 /* AuthenticationNetworkManager.swift in Sources */,
 				B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */,
+				B977787C1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift in Sources */,
 				B9E75B6A1EE3CE7500A137FF /* RFC6750BearerTokenSerializer.swift in Sources */,
 				B9E75B641EE2F57800A137FF /* KeychainProtocol.swift in Sources */,
 				B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */,

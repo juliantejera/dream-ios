@@ -56,11 +56,8 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
     }
     
     lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let activityIndicatorView = self.createActivityIndicatorView()
-        self.view.addSubview(activityIndicatorView)
-        return activityIndicatorView
+        return ActivityIndicatorViewFactory.create(superview: self.view)
     }()
-
     
     private func configure(textField: UITextField) {
         textField.autocorrectionType = .no
