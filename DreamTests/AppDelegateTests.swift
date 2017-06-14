@@ -21,6 +21,7 @@ class AppDelegateTests: XCTestCase {
         keychain = MockKeychainProtocol()
         authenticationController = AuthenticationController(keychain: keychain)
         window = UIWindow()
+        window.makeKeyAndVisible()
         appDelegate = AppDelegate(authenticationController: authenticationController)
         appDelegate.window = window
     }

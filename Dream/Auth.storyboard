@@ -21,7 +21,7 @@
         <!--Home Auth Table View Controller-->
         <scene sceneID="PE2-wc-nsJ">
             <objects>
-                <tableViewController id="cra-pF-LgU" customClass="HomeAuthTableViewController" customModule="Dream" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeAuthTableViewController" id="cra-pF-LgU" customClass="HomeAuthTableViewController" customModule="Dream" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="CuA-9C-JdN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="4Y8-9e-soq"/>
                     <connections>
-                        <segue destination="tsM-js-SBi" kind="presentation" identifier="HomeTabBarControllerSegue" id="kf9-JS-JrL"/>
+                        <segue destination="tsM-js-SBi" kind="presentation" identifier="HomeViewControllerSegue" id="kf9-JS-JrL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggC-0f-KIl" userLabel="First Responder" sceneMemberID="firstResponder"/>

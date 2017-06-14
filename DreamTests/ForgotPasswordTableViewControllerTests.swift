@@ -19,7 +19,7 @@ class ForgotPasswordTableViewControllerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        controller = UIStoryboard.auth.instantiateViewController(withIdentifier: "ForgotPasswordTableViewController") as? ForgotPasswordTableViewController
+        controller = AuthStoryboardFactory.forgotPasswordTableViewController
         window = UIWindow()
         window.makeKeyAndVisible()
         navigationController = MockUINavigationController(rootViewController: controller)
@@ -30,12 +30,6 @@ class ForgotPasswordTableViewControllerTests: XCTestCase {
         controller.email = "jt@gmail.com"
         controller.loadView()
         controller.viewDidLoad()
-
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
     }
     
     func testViewDidLoadConfiguresEmailTextField() {
