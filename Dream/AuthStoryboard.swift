@@ -15,18 +15,18 @@ struct AuthStoryboardFactory {
     }
     
     static var registerAccountTableViewController: RegisterAccountTableViewController {
-        return storyboard.instantiateViewController(withIdentifier: "RegisterAccountTableViewController") as! RegisterAccountTableViewController
+        return storyboard.instantiateViewController()
     }
     
     static var homeAuthTableViewController: HomeAuthTableViewController {
-        return storyboard.instantiateViewController(withIdentifier: "HomeAuthTableViewController") as! HomeAuthTableViewController
+        return storyboard.instantiateViewController()
     }
     
     static var signInTableViewController: SignInTableViewController {
-        return storyboard.instantiateViewController(withIdentifier: "SignInTableViewController") as! SignInTableViewController
+        return storyboard.instantiateViewController()
     }
     
     static var forgotPasswordTableViewController: ForgotPasswordTableViewController {
-        return storyboard.instantiateViewController(withIdentifier: "ForgotPasswordTableViewController") as!ForgotPasswordTableViewController
+        return storyboard.instantiateViewController()
     }
 }

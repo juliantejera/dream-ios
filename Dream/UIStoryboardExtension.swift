@@ -20,4 +20,14 @@ extension UIStoryboard {
     class var users: UIStoryboard {
         return UIStoryboard(name: "Users", bundle: .main)
     }
+    
+    func instantiateViewController<T>() -> T {
+        let name = String(describing: T.self)
+        guard let viewController = instantiateViewController(withIdentifier: name) as? T else {
+            fatalError("Could not instantiate \(name) from the storyboard")
+        }
+        
+        return viewController
+    }
+    
 }
