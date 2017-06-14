@@ -46,6 +46,11 @@ class SignInTableViewController: UITableViewController {
         self.tableView.keyboardDismissMode = .onDrag
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        emailTextField.becomeFirstResponder()
+    }
+    
     @IBAction func signIn() {
         guard !activityIndicatorView.isAnimating else {
             return

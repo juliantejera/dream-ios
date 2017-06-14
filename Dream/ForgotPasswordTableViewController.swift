@@ -31,6 +31,11 @@ class ForgotPasswordTableViewController: UITableViewController {
         self.emailTextField.text = email
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        emailTextField.becomeFirstResponder()
+    }
+    
     @IBAction func sendForgotPasswordRequest(_ sender: UIBarButtonItem) {
         guard !activityIndicatorView.isAnimating else {
             return

@@ -68,7 +68,12 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.keyboardDismissMode = .onDrag
+        tableView.keyboardDismissMode = .onDrag
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        emailTextField.becomeFirstResponder()
     }
     
     @IBAction func registerAccount(_ sender: UIBarButtonItem) {

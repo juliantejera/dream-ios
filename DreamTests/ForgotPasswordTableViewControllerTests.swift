@@ -38,6 +38,13 @@ class ForgotPasswordTableViewControllerTests: XCTestCase {
         XCTAssertEqual(actual, expected)
     }
     
+    func testViewWillAppearMakesTheEmailTextFieldTheFirstResponder() {
+        let textField = MockUITextField()
+        controller.emailTextField = textField
+        controller.viewWillAppear(false)
+        XCTAssertEqual(textField.didBecomeFirstResponder, 1)
+    }
+    
     func testTableViewNumberOfRowsInSection() {
         let actual = controller.tableView(controller.tableView, numberOfRowsInSection: 0)
         let expected = 1
