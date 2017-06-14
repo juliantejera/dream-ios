@@ -20,9 +20,7 @@ class ForgotPasswordTableViewController: UITableViewController {
     }
     
     lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let activityIndicatorView = self.createActivityIndicatorView()
-        self.view.addSubview(activityIndicatorView)
-        return activityIndicatorView
+        return ActivityIndicatorViewFactory.create(superview: self.view)
     }()
     
     var email: String = ""
