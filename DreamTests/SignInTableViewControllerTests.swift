@@ -37,6 +37,13 @@ class SignInTableViewControllerTests: XCTestCase {
         XCTAssertEqual(actual, expected)
     }
     
+    func testViewWillAppearMakesTheEmailTextFieldTheFirstResponder() {
+        let textField = MockUITextField()
+        controller.emailTextField = textField
+        controller.viewWillAppear(false)
+        XCTAssertEqual(textField.didBecomeFirstResponder, 1)
+    }
+    
     func testTableViewNumberOfSections() {
         let actual = controller.numberOfSections(in: controller.tableView)
         let expected = SignInTableViewControllerSections.count

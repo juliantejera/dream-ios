@@ -81,6 +81,25 @@ class RegisterAccountTableViewControllerSpec: QuickSpec {
                         expect(controller.tableView.keyboardDismissMode).to(equal(UIScrollViewKeyboardDismissMode.onDrag))
                     }
                 }
+        
+            }
+            
+            describe("viewWillAppear") {
+                describe("emailTextField") {
+                    
+                    var textField: MockUITextField!
+                    
+                    beforeEach {
+                        textField = MockUITextField()
+                        controller.emailTextField = textField
+                        controller.viewWillAppear(false)
+                    }
+                    
+                    it("becomes the first responder") {
+                        expect(textField.didBecomeFirstResponder).to(equal(1))
+                    }
+                    
+                }
             }
             
             describe("registerAccount") {
