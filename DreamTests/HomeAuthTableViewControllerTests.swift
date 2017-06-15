@@ -40,4 +40,14 @@ class HomeAuthTableViewControllerTests: XCTestCase {
         JTAssertIdentical(destination.delegate, controller)
     }
 
+    func testViewWillAppearHidesNavigationBar() {
+        controller.viewWillAppear(false)
+        XCTAssert(navigationController.isNavigationBarHidden)
+    }
+    
+    func testViewWillDisappearRevealsTheNavigationBar() {
+        controller.viewWillDisappear(false)
+        XCTAssertFalse(navigationController.isNavigationBarHidden)
+    }
+
 }

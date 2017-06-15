@@ -27,15 +27,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="RgF-6b-wiy">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T4c-MF-3W8">
+                                    <rect key="frame" x="67" y="30" width="240" height="240"/>
+                                    <color key="backgroundColor" red="0.35834740490618849" green="0.6345111635137376" blue="0.83344918489456177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="240" id="TO4-HF-9P7"/>
+                                        <constraint firstAttribute="height" constant="240" id="aE6-qg-go9"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="T4c-MF-3W8" firstAttribute="centerY" secondItem="RgF-6b-wiy" secondAttribute="centerY" id="JZd-hz-97e"/>
+                                <constraint firstItem="T4c-MF-3W8" firstAttribute="centerX" secondItem="RgF-6b-wiy" secondAttribute="centerX" id="KN0-lx-Px5"/>
+                            </constraints>
                         </view>
                         <sections>
                             <tableViewSection id="raF-Vv-xVZ">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="b68-8Y-4L8" style="IBUITableViewCellStyleDefault" id="PgY-D5-Fl6">
-                                        <rect key="frame" x="0.0" y="180" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="b68-8Y-4L8" style="IBUITableViewCellStyleDefault" id="PgY-D5-Fl6">
+                                        <rect key="frame" x="0.0" y="300" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PgY-D5-Fl6" id="MSz-G2-YNR">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -54,8 +67,8 @@
                                             <segue destination="6Md-bl-jYJ" kind="show" identifier="SignInTableViewControllerSegue" id="CCC-XS-vj5"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bL7-od-iSf" style="IBUITableViewCellStyleDefault" id="Mnw-L9-SN6">
-                                        <rect key="frame" x="0.0" y="224" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bL7-od-iSf" style="IBUITableViewCellStyleDefault" id="Mnw-L9-SN6">
+                                        <rect key="frame" x="0.0" y="344" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mnw-L9-SN6" id="dkZ-pW-MDf">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -84,6 +97,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="4Y8-9e-soq"/>
                     <connections>
+                        <outlet property="imageView" destination="T4c-MF-3W8" id="rf6-k2-FMz"/>
                         <segue destination="tsM-js-SBi" kind="presentation" identifier="HomeViewControllerSegue" id="kf9-JS-JrL"/>
                     </connections>
                 </tableViewController>
