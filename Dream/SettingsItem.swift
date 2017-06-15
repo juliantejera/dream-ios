@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SettingsItem {
+enum SettingsItem: Int {
     
     case signOut
     
@@ -18,5 +18,7 @@ enum SettingsItem {
             return "Sign out"
         }
     }
+    
+    static let count = 1
 
 }

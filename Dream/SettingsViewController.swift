@@ -17,23 +17,26 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    var settingsItems: [SettingsItem] = [.signOut]
     var authenticationController = AuthenticationController()
     var application: UIApplicationProtocol = UIApplication.shared
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settingsItems.count
+        return SettingsItem.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SettingsItemTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        let settingsItem = settingsItems[indexPath.row]
-        cell.textLabel?.text = settingsItem.title
+        if let settingsItem = SettingsItem(rawValue: indexPath.row) {
+            cell.textLabel?.text = settingsItem.title
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let settingsItem = settingsItems[indexPath.row]
+        guard let settingsItem = SettingsItem(rawValue: indexPath.row) else {
+            return
+        }
+        
         switch settingsItem {
         case .signOut:
             signOut()
@@ -41,14 +44,14 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func signOut() {
-        guard let window = UIApplication.shared.keyWindow else {
+        guard let window = application.keyWindow else {
             return
         }
         
         authenticationController.removeToken()
         let options: UIViewAnimationOptions = [.curveEaseInOut, .transitionCrossDissolve]
         UIView.transition(with: window, duration: 0.3, options: options, animations: { 
-            self.application.keyWindow?.rootViewController = UIStoryboard.auth.instantiateInitialViewController()
+            window.rootViewController = UIStoryboard.auth.instantiateInitialViewController()
         }, completion: nil)
     }
 
