@@ -36,4 +36,13 @@ class MockKeychainProtocol: KeychainProtocol {
             attributes[key] = value
         }
     }
+    
+    func remove(_ key: String) throws {
+        switch state {
+        case .failure:
+            throw state
+        case .none:
+            attributes.removeValue(forKey: key)
+        }
+    }
 }
