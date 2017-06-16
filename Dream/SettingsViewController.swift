@@ -17,8 +17,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    var authenticationController = AuthenticationController()
-    var application: UIApplicationProtocol = UIApplication.shared
+    var signOutAlertViewControllerFactory = SignOutAlertControllerFactory()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SettingsItem.count
@@ -39,20 +38,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         switch settingsItem {
         case .signOut:
-            signOut()
+            present(signOutAlertViewControllerFactory.create(), animated: true, completion: nil)
         }
-    }
-    
-    private func signOut() {
-        guard let window = application.keyWindow else {
-            return
-        }
-        
-        authenticationController.removeToken()
-        let options: UIViewAnimationOptions = [.curveEaseInOut, .transitionCrossDissolve]
-        UIView.transition(with: window, duration: 0.3, options: options, animations: { 
-            window.rootViewController = UIStoryboard.auth.instantiateInitialViewController()
-        }, completion: nil)
     }
 
 }

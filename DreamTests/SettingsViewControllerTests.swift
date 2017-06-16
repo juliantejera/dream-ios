@@ -12,18 +12,14 @@ import XCTest
 class SettingsViewControllerTests: XCTestCase {
     
     var controller: SettingsViewController!
-    var authenticationController: AuthenticationController!
-    var keychain: MockKeychainProtocol!
-    var application: MockUIApplication!
+    var window: UIWindow!
     
     override func setUp() {
         super.setUp()
-        keychain = MockKeychainProtocol()
-        authenticationController = AuthenticationController(keychain: keychain)
-        application = MockUIApplication()
         controller = createSettingsViewController()
-        controller.authenticationController = authenticationController
-        controller.application = application
+        window = UIWindow()
+        window.rootViewController = controller
+        window.makeKeyAndVisible()
         controller.loadView()
     }
     
@@ -56,14 +52,10 @@ class SettingsViewControllerTests: XCTestCase {
         XCTAssertEqual(cell?.textLabel?.text, settingsItem.title)
     }
     
-    func testTableViewDidSelectRow_whenTheSignOutSettingsItemIsSelected_itSignsOutTheUser() {
+    func testTableViewDidSelectRow_whenTheSignOutSettingsItemIsSelected_itPresentsAnAlertController() {
         let settingsItem = SettingsItem.signOut
         let indexPath = IndexPath(row: settingsItem.rawValue, section: 0)
-        authenticationController.persist(token: RFC6750BearerToken.create())
         controller.tableView(controller.tableView, didSelectRowAt: indexPath)
-        
-        XCTAssertNil(authenticationController.extract())
-        XCTAssert(application.keyWindow?.rootViewController is AuthNavigationController)
+        XCTAssert(controller.presentedViewController is UIAlertController)
     }
-
 }
