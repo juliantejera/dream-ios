@@ -34,6 +34,19 @@ struct AuthenticationController {
         }
     }
     
+    func removeToken() {
+        do {
+            try keychain.remove(RFC6750BearerTokenParser.Keys.accessToken)
+            try keychain.remove(RFC6750BearerTokenParser.Keys.tokenType)
+            try keychain.remove(RFC6750BearerTokenParser.Keys.client)
+            try keychain.remove(RFC6750BearerTokenParser.Keys.expiry)
+            try keychain.remove(RFC6750BearerTokenParser.Keys.uid)
+        } catch let error {
+            print("Keychain error: \(error)")
+        }
+
+    }
+    
     func extract() -> RFC6750BearerToken? {
         do {
             let dictionary = [

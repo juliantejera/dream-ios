@@ -58,6 +58,17 @@
 		B97778781EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778771EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift */; };
 		B977787A1EF0CFEC00A6E250 /* AuthStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778791EF0CFEC00A6E250 /* AuthStoryboard.swift */; };
 		B977787C1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977787B1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift */; };
+		B97778821EF21DE300A6E250 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B97778811EF21DE300A6E250 /* Settings.storyboard */; };
+		B97778841EF21E2500A6E250 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778831EF21E2500A6E250 /* SettingsViewController.swift */; };
+		B97778861EF2219900A6E250 /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778851EF2219900A6E250 /* SettingsItem.swift */; };
+		B97778881EF2228A00A6E250 /* UiTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778871EF2228A00A6E250 /* UiTableViewExtension.swift */; };
+		B977788B1EF2239300A6E250 /* SettingsItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977788A1EF2239300A6E250 /* SettingsItemTableViewCell.swift */; };
+		B977788F1EF235C300A6E250 /* UIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977788E1EF235C300A6E250 /* UIApplicationProtocol.swift */; };
+		B97778911EF2B2B100A6E250 /* SettingsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778901EF2B2B100A6E250 /* SettingsViewControllerTests.swift */; };
+		B97778931EF2BA4600A6E250 /* MockUIApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778921EF2BA4600A6E250 /* MockUIApplicationProtocol.swift */; };
+		B97778951EF2BCDD00A6E250 /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778941EF2BCDD00A6E250 /* AuthNavigationController.swift */; };
+		B97778971EF375B600A6E250 /* SignOutAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */; };
+		B977789B1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */; };
 		B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F31E2B1D87004CCC50 /* AppDelegate.swift */; };
 		B98652F61E2B1D87004CCC50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F51E2B1D87004CCC50 /* ViewController.swift */; };
 		B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652F71E2B1D87004CCC50 /* Main.storyboard */; };
@@ -158,6 +169,17 @@
 		B97778771EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAuthTableViewControllerTests.swift; sourceTree = "<group>"; };
 		B97778791EF0CFEC00A6E250 /* AuthStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthStoryboard.swift; sourceTree = "<group>"; };
 		B977787B1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewFactory.swift; sourceTree = "<group>"; };
+		B97778811EF21DE300A6E250 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		B97778831EF21E2500A6E250 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B97778851EF2219900A6E250 /* SettingsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		B97778871EF2228A00A6E250 /* UiTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiTableViewExtension.swift; sourceTree = "<group>"; };
+		B977788A1EF2239300A6E250 /* SettingsItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsItemTableViewCell.swift; sourceTree = "<group>"; };
+		B977788E1EF235C300A6E250 /* UIApplicationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationProtocol.swift; sourceTree = "<group>"; };
+		B97778901EF2B2B100A6E250 /* SettingsViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerTests.swift; sourceTree = "<group>"; };
+		B97778921EF2BA4600A6E250 /* MockUIApplicationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUIApplicationProtocol.swift; sourceTree = "<group>"; };
+		B97778941EF2BCDD00A6E250 /* AuthNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
+		B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutAlertControllerFactory.swift; sourceTree = "<group>"; };
+		B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutAlertControllerFactoryTests.swift; sourceTree = "<group>"; };
 		B98652F01E2B1D87004CCC50 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98652F31E2B1D87004CCC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B98652F51E2B1D87004CCC50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */,
+				B97778901EF2B2B100A6E250 /* SettingsViewControllerTests.swift */,
 				B97778691EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift */,
 				B9E75B401EE108BB00A137FF /* SignInTableViewControllerTests.swift */,
 				B97778771EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift */,
@@ -292,6 +315,7 @@
 				B977786B1EEF7BF800A6E250 /* MockUINavigationController.swift */,
 				B9224C851EECE3B3005DBEED /* MockSignInTableViewControllerDelegate.swift */,
 				B90697731ED13CB80045E34E /* MockUITextField.swift */,
+				B97778921EF2BA4600A6E250 /* MockUIApplicationProtocol.swift */,
 			);
 			name = "Mocks & Spies";
 			sourceTree = "<group>";
@@ -378,6 +402,14 @@
 			name = "View Models";
 			sourceTree = "<group>";
 		};
+		B97778891EF2236E00A6E250 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				B977788A1EF2239300A6E250 /* SettingsItemTableViewCell.swift */,
+			);
+			name = VIews;
+			sourceTree = "<group>";
+		};
 		B98652E71E2B1D87004CCC50 = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +435,7 @@
 			children = (
 				B9E75B591EE26D7300A137FF /* Dream.entitlements */,
 				B98652F31E2B1D87004CCC50 /* AppDelegate.swift */,
+				B97778891EF2236E00A6E250 /* VIews */,
 				B9E75B621EE2F56600A137FF /* Protocols */,
 				B9E75B421EE1098E00A137FF /* Extensions */,
 				B924DAEE1EA45CFD009F1FF8 /* View Models */,
@@ -447,6 +480,7 @@
 				B977786D1EF006E400A6E250 /* Home.storyboard */,
 				B97778711EF00E0200A6E250 /* Users.storyboard */,
 				B97778791EF0CFEC00A6E250 /* AuthStoryboard.swift */,
+				B97778811EF21DE300A6E250 /* Settings.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -461,6 +495,8 @@
 				B977785D1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift */,
 				B977786F1EF007B100A6E250 /* UsersViewController.swift */,
 				B97778751EF014A200A6E250 /* HomeViewController.swift */,
+				B97778831EF21E2500A6E250 /* SettingsViewController.swift */,
+				B97778941EF2BCDD00A6E250 /* AuthNavigationController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -470,6 +506,7 @@
 			children = (
 				B9E75B3E1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift */,
 				B9E75B601EE2751300A137FF /* AuthenticationControllerTests.swift */,
+				B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -480,6 +517,7 @@
 				B9E75B451EE10ABC00A137FF /* UIStoryboardExtension.swift */,
 				B9E75B6B1EE440E500A137FF /* DictionaryExtension.swift */,
 				B9224C7F1EECD052005DBEED /* UIViewControllerExtension.swift */,
+				B97778871EF2228A00A6E250 /* UiTableViewExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -488,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E75B631EE2F57800A137FF /* KeychainProtocol.swift */,
+				B977788E1EF235C300A6E250 /* UIApplicationProtocol.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -517,6 +556,8 @@
 			isa = PBXGroup;
 			children = (
 				B9E75B571EE2627E00A137FF /* AuthenticationController.swift */,
+				B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */,
+				B97778851EF2219900A6E250 /* SettingsItem.swift */,
 				B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */,
 				B9E75B531EE18ED500A137FF /* RFC6750BearerToken.swift */,
 				B977787B1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift */,
@@ -626,6 +667,7 @@
 				B97778721EF00E0200A6E250 /* Users.storyboard in Resources */,
 				B98652FB1E2B1D87004CCC50 /* Assets.xcassets in Resources */,
 				B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */,
+				B97778821EF21DE300A6E250 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,9 +788,12 @@
 			files = (
 				B98652F61E2B1D87004CCC50 /* ViewController.swift in Sources */,
 				B924DAD81EA324BA009F1FF8 /* Validator.swift in Sources */,
+				B97778861EF2219900A6E250 /* SettingsItem.swift in Sources */,
 				B9E75B541EE18ED500A137FF /* RFC6750BearerToken.swift in Sources */,
 				B924DAE41EA3B296009F1FF8 /* PasswordValidator.swift in Sources */,
 				B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */,
+				B977788F1EF235C300A6E250 /* UIApplicationProtocol.swift in Sources */,
+				B97778841EF21E2500A6E250 /* SettingsViewController.swift in Sources */,
 				B97778761EF014A200A6E250 /* HomeViewController.swift in Sources */,
 				B977787A1EF0CFEC00A6E250 /* AuthStoryboard.swift in Sources */,
 				B924DAE81EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift in Sources */,
@@ -761,21 +806,25 @@
 				B9E75B501EE1141800A137FF /* SignInViewModelSerializer.swift in Sources */,
 				B924DAF61EB19796009F1FF8 /* ErrorsParser.swift in Sources */,
 				B9E75B481EE1108C00A137FF /* SignInViewModel.swift in Sources */,
+				B97778881EF2228A00A6E250 /* UiTableViewExtension.swift in Sources */,
 				B977785E1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift in Sources */,
 				B924DAF01EA45D13009F1FF8 /* AccountRegistrationViewModel.swift in Sources */,
 				B9FD3B601E9FCFD90018BEE6 /* DreamNetworkClient.swift in Sources */,
 				B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */,
+				B977788B1EF2239300A6E250 /* SettingsItemTableViewCell.swift in Sources */,
 				B924DAE01EA3ACDE009F1FF8 /* EmailValidator.swift in Sources */,
 				B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */,
 				B9224C801EECD052005DBEED /* UIViewControllerExtension.swift in Sources */,
 				B9E75B461EE10ABC00A137FF /* UIStoryboardExtension.swift in Sources */,
 				B9FD3B5E1E9FCF0B0018BEE6 /* NetworkClient.swift in Sources */,
+				B97778971EF375B600A6E250 /* SignOutAlertControllerFactory.swift in Sources */,
 				B924DAED1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift in Sources */,
 				B9FD3B6A1EA034BE0018BEE6 /* AuthenticationNetworkManager.swift in Sources */,
 				B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */,
 				B977787C1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift in Sources */,
 				B9E75B6A1EE3CE7500A137FF /* RFC6750BearerTokenSerializer.swift in Sources */,
 				B9E75B641EE2F57800A137FF /* KeychainProtocol.swift in Sources */,
+				B97778951EF2BCDD00A6E250 /* AuthNavigationController.swift in Sources */,
 				B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */,
 				B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */,
 				B9E75B6C1EE440E500A137FF /* DictionaryExtension.swift in Sources */,
@@ -799,6 +848,7 @@
 				B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */,
 				B9E75B611EE2751300A137FF /* AuthenticationControllerTests.swift in Sources */,
 				B9224C7E1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift in Sources */,
+				B977789B1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift in Sources */,
 				B9E75B4E1EE1123400A137FF /* SignInViewModelExtension.swift in Sources */,
 				B90697681ECFED790045E34E /* NetworkClientResultAssertions.swift in Sources */,
 				B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */,
@@ -807,6 +857,7 @@
 				B97778681EEF76CA00A6E250 /* ForgotPasswordParserTests.swift in Sources */,
 				B977786C1EEF7BF800A6E250 /* MockUINavigationController.swift in Sources */,
 				B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */,
+				B97778911EF2B2B100A6E250 /* SettingsViewControllerTests.swift in Sources */,
 				B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */,
 				B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */,
 				B9E75B411EE108BB00A137FF /* SignInTableViewControllerTests.swift in Sources */,
@@ -814,6 +865,7 @@
 				B906976B1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift in Sources */,
 				B97778781EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift in Sources */,
 				B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */,
+				B97778931EF2BA4600A6E250 /* MockUIApplicationProtocol.swift in Sources */,
 				B977786A1EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift in Sources */,
 				B9E75B4C1EE1119500A137FF /* SignInViewModelValidatorTests.swift in Sources */,
 				B9E75B681EE2FA4700A137FF /* CustomTestAssertions.swift in Sources */,

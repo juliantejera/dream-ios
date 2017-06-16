@@ -57,4 +57,20 @@ class AuthenticationControllerTests: XCTestCase {
         keychain.state = .failure
         XCTAssertNil(authenticationController.extract())
     }
+    
+    func testRemoveTokenWhenItSucceeds() {
+        authenticationController.persist(token: RFC6750BearerToken.create())
+        authenticationController.removeToken()
+        XCTAssertNil(authenticationController.extract())
+    }
+    
+    func testRemoveWhenItFails() {
+        let expected = RFC6750BearerToken.create()
+        authenticationController.persist(token: expected)
+        keychain.state = .failure
+        authenticationController.removeToken()
+        keychain.state = .none
+        let actual = authenticationController.extract()
+        XCTAssertEqual(actual, expected)
+    }
 }

@@ -436,10 +436,10 @@
             </objects>
             <point key="canvasLocation" x="2914" y="690"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Auth Navigation Controller-->
         <scene sceneID="9ZL-vv-bqm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Thi-oD-dyx" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Thi-oD-dyx" customClass="AuthNavigationController" customModule="Dream" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Rz-wu-aLj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
