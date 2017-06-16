@@ -41,11 +41,14 @@
         <scene sceneID="7UY-s1-3F2">
             <objects>
                 <viewControllerPlaceholder storyboardName="Settings" id="JNe-PI-sHf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="5le-Rz-6Nq"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="5le-Rz-6Nq"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mQq-e8-AQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="79" y="-111"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="25" height="25"/>
+    </resources>
 </document>
