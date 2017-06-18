@@ -1,0 +1,12 @@
+{
+  "distance": 50,
+  "id": 1,
+  "photos": [
+    {
+      "id": 1,
+      "order": 0,
+      "status": 2,
+      "url": "https://google.com"
+    }
+  ]
+}
