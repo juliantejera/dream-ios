@@ -87,6 +87,7 @@
 		B9B250BE1EF6C35500F1EA23 /* UserParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250BD1EF6C35500F1EA23 /* UserParserTests.swift */; };
 		B9B250C01EF6C3A600F1EA23 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = B9B250BF1EF6C3A600F1EA23 /* user.json */; };
 		B9B250C21EF6C45100F1EA23 /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250C11EF6C45100F1EA23 /* UserExtension.swift */; };
+		B9B250C41EF6C5B600F1EA23 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250C31EF6C5B600F1EA23 /* NetworkManager.swift */; };
 		B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */; };
 		B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */; };
 		B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */; };
@@ -215,6 +216,7 @@
 		B9B250BD1EF6C35500F1EA23 /* UserParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParserTests.swift; sourceTree = "<group>"; };
 		B9B250BF1EF6C3A600F1EA23 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		B9B250C11EF6C45100F1EA23 /* UserExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserExtension.swift; sourceTree = "<group>"; };
+		B9B250C31EF6C5B600F1EA23 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
 		B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewController.swift; sourceTree = "<group>"; };
@@ -580,6 +582,7 @@
 				B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */,
 				B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */,
 				B9FD3B691EA034BE0018BEE6 /* AuthenticationNetworkManager.swift */,
+				B9B250C31EF6C5B600F1EA23 /* NetworkManager.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -851,6 +854,7 @@
 				B9E75B4A1EE1112F00A137FF /* SignInViewModelValidator.swift in Sources */,
 				B924DAF41EAD9EEE009F1FF8 /* Serializer.swift in Sources */,
 				B97778601EEDDDD700A6E250 /* ForgotPasswordParser.swift in Sources */,
+				B9B250C41EF6C5B600F1EA23 /* NetworkManager.swift in Sources */,
 				B9E75B581EE2627E00A137FF /* AuthenticationController.swift in Sources */,
 				B97778701EF007B100A6E250 /* UsersViewController.swift in Sources */,
 				B9E75B501EE1141800A137FF /* SignInViewModelSerializer.swift in Sources */,
