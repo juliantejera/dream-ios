@@ -88,6 +88,9 @@
 		B9B250C01EF6C3A600F1EA23 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = B9B250BF1EF6C3A600F1EA23 /* user.json */; };
 		B9B250C21EF6C45100F1EA23 /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250C11EF6C45100F1EA23 /* UserExtension.swift */; };
 		B9B250C41EF6C5B600F1EA23 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250C31EF6C5B600F1EA23 /* NetworkManager.swift */; };
+		B9B250C61EF6C90000F1EA23 /* UserNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250C51EF6C90000F1EA23 /* UserNetworkManager.swift */; };
+		B9B250C81EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250C71EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift */; };
+		B9B250CA1EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json in Resources */ = {isa = PBXBuildFile; fileRef = B9B250C91EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json */; };
 		B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */; };
 		B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */; };
 		B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */; };
@@ -217,6 +220,9 @@
 		B9B250BF1EF6C3A600F1EA23 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		B9B250C11EF6C45100F1EA23 /* UserExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserExtension.swift; sourceTree = "<group>"; };
 		B9B250C31EF6C5B600F1EA23 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B9B250C51EF6C90000F1EA23 /* UserNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNetworkManager.swift; sourceTree = "<group>"; };
+		B9B250C71EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNetworkManagerTests.swift; sourceTree = "<group>"; };
+		B9B250C91EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_network_manager_find_all_success.json; sourceTree = "<group>"; };
 		B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
 		B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewController.swift; sourceTree = "<group>"; };
@@ -376,6 +382,7 @@
 				B90697651ECFE74D0045E34E /* authentication_network_manager_register_failure.json */,
 				B97778631EEF752000A6E250 /* authentication_network_manager_forgot_password_success.json */,
 				B97778651EEF762E00A6E250 /* authentication_network_manager_forgot_password_unknown_email.json */,
+				B9B250C91EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -384,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				B906975F1ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift */,
+				B9B250C71EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift */,
 				B97778611EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift */,
 			);
 			name = "Network Managers";
@@ -582,6 +590,7 @@
 				B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */,
 				B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */,
 				B9FD3B691EA034BE0018BEE6 /* AuthenticationNetworkManager.swift */,
+				B9B250C51EF6C90000F1EA23 /* UserNetworkManager.swift */,
 				B9B250C31EF6C5B600F1EA23 /* NetworkManager.swift */,
 			);
 			name = Networking;
@@ -728,6 +737,7 @@
 				B9B250B61EF62DA400F1EA23 /* photo.json in Resources */,
 				B90AC44F1EC76D2A007C0FA4 /* errors_parser_valid.json in Resources */,
 				B9E75B5D1EE26FF500A137FF /* bearer_token.json in Resources */,
+				B9B250CA1EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json in Resources */,
 				B90697641ECFE6F50045E34E /* authentication_network_manager_register_success.json in Resources */,
 				B9B250C01EF6C3A600F1EA23 /* user.json in Resources */,
 				B9224C821EECDDAA005DBEED /* authentication_network_manager_sign_in_success.json in Resources */,
@@ -846,6 +856,7 @@
 				B924DAE41EA3B296009F1FF8 /* PasswordValidator.swift in Sources */,
 				B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */,
 				B977788F1EF235C300A6E250 /* UIApplicationProtocol.swift in Sources */,
+				B9B250C61EF6C90000F1EA23 /* UserNetworkManager.swift in Sources */,
 				B97778841EF21E2500A6E250 /* SettingsViewController.swift in Sources */,
 				B97778761EF014A200A6E250 /* HomeViewController.swift in Sources */,
 				B977787A1EF0CFEC00A6E250 /* AuthStoryboard.swift in Sources */,
@@ -915,6 +926,7 @@
 				B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */,
 				B9E75B5B1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift in Sources */,
 				B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */,
+				B9B250C81EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift in Sources */,
 				B9B250C21EF6C45100F1EA23 /* UserExtension.swift in Sources */,
 				B97778681EEF76CA00A6E250 /* ForgotPasswordParserTests.swift in Sources */,
 				B9B250B81EF62E5B00F1EA23 /* PhotoExtension.swift in Sources */,
