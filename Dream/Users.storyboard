@@ -20,9 +20,45 @@
                     <view key="view" contentMode="scaleToFill" id="O3W-fQ-ZMe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tqj-AT-P3y">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="kVs-Lp-q8x">
+                                    <size key="itemSize" width="120" height="120"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="1" minY="1" maxX="1" maxY="1"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserCollectionViewCell" id="Vdv-s8-Y6N" customClass="UserCollectionViewCell" customModule="Dream" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="1" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="TbZ-YB-ubR" id="ZLl-iW-yTh"/>
+                                    <outlet property="delegate" destination="TbZ-YB-ubR" id="PL1-fI-2j6"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tqj-AT-P3y" firstAttribute="centerX" secondItem="O3W-fQ-ZMe" secondAttribute="centerX" id="YPA-ar-XiR"/>
+                            <constraint firstItem="tqj-AT-P3y" firstAttribute="centerY" secondItem="O3W-fQ-ZMe" secondAttribute="centerY" id="fAr-Kf-C6b"/>
+                            <constraint firstItem="tqj-AT-P3y" firstAttribute="width" secondItem="O3W-fQ-ZMe" secondAttribute="width" id="gaf-Wm-anE"/>
+                            <constraint firstItem="tqj-AT-P3y" firstAttribute="height" secondItem="O3W-fQ-ZMe" secondAttribute="height" id="jpW-lc-50B"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="T1u-PP-YRn"/>
+                    <connections>
+                        <outlet property="collectionView" destination="tqj-AT-P3y" id="bm5-eB-aWF"/>
+                        <outlet property="collectionViewFlowLayout" destination="kVs-Lp-q8x" id="T2m-0u-cSA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eb0-d6-65N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
