@@ -91,6 +91,7 @@
 		B9B250C61EF6C90000F1EA23 /* UserNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250C51EF6C90000F1EA23 /* UserNetworkManager.swift */; };
 		B9B250C81EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250C71EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift */; };
 		B9B250CA1EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json in Resources */ = {isa = PBXBuildFile; fileRef = B9B250C91EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json */; };
+		B9B250CC1EF774B500F1EA23 /* UsersViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250CB1EF774B500F1EA23 /* UsersViewControllerTests.swift */; };
 		B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */; };
 		B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */; };
 		B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */; };
@@ -223,6 +224,7 @@
 		B9B250C51EF6C90000F1EA23 /* UserNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNetworkManager.swift; sourceTree = "<group>"; };
 		B9B250C71EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNetworkManagerTests.swift; sourceTree = "<group>"; };
 		B9B250C91EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_network_manager_find_all_success.json; sourceTree = "<group>"; };
+		B9B250CB1EF774B500F1EA23 /* UsersViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewControllerTests.swift; sourceTree = "<group>"; };
 		B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
 		B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewController.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				B97778691EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift */,
 				B9E75B401EE108BB00A137FF /* SignInTableViewControllerTests.swift */,
 				B97778771EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift */,
+				B9B250CB1EF774B500F1EA23 /* UsersViewControllerTests.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -917,6 +920,7 @@
 				B90697601ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift in Sources */,
 				B924DAEA1EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift in Sources */,
 				B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */,
+				B9B250CC1EF774B500F1EA23 /* UsersViewControllerTests.swift in Sources */,
 				B9B250BE1EF6C35500F1EA23 /* UserParserTests.swift in Sources */,
 				B9E75B611EE2751300A137FF /* AuthenticationControllerTests.swift in Sources */,
 				B9224C7E1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift in Sources */,

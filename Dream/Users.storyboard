@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Users View Controller-->
         <scene sceneID="bO6-OL-eGb">
             <objects>
-                <viewController id="TbZ-YB-ubR" customClass="UsersViewController" customModule="Dream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UsersViewController" id="TbZ-YB-ubR" customClass="UsersViewController" customModule="Dream" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N9s-uZ-DhP"/>
                         <viewControllerLayoutGuide type="bottom" id="TxA-M0-hMx"/>
@@ -37,7 +38,35 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fcv-QH-VGU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igz-rE-c8u">
+                                                    <rect key="frame" x="0.0" y="94" width="120" height="26"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="2dR-vg-ll3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="fcv-QH-VGU" firstAttribute="height" secondItem="Vdv-s8-Y6N" secondAttribute="height" id="T56-jc-cX5"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Igz-rE-c8u" secondAttribute="bottom" constant="-8" id="X45-Bo-fb2"/>
+                                            <constraint firstItem="Igz-rE-c8u" firstAttribute="width" secondItem="Vdv-s8-Y6N" secondAttribute="width" id="amu-VP-5mP"/>
+                                            <constraint firstItem="fcv-QH-VGU" firstAttribute="centerX" secondItem="Vdv-s8-Y6N" secondAttribute="centerX" id="hg1-5n-b5R"/>
+                                            <constraint firstItem="Igz-rE-c8u" firstAttribute="centerX" secondItem="Vdv-s8-Y6N" secondAttribute="centerX" id="huc-QC-AHC"/>
+                                            <constraint firstItem="fcv-QH-VGU" firstAttribute="width" secondItem="Vdv-s8-Y6N" secondAttribute="width" id="qGi-Jn-Y1d"/>
+                                            <constraint firstItem="fcv-QH-VGU" firstAttribute="centerY" secondItem="Vdv-s8-Y6N" secondAttribute="centerY" id="wWs-zp-5Uk"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="Igz-rE-c8u" id="LiJ-1S-62B"/>
+                                            <outlet property="imageView" destination="fcv-QH-VGU" id="xZK-Ur-Ld6"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
