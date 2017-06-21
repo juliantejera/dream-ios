@@ -92,6 +92,11 @@
 		B9B250C81EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250C71EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift */; };
 		B9B250CA1EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json in Resources */ = {isa = PBXBuildFile; fileRef = B9B250C91EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json */; };
 		B9B250CC1EF774B500F1EA23 /* UsersViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250CB1EF774B500F1EA23 /* UsersViewControllerTests.swift */; };
+		B9B250D21EF7F4BE00F1EA23 /* ImageNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250D11EF7F4BE00F1EA23 /* ImageNetworkManager.swift */; };
+		B9B250D61EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250D51EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift */; };
+		B9B250D81EF8001500F1EA23 /* ImageNetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250D71EF8001500F1EA23 /* ImageNetworkManagerProtocol.swift */; };
+		B9B250DA1EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250D91EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift */; };
+		B9B250DC1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250DB1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift */; };
 		B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */; };
 		B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */; };
 		B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */; };
@@ -225,6 +230,11 @@
 		B9B250C71EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNetworkManagerTests.swift; sourceTree = "<group>"; };
 		B9B250C91EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_network_manager_find_all_success.json; sourceTree = "<group>"; };
 		B9B250CB1EF774B500F1EA23 /* UsersViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewControllerTests.swift; sourceTree = "<group>"; };
+		B9B250D11EF7F4BE00F1EA23 /* ImageNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNetworkManager.swift; sourceTree = "<group>"; };
+		B9B250D51EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCellConfigurer.swift; sourceTree = "<group>"; };
+		B9B250D71EF8001500F1EA23 /* ImageNetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		B9B250D91EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCellConfigurerTests.swift; sourceTree = "<group>"; };
+		B9B250DB1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageNetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
 		B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewController.swift; sourceTree = "<group>"; };
@@ -357,6 +367,7 @@
 				B9224C851EECE3B3005DBEED /* MockSignInTableViewControllerDelegate.swift */,
 				B90697731ED13CB80045E34E /* MockUITextField.swift */,
 				B97778921EF2BA4600A6E250 /* MockUIApplicationProtocol.swift */,
+				B9B250DB1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift */,
 			);
 			name = "Mocks & Spies";
 			sourceTree = "<group>";
@@ -562,6 +573,7 @@
 				B9E75B3E1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift */,
 				B9E75B601EE2751300A137FF /* AuthenticationControllerTests.swift */,
 				B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */,
+				B9B250D91EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -583,6 +595,7 @@
 			children = (
 				B9E75B631EE2F57800A137FF /* KeychainProtocol.swift */,
 				B977788E1EF235C300A6E250 /* UIApplicationProtocol.swift */,
+				B9FD3B651EA034580018BEE6 /* Parser.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -591,6 +604,8 @@
 			isa = PBXGroup;
 			children = (
 				B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */,
+				B9B250D11EF7F4BE00F1EA23 /* ImageNetworkManager.swift */,
+				B9B250D71EF8001500F1EA23 /* ImageNetworkManagerProtocol.swift */,
 				B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */,
 				B9FD3B691EA034BE0018BEE6 /* AuthenticationNetworkManager.swift */,
 				B9B250C51EF6C90000F1EA23 /* UserNetworkManager.swift */,
@@ -602,7 +617,6 @@
 		B9FD3B611EA0342F0018BEE6 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				B9FD3B651EA034580018BEE6 /* Parser.swift */,
 				B9E75B551EE18F3500A137FF /* RFC6750BearerTokenParser.swift */,
 				B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */,
 				B977785F1EEDDDD700A6E250 /* ForgotPasswordParser.swift */,
@@ -616,6 +630,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E75B571EE2627E00A137FF /* AuthenticationController.swift */,
+				B9B250D51EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift */,
 				B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */,
 				B97778851EF2219900A6E250 /* SettingsItem.swift */,
 				B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */,
@@ -893,6 +908,7 @@
 				B97778971EF375B600A6E250 /* SignOutAlertControllerFactory.swift in Sources */,
 				B924DAED1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift in Sources */,
 				B9FD3B6A1EA034BE0018BEE6 /* AuthenticationNetworkManager.swift in Sources */,
+				B9B250D81EF8001500F1EA23 /* ImageNetworkManagerProtocol.swift in Sources */,
 				B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */,
 				B977787C1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift in Sources */,
 				B9E75B6A1EE3CE7500A137FF /* RFC6750BearerTokenSerializer.swift in Sources */,
@@ -901,9 +917,11 @@
 				B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */,
 				B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */,
 				B9E75B6C1EE440E500A137FF /* DictionaryExtension.swift in Sources */,
+				B9B250D21EF7F4BE00F1EA23 /* ImageNetworkManager.swift in Sources */,
 				B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */,
 				B9E75B561EE18F3500A137FF /* RFC6750BearerTokenParser.swift in Sources */,
 				B9B250B21EF62BD700F1EA23 /* PhotoParser.swift in Sources */,
+				B9B250D61EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +937,7 @@
 				B90697741ED13CB80045E34E /* MockUITextField.swift in Sources */,
 				B90697601ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift in Sources */,
 				B924DAEA1EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift in Sources */,
+				B9B250DC1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift in Sources */,
 				B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */,
 				B9B250CC1EF774B500F1EA23 /* UsersViewControllerTests.swift in Sources */,
 				B9B250BE1EF6C35500F1EA23 /* UserParserTests.swift in Sources */,
@@ -947,6 +966,7 @@
 				B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */,
 				B97778931EF2BA4600A6E250 /* MockUIApplicationProtocol.swift in Sources */,
 				B977786A1EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift in Sources */,
+				B9B250DA1EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift in Sources */,
 				B9E75B4C1EE1119500A137FF /* SignInViewModelValidatorTests.swift in Sources */,
 				B9E75B681EE2FA4700A137FF /* CustomTestAssertions.swift in Sources */,
 				B9E75B661EE2F61200A137FF /* MockKeychainProtocol.swift in Sources */,

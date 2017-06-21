@@ -23,7 +23,7 @@ class UsersViewController: UIViewController {
     
     var users = [User]()
     var userNetworkManager = UserNetworkManager(client: DreamNetworkClient())
-    
+    var cellConfigurer = UserCollectionViewCellConfigurer()
     lazy var activityIndicatorView: UIActivityIndicatorView = {
         return ActivityIndicatorViewFactory.create(superview: self.view)
     }()
@@ -31,7 +31,6 @@ class UsersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUsers()
-        
     }
     
     func fetchUsers() {
@@ -74,12 +73,10 @@ extension UsersViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: UserCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         let user = users[indexPath.row]
-        cell.imageView.image = UIImage(named: "silhouette")
-        let formatter = LengthFormatter()
-        cell.distanceLabel.text = formatter.string(fromValue: user.distance, unit: .mile)
-
+        cellConfigurer.configure(cell: cell, user: user)
         return cell
     }
+    
 }
 
 extension UsersViewController: UICollectionViewDelegateFlowLayout {
