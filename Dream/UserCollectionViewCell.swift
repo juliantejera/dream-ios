@@ -14,6 +14,6 @@ class UserCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.imageView.image = UIImage(named: "silhouette")
+        self.imageView.image = nil
     }
 }

@@ -70,7 +70,6 @@
 		B97778971EF375B600A6E250 /* SignOutAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */; };
 		B977789B1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */; };
 		B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F31E2B1D87004CCC50 /* AppDelegate.swift */; };
-		B98652F61E2B1D87004CCC50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F51E2B1D87004CCC50 /* ViewController.swift */; };
 		B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652F71E2B1D87004CCC50 /* Main.storyboard */; };
 		B98652FB1E2B1D87004CCC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98652FA1E2B1D87004CCC50 /* Assets.xcassets */; };
 		B98652FE1E2B1D87004CCC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652FC1E2B1D87004CCC50 /* LaunchScreen.storyboard */; };
@@ -97,6 +96,7 @@
 		B9B250D81EF8001500F1EA23 /* ImageNetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250D71EF8001500F1EA23 /* ImageNetworkManagerProtocol.swift */; };
 		B9B250DA1EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250D91EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift */; };
 		B9B250DC1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250DB1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift */; };
+		B9B250DE1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250DD1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift */; };
 		B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */; };
 		B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */; };
 		B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */; };
@@ -205,7 +205,6 @@
 		B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutAlertControllerFactoryTests.swift; sourceTree = "<group>"; };
 		B98652F01E2B1D87004CCC50 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98652F31E2B1D87004CCC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B98652F51E2B1D87004CCC50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B98652F81E2B1D87004CCC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B98652FA1E2B1D87004CCC50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B98652FD1E2B1D87004CCC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -235,6 +234,7 @@
 		B9B250D71EF8001500F1EA23 /* ImageNetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		B9B250D91EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCellConfigurerTests.swift; sourceTree = "<group>"; };
 		B9B250DB1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageNetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		B9B250DD1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCellTests.swift; sourceTree = "<group>"; };
 		B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
 		B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewController.swift; sourceTree = "<group>"; };
@@ -526,6 +526,7 @@
 				B924DAEB1EA3BBF0009F1FF8 /* Validators */,
 				B90AC4451EC76590007C0FA4 /* View Controllers */,
 				B97778731EF0131000A6E250 /* AppDelegateTests.swift */,
+				B9B250DF1EFDE8C800F1EA23 /* Views */,
 			);
 			path = DreamTests;
 			sourceTree = "<group>";
@@ -536,6 +537,14 @@
 				B9B250AF1EF62B5200F1EA23 /* PhotoStatus.swift */,
 			);
 			name = Enums;
+			sourceTree = "<group>";
+		};
+		B9B250DF1EFDE8C800F1EA23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9B250DD1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B9CC9BC61E2DD82B00153BBE /* Storyboards */ = {
@@ -554,7 +563,6 @@
 		B9CC9BC71E2DD83F00153BBE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B98652F51E2B1D87004CCC50 /* ViewController.swift */,
 				B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */,
 				B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */,
 				B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */,
@@ -866,7 +874,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B98652F61E2B1D87004CCC50 /* ViewController.swift in Sources */,
 				B924DAD81EA324BA009F1FF8 /* Validator.swift in Sources */,
 				B97778861EF2219900A6E250 /* SettingsItem.swift in Sources */,
 				B9E75B541EE18ED500A137FF /* RFC6750BearerToken.swift in Sources */,
@@ -947,6 +954,7 @@
 				B9E75B4E1EE1123400A137FF /* SignInViewModelExtension.swift in Sources */,
 				B90697681ECFED790045E34E /* NetworkClientResultAssertions.swift in Sources */,
 				B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */,
+				B9B250DE1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift in Sources */,
 				B9E75B5B1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift in Sources */,
 				B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */,
 				B9B250C81EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift in Sources */,

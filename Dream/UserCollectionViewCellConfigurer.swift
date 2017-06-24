@@ -24,6 +24,8 @@ struct UserCollectionViewCellConfigurer {
     func configure(cell: UserCollectionViewCell, user: User) {
         if let url = user.photos.first?.url {
             configure(imageView: cell.imageView, url: url)
+        } else {
+            cell.imageView.image = defaultImage
         }
         cell.distanceLabel.text = lengthFormatter.string(fromValue: user.distance, unit: .mile)
     }
