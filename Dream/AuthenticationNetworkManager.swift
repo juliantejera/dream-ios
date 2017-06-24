@@ -8,13 +8,10 @@
 
 import Foundation
 
-struct AuthenticationNetworkManager {
-    private let client: NetworkClient
-    private let relativePath: String
-    private var path: String {
-        return "\(client.basePath)\(relativePath)"
-    }
-    
+struct AuthenticationNetworkManager: NetworkManager {
+    let client: NetworkClient
+    let relativePath: String
+
     init(client: NetworkClient) {
         self.client = client
         self.relativePath = "auth"
