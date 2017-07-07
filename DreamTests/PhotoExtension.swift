@@ -14,7 +14,7 @@ extension Photo {
     static func create(id: Int = 1,
                        order: Int = 0,
                        status: PhotoStatus = .accepted,
-                       url: URL = URL(string: "https://google.com")!) -> Photo {
+                       url: URL = URL.create()) -> Photo {
         return Photo(id: id, order: order, status: status, url: url)
     }
     

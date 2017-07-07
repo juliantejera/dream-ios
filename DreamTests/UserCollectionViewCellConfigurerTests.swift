@@ -27,8 +27,8 @@ class UserCollectionViewCellConfigurerTests: XCTestCase {
         cell.imageView = imageView
         cell.distanceLabel = distanceLabel
         imageNetworkManager = MockImageNetworkManager()
-        imageNetworkManager.image = UIImage(named: "settings")
-        defaultImage = UIImage(named: "silhouette")
+        imageNetworkManager.image = UIImage.settings
+        defaultImage = UIImage.silhouette
         configurer = UserCollectionViewCellConfigurer(imageNetworkManager: imageNetworkManager, defaultImage: defaultImage)
         user = User.create()
     }

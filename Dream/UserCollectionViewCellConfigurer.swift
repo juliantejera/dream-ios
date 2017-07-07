@@ -15,7 +15,7 @@ struct UserCollectionViewCellConfigurer {
     private let defaultImage: UIImage?
     
     init(imageNetworkManager: ImageNetworkManagerProtocol = ImageNetworkManager(),
-         defaultImage: UIImage? = UIImage(named: "silhouette")) {
+         defaultImage: UIImage? = UIImage.silhouette) {
         self.imageNetworkManager = imageNetworkManager
         self.defaultImage = defaultImage
         self.lengthFormatter = LengthFormatter()

@@ -87,11 +87,88 @@
                     <connections>
                         <outlet property="collectionView" destination="tqj-AT-P3y" id="bm5-eB-aWF"/>
                         <outlet property="collectionViewFlowLayout" destination="kVs-Lp-q8x" id="T2m-0u-cSA"/>
+                        <segue destination="GrA-uT-qC5" kind="show" identifier="UserProfileViewControllerSegue" id="sVQ-Wc-RHb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eb0-d6-65N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1264.8" y="-438.53073463268368"/>
+        </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="Xp3-74-Cdf">
+            <objects>
+                <viewController storyboardIdentifier="UserProfileViewController" id="GrA-uT-qC5" customClass="UserProfileViewController" customModule="Dream" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qjI-AB-ig6"/>
+                        <viewControllerLayoutGuide type="bottom" id="bK8-8Q-pno"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pXF-gW-to6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dkG-P4-Yh5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="Az9-3X-zzh"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Pfz-9f-e3e">
+                                    <size key="itemSize" width="120" height="129"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="PhotoCollectionViewCell" id="LYb-Cj-7t9" customClass="PhotoCollectionViewCell" customModule="Dream" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="39" width="120" height="129"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="129"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbG-53-mSp">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="120" height="129"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="wbG-53-mSp" firstAttribute="width" secondItem="LYb-Cj-7t9" secondAttribute="width" id="2MW-qx-is4"/>
+                                            <constraint firstItem="wbG-53-mSp" firstAttribute="height" secondItem="LYb-Cj-7t9" secondAttribute="height" id="lWN-pt-VfU"/>
+                                            <constraint firstItem="wbG-53-mSp" firstAttribute="centerX" secondItem="LYb-Cj-7t9" secondAttribute="centerX" id="r3D-o2-wMh"/>
+                                            <constraint firstItem="wbG-53-mSp" firstAttribute="centerY" secondItem="LYb-Cj-7t9" secondAttribute="centerY" id="s0U-os-VVd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="wbG-53-mSp" id="5hZ-yw-w4e"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="GrA-uT-qC5" id="lFl-3g-f8m"/>
+                                    <outlet property="delegate" destination="GrA-uT-qC5" id="Krv-vj-dPC"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nng-Ha-zHZ">
+                                <rect key="frame" x="168" y="292" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nng-Ha-zHZ" firstAttribute="top" secondItem="dkG-P4-Yh5" secondAttribute="bottom" constant="-28" id="Kxi-Q8-5Pq"/>
+                            <constraint firstItem="Nng-Ha-zHZ" firstAttribute="centerX" secondItem="dkG-P4-Yh5" secondAttribute="centerX" id="aoL-Yl-e7v"/>
+                            <constraint firstItem="dkG-P4-Yh5" firstAttribute="top" secondItem="qjI-AB-ig6" secondAttribute="bottom" constant="-64" id="hHM-Dm-CST"/>
+                            <constraint firstItem="dkG-P4-Yh5" firstAttribute="leading" secondItem="pXF-gW-to6" secondAttribute="leadingMargin" constant="-16" id="htk-ve-3Ix"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dkG-P4-Yh5" secondAttribute="trailing" constant="-16" id="iXC-49-i7d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="dkG-P4-Yh5" id="gIA-e2-gaG"/>
+                        <outlet property="collectionViewFlowLayout" destination="Pfz-9f-e3e" id="Avt-ii-KPp"/>
+                        <outlet property="pageControl" destination="Nng-Ha-zHZ" id="eiG-V0-rum"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJw-jO-9xo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061.5999999999999" y="-439.43028485757122"/>
         </scene>
         <!--Users-->
         <scene sceneID="tgs-gz-xTJ">

@@ -9,7 +9,11 @@
 import UIKit
 
 class UsersViewController: UIViewController {
-
+    
+    struct Segues {
+        static let userProfile = "UserProfileViewControllerSegue"
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView?.alwaysBounceVertical = true
@@ -63,6 +67,13 @@ class UsersViewController: UIViewController {
             self.collectionViewFlowLayout.invalidateLayout()
         }, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? UserProfileViewController,
+           let indexPath = sender as? IndexPath, segue.identifier == Segues.userProfile {
+            destination.user = users[indexPath.item]
+        }
+    }
 }
 
 extension UsersViewController: UICollectionViewDataSource {
@@ -80,6 +91,11 @@ extension UsersViewController: UICollectionViewDataSource {
 }
 
 extension UsersViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Segues.userProfile, sender: indexPath)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow: CGFloat = UIDevice.current.orientation.isPortrait ? 3.0 : 5.0
         let marginsAndInsets: CGFloat = collectionViewFlowLayout.sectionInset.left + collectionViewFlowLayout.sectionInset.right + collectionViewFlowLayout.minimumInteritemSpacing * (itemsPerRow - 1)

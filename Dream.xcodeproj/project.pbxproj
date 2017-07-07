@@ -70,7 +70,6 @@
 		B97778971EF375B600A6E250 /* SignOutAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */; };
 		B977789B1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */; };
 		B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F31E2B1D87004CCC50 /* AppDelegate.swift */; };
-		B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652F71E2B1D87004CCC50 /* Main.storyboard */; };
 		B98652FB1E2B1D87004CCC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98652FA1E2B1D87004CCC50 /* Assets.xcassets */; };
 		B98652FE1E2B1D87004CCC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652FC1E2B1D87004CCC50 /* LaunchScreen.storyboard */; };
 		B9B250A31EF584AE00F1EA23 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250A21EF584AE00F1EA23 /* UICollectionViewExtension.swift */; };
@@ -97,6 +96,18 @@
 		B9B250DA1EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250D91EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift */; };
 		B9B250DC1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250DB1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift */; };
 		B9B250DE1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250DD1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift */; };
+		B9B250E31F035B7900F1EA23 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250E21F035B7900F1EA23 /* UserProfileViewController.swift */; };
+		B9B250E51F03618F00F1EA23 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250E41F03618F00F1EA23 /* PhotoCollectionViewCell.swift */; };
+		B9B250E91F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250E81F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift */; };
+		B9B250EB1F04ABA900F1EA23 /* PhotoCollectionViewCellConfigurerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250EA1F04ABA900F1EA23 /* PhotoCollectionViewCellConfigurerTests.swift */; };
+		B9B250EF1F04B4F900F1EA23 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250EE1F04B4F900F1EA23 /* UIImageExtension.swift */; };
+		B9B250F11F05E9BE00F1EA23 /* PhotoCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250F01F05E9BE00F1EA23 /* PhotoCollectionViewCellTests.swift */; };
+		B9B250F31F05EB0100F1EA23 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250F21F05EB0100F1EA23 /* URLExtension.swift */; };
+		B9B250F51F05F04D00F1EA23 /* UserProfileViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250F41F05F04D00F1EA23 /* UserProfileViewControllerTests.swift */; };
+		B9B250F71F0818BB00F1EA23 /* PhotoCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250F61F0818BB00F1EA23 /* PhotoCollectionViewDataSource.swift */; };
+		B9B250F91F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250F81F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift */; };
+		B9B250FB1F0F38F600F1EA23 /* MockPhotoCollectionViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250FA1F0F38F600F1EA23 /* MockPhotoCollectionViewDataSourceDelegate.swift */; };
+		B9B250FD1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250FC1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift */; };
 		B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */; };
 		B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */; };
 		B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */; };
@@ -205,7 +216,6 @@
 		B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutAlertControllerFactoryTests.swift; sourceTree = "<group>"; };
 		B98652F01E2B1D87004CCC50 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98652F31E2B1D87004CCC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B98652F81E2B1D87004CCC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B98652FA1E2B1D87004CCC50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B98652FD1E2B1D87004CCC50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B98652FF1E2B1D87004CCC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,6 +245,18 @@
 		B9B250D91EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCellConfigurerTests.swift; sourceTree = "<group>"; };
 		B9B250DB1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockImageNetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		B9B250DD1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		B9B250E21F035B7900F1EA23 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		B9B250E41F03618F00F1EA23 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9B250E81F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCellConfigurer.swift; sourceTree = "<group>"; };
+		B9B250EA1F04ABA900F1EA23 /* PhotoCollectionViewCellConfigurerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCellConfigurerTests.swift; sourceTree = "<group>"; };
+		B9B250EE1F04B4F900F1EA23 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		B9B250F01F05E9BE00F1EA23 /* PhotoCollectionViewCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		B9B250F21F05EB0100F1EA23 /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		B9B250F41F05F04D00F1EA23 /* UserProfileViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewControllerTests.swift; sourceTree = "<group>"; };
+		B9B250F61F0818BB00F1EA23 /* PhotoCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		B9B250F81F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewDataSourceDelegate.swift; sourceTree = "<group>"; };
+		B9B250FA1F0F38F600F1EA23 /* MockPhotoCollectionViewDataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPhotoCollectionViewDataSourceDelegate.swift; sourceTree = "<group>"; };
+		B9B250FC1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewDataSourceTests.swift; sourceTree = "<group>"; };
 		B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
 		B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewController.swift; sourceTree = "<group>"; };
@@ -327,6 +349,7 @@
 				B906976D1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift */,
 				B9E75B4D1EE1123400A137FF /* SignInViewModelExtension.swift */,
 				B9B250B71EF62E5B00F1EA23 /* PhotoExtension.swift */,
+				B9B250F21F05EB0100F1EA23 /* URLExtension.swift */,
 				B9E75B5E1EE2737900A137FF /* RFC6750BearerTokenExtension.swift */,
 				B9B250C11EF6C45100F1EA23 /* UserExtension.swift */,
 			);
@@ -338,6 +361,7 @@
 			children = (
 				B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */,
 				B97778901EF2B2B100A6E250 /* SettingsViewControllerTests.swift */,
+				B9B250F41F05F04D00F1EA23 /* UserProfileViewControllerTests.swift */,
 				B97778691EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift */,
 				B9E75B401EE108BB00A137FF /* SignInTableViewControllerTests.swift */,
 				B97778771EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift */,
@@ -362,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				B90697611ECFE38C0045E34E /* MockNetworkClient.swift */,
+				B9B250FA1F0F38F600F1EA23 /* MockPhotoCollectionViewDataSourceDelegate.swift */,
 				B9E75B651EE2F61200A137FF /* MockKeychainProtocol.swift */,
 				B977786B1EEF7BF800A6E250 /* MockUINavigationController.swift */,
 				B9224C851EECE3B3005DBEED /* MockSignInTableViewControllerDelegate.swift */,
@@ -463,6 +488,7 @@
 			children = (
 				B977788A1EF2239300A6E250 /* SettingsItemTableViewCell.swift */,
 				B9B250A41EF5856F00F1EA23 /* UserCollectionViewCell.swift */,
+				B9B250E41F03618F00F1EA23 /* PhotoCollectionViewCell.swift */,
 			);
 			name = VIews;
 			sourceTree = "<group>";
@@ -543,6 +569,7 @@
 			isa = PBXGroup;
 			children = (
 				B9B250DD1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift */,
+				B9B250F01F05E9BE00F1EA23 /* PhotoCollectionViewCellTests.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -551,7 +578,6 @@
 			isa = PBXGroup;
 			children = (
 				B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */,
-				B98652F71E2B1D87004CCC50 /* Main.storyboard */,
 				B977786D1EF006E400A6E250 /* Home.storyboard */,
 				B97778711EF00E0200A6E250 /* Users.storyboard */,
 				B97778791EF0CFEC00A6E250 /* AuthStoryboard.swift */,
@@ -571,6 +597,7 @@
 				B97778751EF014A200A6E250 /* HomeViewController.swift */,
 				B97778831EF21E2500A6E250 /* SettingsViewController.swift */,
 				B97778941EF2BCDD00A6E250 /* AuthNavigationController.swift */,
+				B9B250E21F035B7900F1EA23 /* UserProfileViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -582,6 +609,8 @@
 				B9E75B601EE2751300A137FF /* AuthenticationControllerTests.swift */,
 				B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */,
 				B9B250D91EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift */,
+				B9B250EA1F04ABA900F1EA23 /* PhotoCollectionViewCellConfigurerTests.swift */,
+				B9B250FC1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -590,6 +619,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E75B451EE10ABC00A137FF /* UIStoryboardExtension.swift */,
+				B9B250EE1F04B4F900F1EA23 /* UIImageExtension.swift */,
 				B9E75B6B1EE440E500A137FF /* DictionaryExtension.swift */,
 				B9224C7F1EECD052005DBEED /* UIViewControllerExtension.swift */,
 				B9B250A21EF584AE00F1EA23 /* UICollectionViewExtension.swift */,
@@ -603,6 +633,7 @@
 			children = (
 				B9E75B631EE2F57800A137FF /* KeychainProtocol.swift */,
 				B977788E1EF235C300A6E250 /* UIApplicationProtocol.swift */,
+				B9B250F81F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift */,
 				B9FD3B651EA034580018BEE6 /* Parser.swift */,
 			);
 			name = Protocols;
@@ -638,7 +669,9 @@
 			isa = PBXGroup;
 			children = (
 				B9E75B571EE2627E00A137FF /* AuthenticationController.swift */,
+				B9B250F61F0818BB00F1EA23 /* PhotoCollectionViewDataSource.swift */,
 				B9B250D51EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift */,
+				B9B250E81F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift */,
 				B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */,
 				B97778851EF2219900A6E250 /* SettingsItem.swift */,
 				B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */,
@@ -751,7 +784,6 @@
 				B98652FE1E2B1D87004CCC50 /* LaunchScreen.storyboard in Resources */,
 				B97778721EF00E0200A6E250 /* Users.storyboard in Resources */,
 				B98652FB1E2B1D87004CCC50 /* Assets.xcassets in Resources */,
-				B98652F91E2B1D87004CCC50 /* Main.storyboard in Resources */,
 				B97778821EF21DE300A6E250 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -880,9 +912,13 @@
 				B9B250A31EF584AE00F1EA23 /* UICollectionViewExtension.swift in Sources */,
 				B924DAE41EA3B296009F1FF8 /* PasswordValidator.swift in Sources */,
 				B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */,
+				B9B250F91F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift in Sources */,
+				B9B250F71F0818BB00F1EA23 /* PhotoCollectionViewDataSource.swift in Sources */,
 				B977788F1EF235C300A6E250 /* UIApplicationProtocol.swift in Sources */,
 				B9B250C61EF6C90000F1EA23 /* UserNetworkManager.swift in Sources */,
 				B97778841EF21E2500A6E250 /* SettingsViewController.swift in Sources */,
+				B9B250E31F035B7900F1EA23 /* UserProfileViewController.swift in Sources */,
+				B9B250EF1F04B4F900F1EA23 /* UIImageExtension.swift in Sources */,
 				B97778761EF014A200A6E250 /* HomeViewController.swift in Sources */,
 				B977787A1EF0CFEC00A6E250 /* AuthStoryboard.swift in Sources */,
 				B924DAE81EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift in Sources */,
@@ -896,6 +932,7 @@
 				B9E75B501EE1141800A137FF /* SignInViewModelSerializer.swift in Sources */,
 				B924DAF61EB19796009F1FF8 /* ErrorsParser.swift in Sources */,
 				B9E75B481EE1108C00A137FF /* SignInViewModel.swift in Sources */,
+				B9B250E51F03618F00F1EA23 /* PhotoCollectionViewCell.swift in Sources */,
 				B9B250A51EF5856F00F1EA23 /* UserCollectionViewCell.swift in Sources */,
 				B97778881EF2228A00A6E250 /* UiTableViewExtension.swift in Sources */,
 				B977785E1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift in Sources */,
@@ -923,6 +960,7 @@
 				B97778951EF2BCDD00A6E250 /* AuthNavigationController.swift in Sources */,
 				B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */,
 				B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */,
+				B9B250E91F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift in Sources */,
 				B9E75B6C1EE440E500A137FF /* DictionaryExtension.swift in Sources */,
 				B9B250D21EF7F4BE00F1EA23 /* ImageNetworkManager.swift in Sources */,
 				B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */,
@@ -949,11 +987,13 @@
 				B9B250CC1EF774B500F1EA23 /* UsersViewControllerTests.swift in Sources */,
 				B9B250BE1EF6C35500F1EA23 /* UserParserTests.swift in Sources */,
 				B9E75B611EE2751300A137FF /* AuthenticationControllerTests.swift in Sources */,
+				B9B250FB1F0F38F600F1EA23 /* MockPhotoCollectionViewDataSourceDelegate.swift in Sources */,
 				B9224C7E1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift in Sources */,
 				B977789B1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift in Sources */,
 				B9E75B4E1EE1123400A137FF /* SignInViewModelExtension.swift in Sources */,
 				B90697681ECFED790045E34E /* NetworkClientResultAssertions.swift in Sources */,
 				B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */,
+				B9B250FD1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift in Sources */,
 				B9B250DE1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift in Sources */,
 				B9E75B5B1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift in Sources */,
 				B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */,
@@ -965,12 +1005,15 @@
 				B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */,
 				B97778911EF2B2B100A6E250 /* SettingsViewControllerTests.swift in Sources */,
 				B9B250B41EF62D1600F1EA23 /* PhotoParserTests.swift in Sources */,
+				B9B250F31F05EB0100F1EA23 /* URLExtension.swift in Sources */,
+				B9B250EB1F04ABA900F1EA23 /* PhotoCollectionViewCellConfigurerTests.swift in Sources */,
 				B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */,
 				B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */,
 				B9E75B411EE108BB00A137FF /* SignInTableViewControllerTests.swift in Sources */,
 				B90AC44C1EC76904007C0FA4 /* XCTestCaseExtension.swift in Sources */,
 				B906976B1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift in Sources */,
 				B97778781EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift in Sources */,
+				B9B250F11F05E9BE00F1EA23 /* PhotoCollectionViewCellTests.swift in Sources */,
 				B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */,
 				B97778931EF2BA4600A6E250 /* MockUIApplicationProtocol.swift in Sources */,
 				B977786A1EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift in Sources */,
@@ -980,6 +1023,7 @@
 				B9E75B661EE2F61200A137FF /* MockKeychainProtocol.swift in Sources */,
 				B924DADE1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift in Sources */,
 				B97778621EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift in Sources */,
+				B9B250F51F05F04D00F1EA23 /* UserProfileViewControllerTests.swift in Sources */,
 				B90697721ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -995,14 +1039,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B98652F71E2B1D87004CCC50 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B98652F81E2B1D87004CCC50 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B98652FC1E2B1D87004CCC50 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
