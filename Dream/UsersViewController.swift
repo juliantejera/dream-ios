@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class UsersViewController: UIViewController {
     
@@ -32,8 +33,13 @@ class UsersViewController: UIViewController {
         return ActivityIndicatorViewFactory.create(superview: self.view)
     }()
     
+    var locationObserver: LocationObserver?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationObserver = LocationObserver()
+        locationObserver?.delegate = self
+        locationObserver?.startObserving(manager: CLLocationManager())
         fetchUsers()
     }
     
@@ -102,5 +108,16 @@ extension UsersViewController: UICollectionViewDelegateFlowLayout {
         let width: CGFloat = (collectionView.frame.width - marginsAndInsets) / itemsPerRow
         let height: CGFloat = width
         return CGSize(width: width, height: height)
+    }
+}
+
+extension UsersViewController: LocationObserverDelegate {
+    
+    func locationObserver(_ observer: LocationObserver, didFailWithError error: Error) {
+        let controller = LocationPermissionAlertControllerFactory().create()
+        present(controller, animated: true, completion: nil)
+    }
+    
+    func locationObserver(_ observer: LocationObserver, didUpdateLocation location: CLLocation) {
     }
 }

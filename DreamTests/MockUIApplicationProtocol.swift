@@ -15,4 +15,14 @@ class MockUIApplication: UIApplicationProtocol {
     init() {
         keyWindow = UIWindow()
     }
+    
+    var canOpenUrl = true
+    func canOpenURL(_ url: URL) -> Bool {
+        return canOpenUrl
+    }
+    
+    var openUrlCallCount = 0
+    func open(_ url: URL, options: [String : Any], completionHandler completion: ((Bool) -> Void)?) {
+        openUrlCallCount += 1
+    }
 }

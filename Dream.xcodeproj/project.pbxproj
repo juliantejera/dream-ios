@@ -42,6 +42,8 @@
 		B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */; };
 		B924DAF41EAD9EEE009F1FF8 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF31EAD9EEE009F1FF8 /* Serializer.swift */; };
 		B924DAF61EB19796009F1FF8 /* ErrorsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */; };
+		B94C6A771F15C693002D334C /* MockLocationObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C6A761F15C693002D334C /* MockLocationObserverDelegate.swift */; };
+		B94C6A791F17184E002D334C /* LocationPermissionAlertControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C6A781F17184E002D334C /* LocationPermissionAlertControllerFactoryTests.swift */; };
 		B977785E1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977785D1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift */; };
 		B97778601EEDDDD700A6E250 /* ForgotPasswordParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977785F1EEDDDD700A6E250 /* ForgotPasswordParser.swift */; };
 		B97778621EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778611EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift */; };
@@ -69,6 +71,8 @@
 		B97778951EF2BCDD00A6E250 /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778941EF2BCDD00A6E250 /* AuthNavigationController.swift */; };
 		B97778971EF375B600A6E250 /* SignOutAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */; };
 		B977789B1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */; };
+		B97DC6AE1F119FAC00EDDD77 /* LocationObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97DC6AD1F119FAC00EDDD77 /* LocationObserverDelegate.swift */; };
+		B97DC6B01F119FE400EDDD77 /* LocationObserverError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97DC6AF1F119FE400EDDD77 /* LocationObserverError.swift */; };
 		B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F31E2B1D87004CCC50 /* AppDelegate.swift */; };
 		B98652FB1E2B1D87004CCC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98652FA1E2B1D87004CCC50 /* Assets.xcassets */; };
 		B98652FE1E2B1D87004CCC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652FC1E2B1D87004CCC50 /* LaunchScreen.storyboard */; };
@@ -108,8 +112,13 @@
 		B9B250F91F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250F81F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift */; };
 		B9B250FB1F0F38F600F1EA23 /* MockPhotoCollectionViewDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250FA1F0F38F600F1EA23 /* MockPhotoCollectionViewDataSourceDelegate.swift */; };
 		B9B250FD1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250FC1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift */; };
+		B9B250FF1F0FEBA900F1EA23 /* LocationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250FE1F0FEBA900F1EA23 /* LocationObserver.swift */; };
+		B9B251011F0FF4D200F1EA23 /* LocationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B251001F0FF4D200F1EA23 /* LocationManagerProtocol.swift */; };
+		B9B251031F1046B000F1EA23 /* LocationPermissionAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B251021F1046B000F1EA23 /* LocationPermissionAlertControllerFactory.swift */; };
 		B9CC9BC51E2DD81F00153BBE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */; };
 		B9CC9BC91E2E492000153BBE /* RegisterAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */; };
+		B9E10DD41F15C08400BED140 /* LocationObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E10DD31F15C08400BED140 /* LocationObserverTests.swift */; };
+		B9E10DD61F15C0F600BED140 /* MockLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E10DD51F15C0F600BED140 /* MockLocationManager.swift */; };
 		B9E75B371EDEF2CA00A137FF /* SignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */; };
 		B9E75B391EE105FA00A137FF /* SignInTableViewControllerSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */; };
 		B9E75B3F1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B3E1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift */; };
@@ -187,6 +196,8 @@
 		B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAuthTableViewController.swift; sourceTree = "<group>"; };
 		B924DAF31EAD9EEE009F1FF8 /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
 		B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsParser.swift; sourceTree = "<group>"; };
+		B94C6A761F15C693002D334C /* MockLocationObserverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationObserverDelegate.swift; sourceTree = "<group>"; };
+		B94C6A781F17184E002D334C /* LocationPermissionAlertControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionAlertControllerFactoryTests.swift; sourceTree = "<group>"; };
 		B977785D1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
 		B977785F1EEDDDD700A6E250 /* ForgotPasswordParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordParser.swift; sourceTree = "<group>"; };
 		B97778611EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationNetworkManagerTests.swift; sourceTree = "<group>"; };
@@ -214,6 +225,8 @@
 		B97778941EF2BCDD00A6E250 /* AuthNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
 		B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutAlertControllerFactory.swift; sourceTree = "<group>"; };
 		B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutAlertControllerFactoryTests.swift; sourceTree = "<group>"; };
+		B97DC6AD1F119FAC00EDDD77 /* LocationObserverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationObserverDelegate.swift; sourceTree = "<group>"; };
+		B97DC6AF1F119FE400EDDD77 /* LocationObserverError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationObserverError.swift; sourceTree = "<group>"; };
 		B98652F01E2B1D87004CCC50 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98652F31E2B1D87004CCC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B98652FA1E2B1D87004CCC50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -257,8 +270,13 @@
 		B9B250F81F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewDataSourceDelegate.swift; sourceTree = "<group>"; };
 		B9B250FA1F0F38F600F1EA23 /* MockPhotoCollectionViewDataSourceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPhotoCollectionViewDataSourceDelegate.swift; sourceTree = "<group>"; };
 		B9B250FC1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewDataSourceTests.swift; sourceTree = "<group>"; };
+		B9B250FE1F0FEBA900F1EA23 /* LocationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationObserver.swift; sourceTree = "<group>"; };
+		B9B251001F0FF4D200F1EA23 /* LocationManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManagerProtocol.swift; sourceTree = "<group>"; };
+		B9B251021F1046B000F1EA23 /* LocationPermissionAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPermissionAlertControllerFactory.swift; sourceTree = "<group>"; };
 		B9CC9BC41E2DD81F00153BBE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewController.swift; sourceTree = "<group>"; };
+		B9E10DD31F15C08400BED140 /* LocationObserverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationObserverTests.swift; sourceTree = "<group>"; };
+		B9E10DD51F15C0F600BED140 /* MockLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationManager.swift; sourceTree = "<group>"; };
 		B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewController.swift; sourceTree = "<group>"; };
 		B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewControllerSections.swift; sourceTree = "<group>"; };
 		B9E75B3E1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewControllerSectionsTests.swift; sourceTree = "<group>"; };
@@ -386,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				B90697611ECFE38C0045E34E /* MockNetworkClient.swift */,
+				B9E10DD51F15C0F600BED140 /* MockLocationManager.swift */,
 				B9B250FA1F0F38F600F1EA23 /* MockPhotoCollectionViewDataSourceDelegate.swift */,
 				B9E75B651EE2F61200A137FF /* MockKeychainProtocol.swift */,
 				B977786B1EEF7BF800A6E250 /* MockUINavigationController.swift */,
@@ -393,6 +412,7 @@
 				B90697731ED13CB80045E34E /* MockUITextField.swift */,
 				B97778921EF2BA4600A6E250 /* MockUIApplicationProtocol.swift */,
 				B9B250DB1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift */,
+				B94C6A761F15C693002D334C /* MockLocationObserverDelegate.swift */,
 			);
 			name = "Mocks & Spies";
 			sourceTree = "<group>";
@@ -561,6 +581,7 @@
 			isa = PBXGroup;
 			children = (
 				B9B250AF1EF62B5200F1EA23 /* PhotoStatus.swift */,
+				B97DC6AF1F119FE400EDDD77 /* LocationObserverError.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -606,9 +627,11 @@
 			isa = PBXGroup;
 			children = (
 				B9E75B3E1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift */,
+				B9E10DD31F15C08400BED140 /* LocationObserverTests.swift */,
 				B9E75B601EE2751300A137FF /* AuthenticationControllerTests.swift */,
 				B977789A1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift */,
 				B9B250D91EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift */,
+				B94C6A781F17184E002D334C /* LocationPermissionAlertControllerFactoryTests.swift */,
 				B9B250EA1F04ABA900F1EA23 /* PhotoCollectionViewCellConfigurerTests.swift */,
 				B9B250FC1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift */,
 			);
@@ -632,6 +655,8 @@
 			isa = PBXGroup;
 			children = (
 				B9E75B631EE2F57800A137FF /* KeychainProtocol.swift */,
+				B9B251001F0FF4D200F1EA23 /* LocationManagerProtocol.swift */,
+				B97DC6AD1F119FAC00EDDD77 /* LocationObserverDelegate.swift */,
 				B977788E1EF235C300A6E250 /* UIApplicationProtocol.swift */,
 				B9B250F81F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift */,
 				B9FD3B651EA034580018BEE6 /* Parser.swift */,
@@ -669,10 +694,12 @@
 			isa = PBXGroup;
 			children = (
 				B9E75B571EE2627E00A137FF /* AuthenticationController.swift */,
+				B9B250FE1F0FEBA900F1EA23 /* LocationObserver.swift */,
 				B9B250F61F0818BB00F1EA23 /* PhotoCollectionViewDataSource.swift */,
 				B9B250D51EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift */,
 				B9B250E81F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift */,
 				B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */,
+				B9B251021F1046B000F1EA23 /* LocationPermissionAlertControllerFactory.swift */,
 				B97778851EF2219900A6E250 /* SettingsItem.swift */,
 				B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */,
 				B9E75B531EE18ED500A137FF /* RFC6750BearerToken.swift */,
@@ -906,7 +933,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B251031F1046B000F1EA23 /* LocationPermissionAlertControllerFactory.swift in Sources */,
 				B924DAD81EA324BA009F1FF8 /* Validator.swift in Sources */,
+				B97DC6AE1F119FAC00EDDD77 /* LocationObserverDelegate.swift in Sources */,
 				B97778861EF2219900A6E250 /* SettingsItem.swift in Sources */,
 				B9E75B541EE18ED500A137FF /* RFC6750BearerToken.swift in Sources */,
 				B9B250A31EF584AE00F1EA23 /* UICollectionViewExtension.swift in Sources */,
@@ -920,6 +949,7 @@
 				B9B250E31F035B7900F1EA23 /* UserProfileViewController.swift in Sources */,
 				B9B250EF1F04B4F900F1EA23 /* UIImageExtension.swift in Sources */,
 				B97778761EF014A200A6E250 /* HomeViewController.swift in Sources */,
+				B9B250FF1F0FEBA900F1EA23 /* LocationObserver.swift in Sources */,
 				B977787A1EF0CFEC00A6E250 /* AuthStoryboard.swift in Sources */,
 				B924DAE81EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift in Sources */,
 				B9E75B391EE105FA00A137FF /* SignInTableViewControllerSections.swift in Sources */,
@@ -958,11 +988,13 @@
 				B9E75B6A1EE3CE7500A137FF /* RFC6750BearerTokenSerializer.swift in Sources */,
 				B9E75B641EE2F57800A137FF /* KeychainProtocol.swift in Sources */,
 				B97778951EF2BCDD00A6E250 /* AuthNavigationController.swift in Sources */,
+				B9B251011F0FF4D200F1EA23 /* LocationManagerProtocol.swift in Sources */,
 				B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */,
 				B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */,
 				B9B250E91F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift in Sources */,
 				B9E75B6C1EE440E500A137FF /* DictionaryExtension.swift in Sources */,
 				B9B250D21EF7F4BE00F1EA23 /* ImageNetworkManager.swift in Sources */,
+				B97DC6B01F119FE400EDDD77 /* LocationObserverError.swift in Sources */,
 				B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */,
 				B9E75B561EE18F3500A137FF /* RFC6750BearerTokenParser.swift in Sources */,
 				B9B250B21EF62BD700F1EA23 /* PhotoParser.swift in Sources */,
@@ -995,13 +1027,16 @@
 				B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */,
 				B9B250FD1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift in Sources */,
 				B9B250DE1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift in Sources */,
+				B9E10DD61F15C0F600BED140 /* MockLocationManager.swift in Sources */,
 				B9E75B5B1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift in Sources */,
+				B9E10DD41F15C08400BED140 /* LocationObserverTests.swift in Sources */,
 				B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */,
 				B9B250C81EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift in Sources */,
 				B9B250C21EF6C45100F1EA23 /* UserExtension.swift in Sources */,
 				B97778681EEF76CA00A6E250 /* ForgotPasswordParserTests.swift in Sources */,
 				B9B250B81EF62E5B00F1EA23 /* PhotoExtension.swift in Sources */,
 				B977786C1EEF7BF800A6E250 /* MockUINavigationController.swift in Sources */,
+				B94C6A791F17184E002D334C /* LocationPermissionAlertControllerFactoryTests.swift in Sources */,
 				B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */,
 				B97778911EF2B2B100A6E250 /* SettingsViewControllerTests.swift in Sources */,
 				B9B250B41EF62D1600F1EA23 /* PhotoParserTests.swift in Sources */,
@@ -1021,6 +1056,7 @@
 				B9E75B4C1EE1119500A137FF /* SignInViewModelValidatorTests.swift in Sources */,
 				B9E75B681EE2FA4700A137FF /* CustomTestAssertions.swift in Sources */,
 				B9E75B661EE2F61200A137FF /* MockKeychainProtocol.swift in Sources */,
+				B94C6A771F15C693002D334C /* MockLocationObserverDelegate.swift in Sources */,
 				B924DADE1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift in Sources */,
 				B97778621EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift in Sources */,
 				B9B250F51F05F04D00F1EA23 /* UserProfileViewControllerTests.swift in Sources */,
