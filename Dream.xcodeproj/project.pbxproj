@@ -85,6 +85,7 @@
 		B9A573C41F1960CA0081F291 /* CurrentUserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573C31F1960CA0081F291 /* CurrentUserParser.swift */; };
 		B9A573C61F1961DE0081F291 /* CurrentUserParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573C51F1961DE0081F291 /* CurrentUserParserTests.swift */; };
 		B9A573C81F1962B30081F291 /* current_user.json in Resources */ = {isa = PBXBuildFile; fileRef = B9A573C71F1962B30081F291 /* current_user.json */; };
+		B9A573CA1F19657C0081F291 /* CurrentUserNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573C91F19657C0081F291 /* CurrentUserNetworkManagerTests.swift */; };
 		B9B250A31EF584AE00F1EA23 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250A21EF584AE00F1EA23 /* UICollectionViewExtension.swift */; };
 		B9B250A51EF5856F00F1EA23 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250A41EF5856F00F1EA23 /* UserCollectionViewCell.swift */; };
 		B9B250AD1EF62AB700F1EA23 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250AC1EF62AB700F1EA23 /* Photo.swift */; };
@@ -252,6 +253,7 @@
 		B9A573C31F1960CA0081F291 /* CurrentUserParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserParser.swift; sourceTree = "<group>"; };
 		B9A573C51F1961DE0081F291 /* CurrentUserParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserParserTests.swift; sourceTree = "<group>"; };
 		B9A573C71F1962B30081F291 /* current_user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = current_user.json; sourceTree = "<group>"; };
+		B9A573C91F19657C0081F291 /* CurrentUserNetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserNetworkManagerTests.swift; sourceTree = "<group>"; };
 		B9B250A21EF584AE00F1EA23 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		B9B250A41EF5856F00F1EA23 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9B250AC1EF62AB700F1EA23 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 				B906975F1ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift */,
 				B9B250C71EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift */,
 				B97778611EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift */,
+				B9A573C91F19657C0081F291 /* CurrentUserNetworkManagerTests.swift */,
 			);
 			name = "Network Managers";
 			sourceTree = "<group>";
@@ -1043,6 +1046,7 @@
 				B9E75B5F1EE2737900A137FF /* RFC6750BearerTokenExtension.swift in Sources */,
 				B924DAE21EA3AE48009F1FF8 /* EmailValidatorSpec.swift in Sources */,
 				B9E75B3F1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift in Sources */,
+				B9A573CA1F19657C0081F291 /* CurrentUserNetworkManagerTests.swift in Sources */,
 				B90697741ED13CB80045E34E /* MockUITextField.swift in Sources */,
 				B90697601ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift in Sources */,
 				B924DAEA1EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift in Sources */,
