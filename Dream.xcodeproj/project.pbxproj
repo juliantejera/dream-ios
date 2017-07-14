@@ -81,6 +81,10 @@
 		B9A573BA1F19388A0081F291 /* CurrentUserSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573B91F19388A0081F291 /* CurrentUserSerializerTests.swift */; };
 		B9A573BC1F1938E00081F291 /* CurrentUserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573BB1F1938E00081F291 /* CurrentUserExtension.swift */; };
 		B9A573C01F193A2C0081F291 /* CurrentUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573BF1F193A2C0081F291 /* CurrentUserTests.swift */; };
+		B9A573C21F195FFE0081F291 /* CurrentUserNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573C11F195FFE0081F291 /* CurrentUserNetworkManager.swift */; };
+		B9A573C41F1960CA0081F291 /* CurrentUserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573C31F1960CA0081F291 /* CurrentUserParser.swift */; };
+		B9A573C61F1961DE0081F291 /* CurrentUserParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573C51F1961DE0081F291 /* CurrentUserParserTests.swift */; };
+		B9A573C81F1962B30081F291 /* current_user.json in Resources */ = {isa = PBXBuildFile; fileRef = B9A573C71F1962B30081F291 /* current_user.json */; };
 		B9B250A31EF584AE00F1EA23 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250A21EF584AE00F1EA23 /* UICollectionViewExtension.swift */; };
 		B9B250A51EF5856F00F1EA23 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250A41EF5856F00F1EA23 /* UserCollectionViewCell.swift */; };
 		B9B250AD1EF62AB700F1EA23 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250AC1EF62AB700F1EA23 /* Photo.swift */; };
@@ -244,6 +248,10 @@
 		B9A573B91F19388A0081F291 /* CurrentUserSerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserSerializerTests.swift; sourceTree = "<group>"; };
 		B9A573BB1F1938E00081F291 /* CurrentUserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserExtension.swift; sourceTree = "<group>"; };
 		B9A573BF1F193A2C0081F291 /* CurrentUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserTests.swift; sourceTree = "<group>"; };
+		B9A573C11F195FFE0081F291 /* CurrentUserNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserNetworkManager.swift; sourceTree = "<group>"; };
+		B9A573C31F1960CA0081F291 /* CurrentUserParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserParser.swift; sourceTree = "<group>"; };
+		B9A573C51F1961DE0081F291 /* CurrentUserParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserParserTests.swift; sourceTree = "<group>"; };
+		B9A573C71F1962B30081F291 /* current_user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = current_user.json; sourceTree = "<group>"; };
 		B9B250A21EF584AE00F1EA23 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		B9B250A41EF5856F00F1EA23 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9B250AC1EF62AB700F1EA23 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -405,6 +413,7 @@
 			children = (
 				B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */,
 				B9B250B31EF62D1600F1EA23 /* PhotoParserTests.swift */,
+				B9A573C51F1961DE0081F291 /* CurrentUserParserTests.swift */,
 				B97778671EEF76CA00A6E250 /* ForgotPasswordParserTests.swift */,
 				B9E75B5A1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift */,
 				B9B250BD1EF6C35500F1EA23 /* UserParserTests.swift */,
@@ -444,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */,
+				B9A573C71F1962B30081F291 /* current_user.json */,
 				B9E75B5C1EE26FF500A137FF /* bearer_token.json */,
 				B9B250B51EF62DA400F1EA23 /* photo.json */,
 				B9B250BF1EF6C3A600F1EA23 /* user.json */,
@@ -682,6 +692,7 @@
 			isa = PBXGroup;
 			children = (
 				B9FD3B5D1E9FCF0B0018BEE6 /* NetworkClient.swift */,
+				B9A573C11F195FFE0081F291 /* CurrentUserNetworkManager.swift */,
 				B9B250D11EF7F4BE00F1EA23 /* ImageNetworkManager.swift */,
 				B9B250D71EF8001500F1EA23 /* ImageNetworkManagerProtocol.swift */,
 				B9FD3B5F1E9FCFD90018BEE6 /* DreamNetworkClient.swift */,
@@ -696,6 +707,7 @@
 			isa = PBXGroup;
 			children = (
 				B9E75B551EE18F3500A137FF /* RFC6750BearerTokenParser.swift */,
+				B9A573C31F1960CA0081F291 /* CurrentUserParser.swift */,
 				B924DAF51EB19796009F1FF8 /* ErrorsParser.swift */,
 				B977785F1EEDDDD700A6E250 /* ForgotPasswordParser.swift */,
 				B9B250B11EF62BD700F1EA23 /* PhotoParser.swift */,
@@ -840,6 +852,7 @@
 				B9B250CA1EF6CD6B00F1EA23 /* user_network_manager_find_all_success.json in Resources */,
 				B90697641ECFE6F50045E34E /* authentication_network_manager_register_success.json in Resources */,
 				B9B250C01EF6C3A600F1EA23 /* user.json in Resources */,
+				B9A573C81F1962B30081F291 /* current_user.json in Resources */,
 				B9224C821EECDDAA005DBEED /* authentication_network_manager_sign_in_success.json in Resources */,
 				B97778661EEF762E00A6E250 /* authentication_network_manager_forgot_password_unknown_email.json in Resources */,
 				B97778641EEF752000A6E250 /* authentication_network_manager_forgot_password_success.json in Resources */,
@@ -949,11 +962,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B251031F1046B000F1EA23 /* LocationPermissionAlertControllerFactory.swift in Sources */,
+				B9A573C41F1960CA0081F291 /* CurrentUserParser.swift in Sources */,
 				B924DAD81EA324BA009F1FF8 /* Validator.swift in Sources */,
 				B97DC6AE1F119FAC00EDDD77 /* LocationObserverDelegate.swift in Sources */,
 				B97778861EF2219900A6E250 /* SettingsItem.swift in Sources */,
 				B9E75B541EE18ED500A137FF /* RFC6750BearerToken.swift in Sources */,
 				B9B250A31EF584AE00F1EA23 /* UICollectionViewExtension.swift in Sources */,
+				B9A573C21F195FFE0081F291 /* CurrentUserNetworkManager.swift in Sources */,
 				B924DAE41EA3B296009F1FF8 /* PasswordValidator.swift in Sources */,
 				B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */,
 				B9B250F91F0818F400F1EA23 /* PhotoCollectionViewDataSourceDelegate.swift in Sources */,
@@ -1069,6 +1084,7 @@
 				B97778781EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift in Sources */,
 				B9B250F11F05E9BE00F1EA23 /* PhotoCollectionViewCellTests.swift in Sources */,
 				B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */,
+				B9A573C61F1961DE0081F291 /* CurrentUserParserTests.swift in Sources */,
 				B97778931EF2BA4600A6E250 /* MockUIApplicationProtocol.swift in Sources */,
 				B977786A1EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift in Sources */,
 				B9B250DA1EFA95B600F1EA23 /* UserCollectionViewCellConfigurerTests.swift in Sources */,

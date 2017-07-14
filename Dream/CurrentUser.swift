@@ -25,3 +25,9 @@ class CurrentUser {
         self.longitude = location.coordinate.longitude
     }
 }
+
+extension CurrentUser: Equatable {
+    static func == (lhs: CurrentUser, rhs: CurrentUser) -> Bool {
+        return lhs.id == rhs.id && lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+}
