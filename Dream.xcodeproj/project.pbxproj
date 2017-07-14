@@ -76,6 +76,11 @@
 		B98652F41E2B1D87004CCC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98652F31E2B1D87004CCC50 /* AppDelegate.swift */; };
 		B98652FB1E2B1D87004CCC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98652FA1E2B1D87004CCC50 /* Assets.xcassets */; };
 		B98652FE1E2B1D87004CCC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98652FC1E2B1D87004CCC50 /* LaunchScreen.storyboard */; };
+		B9A573B61F1935CB0081F291 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573B51F1935CB0081F291 /* CurrentUser.swift */; };
+		B9A573B81F1937F80081F291 /* CurrentUserSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573B71F1937F80081F291 /* CurrentUserSerializer.swift */; };
+		B9A573BA1F19388A0081F291 /* CurrentUserSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573B91F19388A0081F291 /* CurrentUserSerializerTests.swift */; };
+		B9A573BC1F1938E00081F291 /* CurrentUserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573BB1F1938E00081F291 /* CurrentUserExtension.swift */; };
+		B9A573C01F193A2C0081F291 /* CurrentUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A573BF1F193A2C0081F291 /* CurrentUserTests.swift */; };
 		B9B250A31EF584AE00F1EA23 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250A21EF584AE00F1EA23 /* UICollectionViewExtension.swift */; };
 		B9B250A51EF5856F00F1EA23 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250A41EF5856F00F1EA23 /* UserCollectionViewCell.swift */; };
 		B9B250AD1EF62AB700F1EA23 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B250AC1EF62AB700F1EA23 /* Photo.swift */; };
@@ -234,6 +239,11 @@
 		B98652FF1E2B1D87004CCC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B98653041E2B1D87004CCC50 /* DreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B986530A1E2B1D87004CCC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9A573B51F1935CB0081F291 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		B9A573B71F1937F80081F291 /* CurrentUserSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserSerializer.swift; sourceTree = "<group>"; };
+		B9A573B91F19388A0081F291 /* CurrentUserSerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserSerializerTests.swift; sourceTree = "<group>"; };
+		B9A573BB1F1938E00081F291 /* CurrentUserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserExtension.swift; sourceTree = "<group>"; };
+		B9A573BF1F193A2C0081F291 /* CurrentUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserTests.swift; sourceTree = "<group>"; };
 		B9B250A21EF584AE00F1EA23 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		B9B250A41EF5856F00F1EA23 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9B250AC1EF62AB700F1EA23 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -355,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				B906976A1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift */,
+				B9A573B91F19388A0081F291 /* CurrentUserSerializerTests.swift */,
 				B9E75B511EE1147400A137FF /* SignInViewModelSerializerTests.swift */,
 				B9224C7D1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift */,
 			);
@@ -365,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				B906976D1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift */,
+				B9A573BB1F1938E00081F291 /* CurrentUserExtension.swift */,
 				B9E75B4D1EE1123400A137FF /* SignInViewModelExtension.swift */,
 				B9B250B71EF62E5B00F1EA23 /* PhotoExtension.swift */,
 				B9B250F21F05EB0100F1EA23 /* URLExtension.swift */,
@@ -463,6 +475,7 @@
 				B9E75B691EE3CE7500A137FF /* RFC6750BearerTokenSerializer.swift */,
 				B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */,
 				B9E75B4F1EE1141800A137FF /* SignInViewModelSerializer.swift */,
+				B9A573B71F1937F80081F291 /* CurrentUserSerializer.swift */,
 			);
 			name = Serializer;
 			sourceTree = "<group>";
@@ -634,6 +647,7 @@
 				B94C6A781F17184E002D334C /* LocationPermissionAlertControllerFactoryTests.swift */,
 				B9B250EA1F04ABA900F1EA23 /* PhotoCollectionViewCellConfigurerTests.swift */,
 				B9B250FC1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift */,
+				B9A573BF1F193A2C0081F291 /* CurrentUserTests.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -706,6 +720,7 @@
 				B977787B1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift */,
 				B9B250AC1EF62AB700F1EA23 /* Photo.swift */,
 				B9B250B91EF6BEEF00F1EA23 /* User.swift */,
+				B9A573B51F1935CB0081F291 /* CurrentUser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -964,6 +979,7 @@
 				B9E75B481EE1108C00A137FF /* SignInViewModel.swift in Sources */,
 				B9B250E51F03618F00F1EA23 /* PhotoCollectionViewCell.swift in Sources */,
 				B9B250A51EF5856F00F1EA23 /* UserCollectionViewCell.swift in Sources */,
+				B9A573B61F1935CB0081F291 /* CurrentUser.swift in Sources */,
 				B97778881EF2228A00A6E250 /* UiTableViewExtension.swift in Sources */,
 				B977785E1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift in Sources */,
 				B924DAF01EA45D13009F1FF8 /* AccountRegistrationViewModel.swift in Sources */,
@@ -990,6 +1006,7 @@
 				B97778951EF2BCDD00A6E250 /* AuthNavigationController.swift in Sources */,
 				B9B251011F0FF4D200F1EA23 /* LocationManagerProtocol.swift in Sources */,
 				B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */,
+				B9A573B81F1937F80081F291 /* CurrentUserSerializer.swift in Sources */,
 				B9FD3B661EA034580018BEE6 /* Parser.swift in Sources */,
 				B9B250E91F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift in Sources */,
 				B9E75B6C1EE440E500A137FF /* DictionaryExtension.swift in Sources */,
@@ -1024,6 +1041,7 @@
 				B977789B1EF37EF900A6E250 /* SignOutAlertControllerFactoryTests.swift in Sources */,
 				B9E75B4E1EE1123400A137FF /* SignInViewModelExtension.swift in Sources */,
 				B90697681ECFED790045E34E /* NetworkClientResultAssertions.swift in Sources */,
+				B9A573C01F193A2C0081F291 /* CurrentUserTests.swift in Sources */,
 				B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */,
 				B9B250FD1F0F397500F1EA23 /* PhotoCollectionViewDataSourceTests.swift in Sources */,
 				B9B250DE1EFDE8C000F1EA23 /* UserCollectionViewCellTests.swift in Sources */,
@@ -1042,6 +1060,7 @@
 				B9B250B41EF62D1600F1EA23 /* PhotoParserTests.swift in Sources */,
 				B9B250F31F05EB0100F1EA23 /* URLExtension.swift in Sources */,
 				B9B250EB1F04ABA900F1EA23 /* PhotoCollectionViewCellConfigurerTests.swift in Sources */,
+				B9A573BA1F19388A0081F291 /* CurrentUserSerializerTests.swift in Sources */,
 				B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */,
 				B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */,
 				B9E75B411EE108BB00A137FF /* SignInTableViewControllerTests.swift in Sources */,
@@ -1060,6 +1079,7 @@
 				B924DADE1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift in Sources */,
 				B97778621EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift in Sources */,
 				B9B250F51F05F04D00F1EA23 /* UserProfileViewControllerTests.swift in Sources */,
+				B9A573BC1F1938E00081F291 /* CurrentUserExtension.swift in Sources */,
 				B90697721ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
