@@ -26,6 +26,16 @@ class MockLocationManager: LocationManagerProtocol {
         requestLocationCallCount += 1
     }
     
+    var startUpdatingLocationCallCount = 0
+    func startUpdatingLocation() {
+        startUpdatingLocationCallCount += 1
+    }
+    
+    var stopUpdatingLocationCallCount = 0
+    func stopUpdatingLocation() {
+        stopUpdatingLocationCallCount += 1
+    }
+    
     static var authorizationStatusStub: CLAuthorizationStatus = .notDetermined
     static func authorizationStatus() -> CLAuthorizationStatus {
         return authorizationStatusStub
