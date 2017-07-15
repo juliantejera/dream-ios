@@ -12,9 +12,11 @@ import KeychainAccess.Swift
 struct AuthenticationController {
     
     private let keychain: KeychainProtocol
+    private let userDefaults: UserDefaults
     
-    init(keychain: KeychainProtocol) {
+    init(keychain: KeychainProtocol, userDefaults: UserDefaults = .standard) {
         self.keychain = keychain
+        self.userDefaults = userDefaults
     }
     
     init() {
@@ -34,6 +36,24 @@ struct AuthenticationController {
         }
     }
     
+    func persist(user: CurrentUser) {
+        let dictionary: [String: Any] = ["id": user.id, "latitude": user.latitude, "longitude": user.longitude]
+        userDefaults.set(dictionary, forKey: "current_user")
+    }
+    
+    func extractUser() -> CurrentUser? {
+        let parser = CurrentUserParser()
+        guard let dictionary = userDefaults.value(forKey: "current_user") as? [AnyHashable: Any], let currrentUser = parser.parse(from: dictionary) else {
+            return nil
+        }
+        
+        return currrentUser
+    }
+    
+    func removeUser() {
+        userDefaults.set(nil, forKey: "current_user")
+    }
+    
     func removeToken() {
         do {
             try keychain.remove(RFC6750BearerTokenParser.Keys.accessToken)
@@ -47,7 +67,7 @@ struct AuthenticationController {
 
     }
     
-    func extract() -> RFC6750BearerToken? {
+    func extractToken() -> RFC6750BearerToken? {
         do {
             let dictionary = [
                 RFC6750BearerTokenParser.Keys.accessToken: try keychain.get(RFC6750BearerTokenParser.Keys.accessToken),

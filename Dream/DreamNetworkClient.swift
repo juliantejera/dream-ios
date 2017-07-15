@@ -61,7 +61,7 @@ class DreamNetworkClient: NetworkClient {
         var dictionary = SessionManager.defaultHTTPHeaders
         dictionary["Accept"] = "application/json"
 
-        guard let token = authenticationController.extract(), let tokenHeaders = RFC6750BearerTokenSerializer().serialize(from: token) as? [String: String] else {
+        guard let token = authenticationController.extractToken(), let tokenHeaders = RFC6750BearerTokenSerializer().serialize(from: token) as? [String: String] else {
             return dictionary
         }
         

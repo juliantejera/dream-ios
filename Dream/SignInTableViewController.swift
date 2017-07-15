@@ -33,10 +33,10 @@ class SignInTableViewController: UITableViewController {
         }
     }
     
+    var authenticationController: AuthenticationController = AuthenticationController()
     var viewModel = SignInViewModel(email: "", password: "")
     var manager = AuthenticationNetworkManager(client: DreamNetworkClient())
     weak var delegate: SignInTableViewControllerDelegate?
-    
     lazy var activityIndicatorView: UIActivityIndicatorView = {
         return ActivityIndicatorViewFactory.create(superview: self.view)
     }()
@@ -66,7 +66,8 @@ class SignInTableViewController: UITableViewController {
         activityIndicatorView.startAnimating()
         manager.signIn(user: viewModel) { (result) in
             switch result {
-            case .success(_):
+            case .success(let user):
+                self.authenticationController.persist(user: user)
                 self.delegate?.signInTableViewControllerDidSignIn(self)
             case .failure(let errors):
                 self.presentAlertController(title: "🙈", errors: errors)

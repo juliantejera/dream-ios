@@ -99,6 +99,8 @@ class SignInTableViewControllerTests: XCTestCase {
         controller.viewModel = SignInViewModel.create()
         controller.signIn()
         XCTAssertEqual(delegate.didSignIn, 1)
+        let user = controller.authenticationController.extractUser()
+        XCTAssertNotNil(user)
     }
     
     func testSignIn_AnimatesTheActivityIndicatorView() {
