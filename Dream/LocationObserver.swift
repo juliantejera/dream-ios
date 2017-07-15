@@ -28,12 +28,17 @@ class LocationObserver: NSObject, CLLocationManagerDelegate {
         requestAuthorizationIfNeeded()
     }
     
+    func stopObserving() {
+        self.manager?.stopUpdatingLocation()
+        self.manager = nil
+    }
+    
     private func requestAuthorizationIfNeeded() {
         switch locationManagerType.authorizationStatus() {
         case .notDetermined:
             self.manager?.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
-            self.manager?.requestLocation()
+            self.manager?.startUpdatingLocation()
         case .denied:
             delegate?.locationObserver(self, didFailWithError: LocationObserverError.locationAccessDenied)
         case .restricted:
@@ -56,7 +61,7 @@ class LocationObserver: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedWhenInUse, .authorizedAlways:
-            self.manager?.requestLocation()
+            self.manager?.startUpdatingLocation()
         case .denied:
             delegate?.locationObserver(self, didFailWithError: LocationObserverError.locationAccessDenied)
         case .restricted:
