@@ -34,13 +34,15 @@ class UsersViewController: UIViewController {
         return ActivityIndicatorViewFactory.create(superview: self.view)
     }()
     
-    var locationObserver: LocationObserver?
+    lazy var locationObserver: LocationObserver = {
+        let observer = LocationObserver()
+        observer.delegate = self
+        return observer
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationObserver = LocationObserver()
-        locationObserver?.delegate = self
-        locationObserver?.startObserving(manager: CLLocationManager())
+        locationObserver.startObserving(manager: CLLocationManager())
         fetchUsers()
     }
     
@@ -91,7 +93,7 @@ extension UsersViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: UserCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         let user = users[indexPath.row]
-        cellConfigurer.configure(cell: cell, user: user)
+        cellConfigurer.configure(cell: cell, user: user, indexPath: indexPath)
         return cell
     }
     
@@ -110,6 +112,10 @@ extension UsersViewController: UICollectionViewDelegateFlowLayout {
         let height: CGFloat = width
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cellConfigurer.cancelImageRequest(indexPath: indexPath)
+    }
 }
 
 extension UsersViewController: LocationObserverDelegate {
@@ -121,13 +127,11 @@ extension UsersViewController: LocationObserverDelegate {
     
     func locationObserver(_ observer: LocationObserver, didUpdateLocation location: CLLocation) {
         let authenticationController = AuthenticationController()
-        guard var currentUser = authenticationController.extractUser() else {
+        guard let currentUser = authenticationController.extractUser() else {
             return
         }
         currentUser.update(location: location)
         authenticationController.persist(user: currentUser)
-        currentUserNetworkManager.update(user: currentUser) { (_) in
-            self.fetchUsers()
-        }
+        currentUserNetworkManager.update(user: currentUser, callback: nil)
     }
 }

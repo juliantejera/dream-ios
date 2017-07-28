@@ -20,15 +20,15 @@ struct CurrentUserNetworkManager: NetworkManager {
         self.currentUserParser = CurrentUserParser()
     }
     
-    func update(user: CurrentUser, callback: @escaping (NetworkClientResult<CurrentUser>) -> Void) {
+    func update(user: CurrentUser, callback: ((NetworkClientResult<CurrentUser>) -> Void)?) {
         let parameters = CurrentUserSerializer().serialize(from: user)
         let updatePath = "\(path)/\(user.id)"
         client.request(method: .put, path: updatePath, parameters: parameters) { (result) in
             switch result {
             case .success(let response):
-                callback(self.parseCurrentUser(response: response))
+                callback?(self.parseCurrentUser(response: response))
             case .failure(let errors):
-                callback(.failure(errors))
+                callback?(.failure(errors))
             }
         }
     }

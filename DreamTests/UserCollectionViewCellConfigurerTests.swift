@@ -18,6 +18,7 @@ class UserCollectionViewCellConfigurerTests: XCTestCase {
     var imageNetworkManager: MockImageNetworkManager!
     var defaultImage: UIImage!
     var user: User!
+    var indexPath: IndexPath!
     
     override func setUp() {
         super.setUp()
@@ -31,17 +32,18 @@ class UserCollectionViewCellConfigurerTests: XCTestCase {
         defaultImage = UIImage.silhouette
         configurer = UserCollectionViewCellConfigurer(imageNetworkManager: imageNetworkManager, defaultImage: defaultImage)
         user = User.create()
+        indexPath = IndexPath(item: 0, section: 0)
     }
     
     func test_configure_updatesTheDistanceLabel() {
-        configurer.configure(cell: cell, user: user)
+        configurer.configure(cell: cell, user: user, indexPath: indexPath)
         let actual = cell.distanceLabel.text
         let expected = LengthFormatter().string(fromValue: user.distance, unit: .mile)
         XCTAssertEqual(actual, expected)
     }
     
     func test_configure_whenTheImageNetworkManagerSucceeds_itUpdatesTheImage() {
-        configurer.configure(cell: cell, user: user)
+        configurer.configure(cell: cell, user: user, indexPath: indexPath)
         let actual = cell.imageView.image
         let expected = imageNetworkManager.image
         XCTAssertEqual(actual, expected)
@@ -49,9 +51,18 @@ class UserCollectionViewCellConfigurerTests: XCTestCase {
     
     func test_configure_whenTheImageNetworkManagerFails_itUsesTheDefaultImage() {
         imageNetworkManager.image = nil
-        configurer.configure(cell: cell, user: user)
+        configurer.configure(cell: cell, user: user, indexPath: indexPath)
         let actual = cell.imageView.image
         let expected = defaultImage
+        XCTAssertEqual(actual, expected)
+    }
+    
+    func test_cancelImageRequest_itCancelsTheRunningDataTask() {
+        imageNetworkManager.task.state = .running
+        configurer.configure(cell: cell, user: user, indexPath: indexPath)
+        configurer.cancelImageRequest(indexPath: indexPath)
+        let actual = imageNetworkManager.task.cancelCallCount
+        let expected = 1
         XCTAssertEqual(actual, expected)
     }
 }

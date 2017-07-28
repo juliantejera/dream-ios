@@ -17,7 +17,7 @@ struct ImageNetworkManager: ImageNetworkManagerProtocol {
         self.session = session
     }
         
-    func request(url: URL, callback: @escaping (UIImage?) -> Void) {
+    func request(url: URL, callback: @escaping (UIImage?) -> Void) -> URLSessionTaskProtocol {
         let task = session.dataTask(with: url) { (data, urlResponse, error) in
             guard let data = data, let image = UIImage(data: data) else {
                 DispatchQueue.main.async {
@@ -32,6 +32,7 @@ struct ImageNetworkManager: ImageNetworkManagerProtocol {
         }
         
         task.resume()
+        return task
     }
     
 }
