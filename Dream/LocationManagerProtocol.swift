@@ -15,6 +15,8 @@ protocol LocationManagerProtocol: class {
     var distanceFilter: CLLocationDistance { get set }
     func requestWhenInUseAuthorization()
     func requestLocation()
+    func startUpdatingLocation()
+    func stopUpdatingLocation()
     static func authorizationStatus() -> CLAuthorizationStatus
 }
 

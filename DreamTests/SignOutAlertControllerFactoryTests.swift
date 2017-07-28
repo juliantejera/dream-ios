@@ -27,7 +27,7 @@ class SignOutAlertControllerFactoryTests: XCTestCase {
     func testSignOut() {
         authenticationController.persist(token: RFC6750BearerToken.create())
         factory.signOut()
-        XCTAssertNil(authenticationController.extract())
+        XCTAssertNil(authenticationController.extractToken())
         XCTAssert(application.keyWindow?.rootViewController is AuthNavigationController)
     }
     

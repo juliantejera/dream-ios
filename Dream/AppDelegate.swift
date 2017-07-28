@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var authenticationController: AuthenticationController
     
     private var initialViewController: UIViewController? {
-        return authenticationController.extract() == nil ? UIStoryboard.auth.instantiateInitialViewController() : UIStoryboard.home.instantiateInitialViewController()
+        return authenticationController.extractToken() == nil ? UIStoryboard.auth.instantiateInitialViewController() : UIStoryboard.home.instantiateInitialViewController()
     }
     
     override convenience init() {

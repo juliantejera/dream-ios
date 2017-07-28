@@ -7,8 +7,8 @@
         "name": null,
         "nickname": null,
         "image": null,
-        "latitude": null,
-        "longitude": null,
+        "latitude": 40.2525,
+        "longitude": -25.2323,
         "birthdate": "1988-05-20"
     }
 }

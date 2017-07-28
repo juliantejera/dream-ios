@@ -42,7 +42,7 @@ class LocationObserverTests: XCTestCase {
     func test_startObserving_whenTheStatusIsAuthorizedWhenInUse_itRequestsTheLocation() {
         MockLocationManager.authorizationStatusStub = .authorizedWhenInUse
         observer.startObserving(manager: locationManager)
-        let actual = locationManager.requestLocationCallCount
+        let actual = locationManager.startUpdatingLocationCallCount
         let expected = 1
         XCTAssertEqual(actual, expected)
     }
@@ -50,7 +50,7 @@ class LocationObserverTests: XCTestCase {
     func test_startObserving_whenTheStatusIsAuthorizedAlways_itRequestsTheLocation() {
         MockLocationManager.authorizationStatusStub = .authorizedWhenInUse
         observer.startObserving(manager: locationManager)
-        let actual = locationManager.requestLocationCallCount
+        let actual = locationManager.startUpdatingLocationCallCount
         let expected = 1
         XCTAssertEqual(actual, expected)
     }
@@ -99,7 +99,7 @@ class LocationObserverTests: XCTestCase {
         MockLocationManager.authorizationStatusStub = .notDetermined
         observer.startObserving(manager: locationManager)
         observer.locationManager(CLLocationManager(), didChangeAuthorization: .authorizedWhenInUse)
-        let actual = locationManager.requestLocationCallCount
+        let actual = locationManager.startUpdatingLocationCallCount
         let expected = 1
         XCTAssertEqual(actual, expected)
     }
@@ -108,7 +108,7 @@ class LocationObserverTests: XCTestCase {
         MockLocationManager.authorizationStatusStub = .notDetermined
         observer.startObserving(manager: locationManager)
         observer.locationManager(CLLocationManager(), didChangeAuthorization: .authorizedAlways)
-        let actual = locationManager.requestLocationCallCount
+        let actual = locationManager.startUpdatingLocationCallCount
         let expected = 1
         XCTAssertEqual(actual, expected)
     }
@@ -126,4 +126,5 @@ class LocationObserverTests: XCTestCase {
         let expected = LocationObserverError.locationAccessRestricted.localizedDescription
         XCTAssertEqual(actual, expected)
     }
+    
 }

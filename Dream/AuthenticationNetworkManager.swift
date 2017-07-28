@@ -25,13 +25,27 @@ struct AuthenticationNetworkManager: NetworkManager {
         }
     }
     
-    func signIn(user: SignInViewModel, callback: @escaping (NetworkClientResult<Any>) -> Void) {
+    func signIn(user: SignInViewModel, callback: @escaping (NetworkClientResult<CurrentUser>) -> Void) {
         let serializer = SignInViewModelSerializer()
         let parameters = serializer.serialize(from: user)
         let signInPath = "\(path)/sign_in"
         client.request(method: .post, path: signInPath, parameters: parameters) { (result) in
-            callback(result)
+            switch result {
+            case .success(let response):
+                callback(self.parseSignIn(response: response))
+            case .failure(let errors):
+                callback(.failure(errors))
+            }
         }
+    }
+    
+    private func parseSignIn(response: Any) -> NetworkClientResult<CurrentUser> {
+        let parser = CurrentUserParser()
+        if let dictionary = response as? [AnyHashable: Any], let dataDictionary = dictionary["data"] as? [AnyHashable: Any], let currentUser = parser.parse(from: dataDictionary) {
+            return .success(currentUser)
+        }
+        
+        return .failure([DreamNetworkClientError.unparsableModel.localizedDescription])
     }
     
     func forgotPassword(email: String, callback: @escaping (NetworkClientResult<String>) -> Void) {

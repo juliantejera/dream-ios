@@ -24,15 +24,14 @@ class AuthenticationControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    
-    func testPersistWhenItSucceeds() throws {
+    func test_persistToken_whenItSucceeds() throws {
         authenticationController.persist(token: RFC6750BearerToken.create())
         let actual = keychain.attributes
         let expected = try JTAssertNotNilAndUnwrap(fixture(name: "bearer_token") as? [String: String])
         XCTAssertEqual(actual, expected)
     }
     
-    func testPersistWhenItFails() {
+    func test_persistToken_whenItFails() {
         keychain.state = .failure
         authenticationController.persist(token: RFC6750BearerToken.create())
         let actual = keychain.attributes
@@ -40,37 +39,63 @@ class AuthenticationControllerTests: XCTestCase {
         XCTAssertEqual(actual, expected)
     }
     
-    func testExtractWhenItSucceeds() {
+    func test_extractToken_whenItSucceeds() {
         let expected = RFC6750BearerToken.create()
         authenticationController.persist(token: expected)
-        let actual = authenticationController.extract()
+        let actual = authenticationController.extractToken()
         XCTAssertEqual(actual, expected)
     }
     
-    func testExtractWhenThereIsntAPersistedToken() {
-        XCTAssertNil(authenticationController.extract())
+    func test_extractToken_whenThereIsntAPersistedToken() {
+        XCTAssertNil(authenticationController.extractToken())
     }
     
-    func testExtractWhenThereIsAKeychainError() {
+    func test_extractToken_whenThereIsAKeychainError() {
         let expected = RFC6750BearerToken.create()
         authenticationController.persist(token: expected)
         keychain.state = .failure
-        XCTAssertNil(authenticationController.extract())
+        XCTAssertNil(authenticationController.extractToken())
     }
     
-    func testRemoveTokenWhenItSucceeds() {
+    func test_removeToken_whenItSucceeds() {
         authenticationController.persist(token: RFC6750BearerToken.create())
         authenticationController.removeToken()
-        XCTAssertNil(authenticationController.extract())
+        XCTAssertNil(authenticationController.extractToken())
     }
     
-    func testRemoveWhenItFails() {
+    func test_removeToken_whenItFails() {
         let expected = RFC6750BearerToken.create()
         authenticationController.persist(token: expected)
         keychain.state = .failure
         authenticationController.removeToken()
         keychain.state = .none
-        let actual = authenticationController.extract()
+        let actual = authenticationController.extractToken()
         XCTAssertEqual(actual, expected)
+    }
+    
+    func test_persistCurrentUser_savesToUserDefaults() {
+        let user = CurrentUser.create()
+        authenticationController.persist(user: user)
+        let dictionary = UserDefaults.standard.value(forKey: "current_user")
+        XCTAssertNotNil(dictionary)
+    }
+    
+    func test_extractCurrentUser_whenTheresAPersistedUser_itReturnsIt() {
+        let user = CurrentUser.create()
+        authenticationController.persist(user: user)
+        let extractedUser = authenticationController.extractUser()
+        XCTAssertEqual(extractedUser, user)
+    }
+    
+    func test_extractCurrentUser_whenThereIsNotAPersistedUser_itReturnsNil() {
+        UserDefaults.standard.set(nil, forKey: "current_user")
+        XCTAssertNil(authenticationController.extractUser())
+    }
+    
+    func test_removeUser() {
+        let user = CurrentUser.create()
+        authenticationController.persist(user: user)
+        authenticationController.removeUser()
+        XCTAssertNil(authenticationController.extractUser())
     }
 }

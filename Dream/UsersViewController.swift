@@ -28,6 +28,7 @@ class UsersViewController: UIViewController {
     
     var users = [User]()
     var userNetworkManager = UserNetworkManager(client: DreamNetworkClient())
+    var currentUserNetworkManager = CurrentUserNetworkManager(client: DreamNetworkClient())
     var cellConfigurer = UserCollectionViewCellConfigurer()
     lazy var activityIndicatorView: UIActivityIndicatorView = {
         return ActivityIndicatorViewFactory.create(superview: self.view)
@@ -119,5 +120,14 @@ extension UsersViewController: LocationObserverDelegate {
     }
     
     func locationObserver(_ observer: LocationObserver, didUpdateLocation location: CLLocation) {
+        let authenticationController = AuthenticationController()
+        guard var currentUser = authenticationController.extractUser() else {
+            return
+        }
+        currentUser.update(location: location)
+        authenticationController.persist(user: currentUser)
+        currentUserNetworkManager.update(user: currentUser) { (_) in
+            self.fetchUsers()
+        }
     }
 }
