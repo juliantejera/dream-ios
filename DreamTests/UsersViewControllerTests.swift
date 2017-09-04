@@ -15,7 +15,7 @@ class UsersViewControllerTests: XCTestCase {
     var controller: UsersViewController!
     var client: MockNetworkClient!
     var userNetworkManager: UserNetworkManager!
-    
+
     override func setUp() {
         super.setUp()
         controller = createUsersViewController()

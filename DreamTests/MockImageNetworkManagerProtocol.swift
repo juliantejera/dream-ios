@@ -12,9 +12,11 @@ import UIKit
 class MockImageNetworkManager: ImageNetworkManagerProtocol {
     
     var image: UIImage?
-    
-    func request(url: URL, callback: @escaping (UIImage?) -> Void) {
+    var onRequest: (() -> Void)?
+    var task = MockURLSessionTaskProtocol()
+    func request(url: URL, callback: @escaping (UIImage?) -> Void) -> URLSessionTaskProtocol {
         callback(image)
+        return task
     }
 
 }

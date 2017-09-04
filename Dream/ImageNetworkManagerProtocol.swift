@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ImageNetworkManagerProtocol {
-    func request(url: URL, callback: @escaping (UIImage?) -> Void)
+    func request(url: URL, callback: @escaping (UIImage?) -> Void) -> URLSessionTaskProtocol
 }

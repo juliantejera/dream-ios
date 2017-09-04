@@ -17,7 +17,7 @@ struct PhotoCollectionViewCellConfigurer {
     }
     
     func configure(cell: PhotoCollectionViewCell, photo: Photo) {
-        imageNetworkManager.request(url: photo.url) { (image) in
+        let _ = imageNetworkManager.request(url: photo.url) { (image) in
             cell.imageView.image = image
         }
     }
