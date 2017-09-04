@@ -110,7 +110,7 @@ extension SignInTableViewController: UITextFieldDelegate {
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
-    func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
         viewModel.email = emailTextField.text ?? ""
         viewModel.password = passwordTextField.text ?? ""
     }

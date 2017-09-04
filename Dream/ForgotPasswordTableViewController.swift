@@ -61,7 +61,7 @@ class ForgotPasswordTableViewController: UITableViewController {
         
     }
     
-    func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
         email = emailTextField.text ?? ""
     }
 
