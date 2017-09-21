@@ -8,17 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AC63F989F32C65CFCE6693B5 /* Pods_DreamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0F128E21AEC89E72875A97 /* Pods_DreamTests.framework */; };
-		B90697601ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906975F1ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift */; };
 		B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697611ECFE38C0045E34E /* MockNetworkClient.swift */; };
 		B90697641ECFE6F50045E34E /* authentication_network_manager_register_success.json in Resources */ = {isa = PBXBuildFile; fileRef = B90697631ECFE6F50045E34E /* authentication_network_manager_register_success.json */; };
 		B90697661ECFE74D0045E34E /* authentication_network_manager_register_failure.json in Resources */ = {isa = PBXBuildFile; fileRef = B90697651ECFE74D0045E34E /* authentication_network_manager_register_failure.json */; };
 		B90697681ECFED790045E34E /* NetworkClientResultAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697671ECFED790045E34E /* NetworkClientResultAssertions.swift */; };
-		B906976B1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906976A1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift */; };
 		B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906976D1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift */; };
 		B90697701ECFF15D0045E34E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906976F1ECFF15D0045E34E /* DateExtension.swift */; };
-		B90697721ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */; };
 		B90697741ED13CB80045E34E /* MockUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90697731ED13CB80045E34E /* MockUITextField.swift */; };
-		B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */; };
 		B90AC44C1EC76904007C0FA4 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC44B1EC76904007C0FA4 /* XCTestCaseExtension.swift */; };
 		B90AC44F1EC76D2A007C0FA4 /* errors_parser_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */; };
 		B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */; };
@@ -29,14 +25,9 @@
 		B9224C861EECE3B3005DBEED /* MockSignInTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224C851EECE3B3005DBEED /* MockSignInTableViewControllerDelegate.swift */; };
 		B924DAD81EA324BA009F1FF8 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAD71EA324BA009F1FF8 /* Validator.swift */; };
 		B924DADA1EA32546009F1FF8 /* AdultAgeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAD91EA32546009F1FF8 /* AdultAgeValidator.swift */; };
-		B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DADB1EA32594009F1FF8 /* CompositeValidatorSpec.swift */; };
-		B924DADE1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DADD1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift */; };
 		B924DAE01EA3ACDE009F1FF8 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DADF1EA3ACDE009F1FF8 /* EmailValidator.swift */; };
-		B924DAE21EA3AE48009F1FF8 /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE11EA3AE48009F1FF8 /* EmailValidatorSpec.swift */; };
 		B924DAE41EA3B296009F1FF8 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE31EA3B296009F1FF8 /* PasswordValidator.swift */; };
-		B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE51EA3B741009F1FF8 /* PasswordValidatorSpec.swift */; };
 		B924DAE81EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE71EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift */; };
-		B924DAEA1EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAE91EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift */; };
 		B924DAED1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAEC1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift */; };
 		B924DAF01EA45D13009F1FF8 /* AccountRegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAEF1EA45D13009F1FF8 /* AccountRegistrationViewModel.swift */; };
 		B924DAF21EAD8A05009F1FF8 /* HomeAuthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */; };
@@ -177,17 +168,13 @@
 /* Begin PBXFileReference section */
 		3641C53DA38C11F675C59BDC /* Pods-DreamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DreamTests/Pods-DreamTests.release.xcconfig"; sourceTree = "<group>"; };
 		B597A76F5CB82F739CB97ECA /* Pods_Dream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B906975F1ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationNetworkManagerSpec.swift; sourceTree = "<group>"; };
 		B90697611ECFE38C0045E34E /* MockNetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
 		B90697631ECFE6F50045E34E /* authentication_network_manager_register_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authentication_network_manager_register_success.json; sourceTree = "<group>"; };
 		B90697651ECFE74D0045E34E /* authentication_network_manager_register_failure.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authentication_network_manager_register_failure.json; sourceTree = "<group>"; };
 		B90697671ECFED790045E34E /* NetworkClientResultAssertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientResultAssertions.swift; sourceTree = "<group>"; };
-		B906976A1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelSerializerSpec.swift; sourceTree = "<group>"; };
 		B906976D1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelExtension.swift; sourceTree = "<group>"; };
 		B906976F1ECFF15D0045E34E /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterAccountTableViewControllerSpec.swift; sourceTree = "<group>"; };
 		B90697731ED13CB80045E34E /* MockUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUITextField.swift; sourceTree = "<group>"; };
-		B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsParserSpec.swift; sourceTree = "<group>"; };
 		B90AC44B1EC76904007C0FA4 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 		B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errors_parser_valid.json; sourceTree = "<group>"; };
 		B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelSerializer.swift; sourceTree = "<group>"; };
@@ -198,14 +185,9 @@
 		B9224C851EECE3B3005DBEED /* MockSignInTableViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSignInTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B924DAD71EA324BA009F1FF8 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		B924DAD91EA32546009F1FF8 /* AdultAgeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdultAgeValidator.swift; sourceTree = "<group>"; };
-		B924DADB1EA32594009F1FF8 /* CompositeValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeValidatorSpec.swift; sourceTree = "<group>"; };
-		B924DADD1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdultAgeValidatorSpec.swift; sourceTree = "<group>"; };
 		B924DADF1EA3ACDE009F1FF8 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
-		B924DAE11EA3AE48009F1FF8 /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		B924DAE31EA3B296009F1FF8 /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
-		B924DAE51EA3B741009F1FF8 /* PasswordValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidatorSpec.swift; sourceTree = "<group>"; };
 		B924DAE71EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordConfirmationValidator.swift; sourceTree = "<group>"; };
-		B924DAE91EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordConfirmationValidatorSpec.swift; sourceTree = "<group>"; };
 		B924DAEC1EA45A97009F1FF8 /* AccountRegistrationViewModelValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelValidator.swift; sourceTree = "<group>"; };
 		B924DAEF1EA45D13009F1FF8 /* AccountRegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModel.swift; sourceTree = "<group>"; };
 		B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAuthTableViewController.swift; sourceTree = "<group>"; };
@@ -384,7 +366,6 @@
 		B90697691ECFEFE90045E34E /* Serializers */ = {
 			isa = PBXGroup;
 			children = (
-				B906976A1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift */,
 				B9A573B91F19388A0081F291 /* CurrentUserSerializerTests.swift */,
 				B9E75B511EE1147400A137FF /* SignInViewModelSerializerTests.swift */,
 				B9224C7D1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift */,
@@ -409,7 +390,6 @@
 		B90AC4451EC76590007C0FA4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B90697711ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift */,
 				B97778901EF2B2B100A6E250 /* SettingsViewControllerTests.swift */,
 				B9B250F41F05F04D00F1EA23 /* UserProfileViewControllerTests.swift */,
 				B97778691EEF794800A6E250 /* ForgotPasswordTableViewControllerTests.swift */,
@@ -423,7 +403,6 @@
 		B90AC4461EC76692007C0FA4 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				B90AC4471EC76702007C0FA4 /* ErrorsParserSpec.swift */,
 				B9B250B31EF62D1600F1EA23 /* PhotoParserTests.swift */,
 				B9A573C51F1961DE0081F291 /* CurrentUserParserTests.swift */,
 				B97778671EEF76CA00A6E250 /* ForgotPasswordParserTests.swift */,
@@ -484,7 +463,6 @@
 		B90AC4501EC77010007C0FA4 /* Network Managers */ = {
 			isa = PBXGroup;
 			children = (
-				B906975F1ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift */,
 				B9B250C71EF6CCBB00F1EA23 /* UserNetworkManagerTests.swift */,
 				B97778611EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift */,
 				B9A573C91F19657C0081F291 /* CurrentUserNetworkManagerTests.swift */,
@@ -521,12 +499,7 @@
 		B924DAEB1EA3BBF0009F1FF8 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				B924DAE11EA3AE48009F1FF8 /* EmailValidatorSpec.swift */,
 				B9E75B4B1EE1119500A137FF /* SignInViewModelValidatorTests.swift */,
-				B924DADB1EA32594009F1FF8 /* CompositeValidatorSpec.swift */,
-				B924DAE51EA3B741009F1FF8 /* PasswordValidatorSpec.swift */,
-				B924DADD1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift */,
-				B924DAE91EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift */,
 			);
 			name = Validators;
 			sourceTree = "<group>";
@@ -806,7 +779,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Julian Tejera";
 				TargetAttributes = {
 					B98652EF1E2B1D87004CCC50 = {
@@ -905,13 +878,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		57DDE878B6E1B1D05D6C187E /* [CP] Copy Pods Resources */ = {
@@ -935,9 +911,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Dream/Pods-Dream-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -950,13 +931,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dream-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2BEE6C7D81980B4B91E2C4A /* [CP] Copy Pods Resources */ = {
@@ -1065,12 +1049,9 @@
 				B97778741EF0131000A6E250 /* AppDelegateTests.swift in Sources */,
 				B9224C861EECE3B3005DBEED /* MockSignInTableViewControllerDelegate.swift in Sources */,
 				B9E75B5F1EE2737900A137FF /* RFC6750BearerTokenExtension.swift in Sources */,
-				B924DAE21EA3AE48009F1FF8 /* EmailValidatorSpec.swift in Sources */,
 				B9E75B3F1EE1072500A137FF /* SignInTableViewControllerSectionsTests.swift in Sources */,
 				B9A573CA1F19657C0081F291 /* CurrentUserNetworkManagerTests.swift in Sources */,
 				B90697741ED13CB80045E34E /* MockUITextField.swift in Sources */,
-				B90697601ECFE2F20045E34E /* AuthenticationNetworkManagerSpec.swift in Sources */,
-				B924DAEA1EA3B8C5009F1FF8 /* PasswordConfirmationValidatorSpec.swift in Sources */,
 				B9B250DC1EFA96C100F1EA23 /* MockImageNetworkManagerProtocol.swift in Sources */,
 				B906976E1ECFF08C0045E34E /* AccountRegistrationViewModelExtension.swift in Sources */,
 				B9B250CC1EF774B500F1EA23 /* UsersViewControllerTests.swift in Sources */,
@@ -1095,18 +1076,14 @@
 				B9B250B81EF62E5B00F1EA23 /* PhotoExtension.swift in Sources */,
 				B977786C1EEF7BF800A6E250 /* MockUINavigationController.swift in Sources */,
 				B94C6A791F17184E002D334C /* LocationPermissionAlertControllerFactoryTests.swift in Sources */,
-				B924DAE61EA3B741009F1FF8 /* PasswordValidatorSpec.swift in Sources */,
 				B97778911EF2B2B100A6E250 /* SettingsViewControllerTests.swift in Sources */,
 				B9B250B41EF62D1600F1EA23 /* PhotoParserTests.swift in Sources */,
 				B9B250F31F05EB0100F1EA23 /* URLExtension.swift in Sources */,
 				B9B250EB1F04ABA900F1EA23 /* PhotoCollectionViewCellConfigurerTests.swift in Sources */,
 				B9A573BA1F19388A0081F291 /* CurrentUserSerializerTests.swift in Sources */,
-				B924DADC1EA32594009F1FF8 /* CompositeValidatorSpec.swift in Sources */,
 				B94677D01F2B71B600F35AEB /* MockURLSessionTaskProtocol.swift in Sources */,
-				B90AC4481EC76702007C0FA4 /* ErrorsParserSpec.swift in Sources */,
 				B9E75B411EE108BB00A137FF /* SignInTableViewControllerTests.swift in Sources */,
 				B90AC44C1EC76904007C0FA4 /* XCTestCaseExtension.swift in Sources */,
-				B906976B1ECFEFF90045E34E /* AccountRegistrationViewModelSerializerSpec.swift in Sources */,
 				B97778781EF0C8F300A6E250 /* HomeAuthTableViewControllerTests.swift in Sources */,
 				B9B250F11F05E9BE00F1EA23 /* PhotoCollectionViewCellTests.swift in Sources */,
 				B90697621ECFE38C0045E34E /* MockNetworkClient.swift in Sources */,
@@ -1118,11 +1095,9 @@
 				B9E75B681EE2FA4700A137FF /* CustomTestAssertions.swift in Sources */,
 				B9E75B661EE2F61200A137FF /* MockKeychainProtocol.swift in Sources */,
 				B94C6A771F15C693002D334C /* MockLocationObserverDelegate.swift in Sources */,
-				B924DADE1EA326E5009F1FF8 /* AdultAgeValidatorSpec.swift in Sources */,
 				B97778621EEF71F200A6E250 /* AuthenticationNetworkManagerTests.swift in Sources */,
 				B9B250F51F05F04D00F1EA23 /* UserProfileViewControllerTests.swift in Sources */,
 				B9A573BC1F1938E00081F291 /* CurrentUserExtension.swift in Sources */,
-				B90697721ECFF2CE0045E34E /* RegisterAccountTableViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,7 +1132,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1165,7 +1142,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1207,7 +1188,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1215,7 +1198,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
