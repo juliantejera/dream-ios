@@ -125,13 +125,13 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         return true
     }
     
-    func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChange(_ textField: UITextField) {
         self.viewModel.email = emailTextField.text ?? ""
         self.viewModel.password = passwordTextField.text ?? ""
         self.viewModel.passwordConfirmation = passwordConfirmationTextField.text ?? ""
     }
     
-    func birthdateChanged(datePicker: UIDatePicker) {
+    @objc func birthdateChanged(datePicker: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         self.birthdateTextField.text = formatter.string(from: datePicker.date)

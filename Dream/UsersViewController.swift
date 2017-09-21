@@ -46,7 +46,7 @@ class UsersViewController: UIViewController {
         fetchUsers()
     }
     
-    func fetchUsers() {
+    @objc func fetchUsers() {
         guard !activityIndicatorView.isAnimating || !collectionView.refreshControl!.isRefreshing else {
             return
         }
