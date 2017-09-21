@@ -1,6 +1,6 @@
 language: swift
-osx_image: xcode8.3
+osx_image: xcode9
 before_script:
   - gem install xcpretty
 script:
-  - xcodebuild -scheme Dream -workspace Dream.xcworkspace -sdk iphonesimulator -destination 'name=iPhone 6S,OS=10.3' build test CODE_SIGNING_REQUIRED=NO | xcpretty
+  - xcodebuild -scheme Dream -workspace Dream.xcworkspace -sdk iphonesimulator -destination 'name=iPhone 6S,OS=11' build test CODE_SIGNING_REQUIRED=NO | xcpretty
