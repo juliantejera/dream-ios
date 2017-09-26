@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct ForgotPasswordModel: Codable {
+    let message: String
+}

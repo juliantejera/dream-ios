@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import Alamofire
 
 protocol NetworkClient {
     var basePath: String { get }
-    func request(method: HTTPMethod, path: String, parameters: [String: Any]?, callback: @escaping (NetworkClientResult<Any>) -> Void)
+    func request(method: HttpMethod, path: String, parameters: [String: Any]?, httpBody: Data?, callback: @escaping (NetworkClientResult<Data>) -> Void)
+    func request<T: Codable>(method: HttpMethod, path: String, parameters: [String: Any]?, httpBody: Data?, callback: @escaping (NetworkClientResult<T>) -> Void)
 }
 
 enum NetworkClientResult<Type> {

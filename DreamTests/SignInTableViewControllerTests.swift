@@ -23,7 +23,7 @@ class SignInTableViewControllerTests: XCTestCase {
         window.makeKeyAndVisible()
         window.rootViewController = controller
         client = MockNetworkClient()
-        client.response = self.fixture(name: "authentication_network_manager_sign_in_success")
+        client.response = try? jsonData(from: "authentication_network_manager_sign_in_success")
         controller.manager = AuthenticationNetworkManager(client: client)
         delegate = MockSignInTableViewControllerDelegate()
         controller.delegate = delegate

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RFC6750BearerToken {
+struct RFC6750BearerToken: Codable {
     let accessToken: String
     let tokenType: String
     let client: String

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Photo {
+struct Photo: Codable {
     let id: Int
     let order: Int
     let status: PhotoStatus

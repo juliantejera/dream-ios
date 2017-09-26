@@ -42,15 +42,15 @@ class AuthenticationNetworkManagerTests: XCTestCase {
         }
     }
     
-    func testForgotPasswordWhenNetworkRequestSucceedsAndItCanBeParsedItReturnsASuccessResult() {
-        client.response = fixture(name: "authentication_network_manager_forgot_password_success")
+    func testForgotPasswordWhenNetworkRequestSucceedsAndItCanBeParsedItReturnsASuccessResult() throws {
+        client.response = try jsonData(from: "authentication_network_manager_forgot_password_success")
         manager.forgotPassword(email: email) { (result) in
             JTAssertNetworkClientResultSucceeds(result)
         }
     }
     
-    func testForgotPasswordWhenNetworkRequestSucceedsAndItCannotBeParsedItReturnsAFailure() {
-        client.response = fixture(name: "authentication_network_manager_forgot_password_unknown_email")
+    func testForgotPasswordWhenNetworkRequestSucceedsAndItCannotBeParsedItReturnsAFailure() throws {
+        client.response = try jsonData(from: "authentication_network_manager_forgot_password_unknown_email")
         manager.forgotPassword(email: email) { (result) in
             JTAssertNetworkClientResultFails(result)
         }

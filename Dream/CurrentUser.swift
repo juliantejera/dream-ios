@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class CurrentUser {
+class CurrentUser: Codable {
     let id: Int
     var latitude: Double
     var longitude: Double

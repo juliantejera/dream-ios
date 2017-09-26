@@ -50,8 +50,8 @@ class ForgotPasswordTableViewController: UITableViewController {
         
         manager.forgotPassword(email: email) { (result) in
             switch result {
-            case .success(let message):
-                self.present(self.forgotPasswordAlertController(message: message), animated: true, completion: nil)
+            case .success(let forgotPasswordModel):
+                self.present(self.forgotPasswordAlertController(message: forgotPasswordModel.message), animated: true, completion: nil)
             case .failure(let errors):
                 self.presentAlertController(title: "🙈", errors: errors)
             }

@@ -9,6 +9,7 @@
 import XCTest
 
 private class DreamTestClass {}
+private struct FixtureNotFoundError: Error {}
 
 extension XCTestCase {
     
@@ -16,6 +17,13 @@ extension XCTestCase {
         return Bundle(for: DreamTestClass.self)
     }
     
+    func jsonData(from file: String) throws -> Data {
+        guard let url = bundle.url(forResource: file, withExtension: "json") else {
+            throw FixtureNotFoundError()
+        }
+        
+        return try Data(contentsOf: url)
+    }
     func fixture(name: String) -> [String: Any] {
         
         guard let url = bundle.url(forResource: name, withExtension: "json") else {

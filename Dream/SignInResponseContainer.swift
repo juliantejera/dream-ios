@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct SignInResponseContainer: Codable {
+    enum CodingKeys: String, CodingKey {
+        case user = "data"
+    }
+    
+    let user: CurrentUser
+}
