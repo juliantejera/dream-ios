@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PhotoStatus: Int {
+enum PhotoStatus: Int, Codable {
     case inProgress
     case rejected
     case accepted

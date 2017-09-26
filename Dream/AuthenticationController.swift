@@ -37,17 +37,20 @@ struct AuthenticationController {
     }
     
     func persist(user: CurrentUser) {
-        let dictionary: [String: Any] = ["id": user.id, "latitude": user.latitude, "longitude": user.longitude]
-        userDefaults.set(dictionary, forKey: "current_user")
+        do {
+            let data = try JSONEncoder().encode(user)
+            userDefaults.set(data, forKey: "current_user")
+        } catch {
+            
+        }
     }
     
     func extractUser() -> CurrentUser? {
-        let parser = CurrentUserParser()
-        guard let dictionary = userDefaults.value(forKey: "current_user") as? [AnyHashable: Any], let currrentUser = parser.parse(from: dictionary) else {
+        guard let data = userDefaults.value(forKey: "current_user") as? Data else {
             return nil
         }
         
-        return currrentUser
+        return try? JSONDecoder().decode(CurrentUser.self, from: data)        
     }
     
     func removeUser() {

@@ -9,6 +9,7 @@
 import Foundation
 
 protocol URLSessionTaskProtocol: Cancellable, Suspendable, Resumable {
+    var taskIdentifier: Int { get }
     var state: URLSessionTask.State { get }
 }
 

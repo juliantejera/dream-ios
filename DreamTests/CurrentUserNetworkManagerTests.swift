@@ -22,8 +22,8 @@ class CurrentUserNetworkManagerTests: XCTestCase {
         currentUser = CurrentUser.create()
     }
     
-    func test_update_whenTheRequestSucceeds_itReturnsACurrentUser() {
-        client.response = fixture(name: "current_user")
+    func test_update_whenTheRequestSucceeds_itReturnsACurrentUser() throws {
+        client.response = try jsonData(from: "current_user")
         manager.update(user: currentUser) { (result) in
             switch result {
             case .success(let updatedUser):
@@ -35,7 +35,7 @@ class CurrentUserNetworkManagerTests: XCTestCase {
     }
     
     func test_update_whenTheRequestSucceedsButTheResponseCannotBeParsed_itFails() {
-        client.response = [:]
+        client.response = nil
         manager.update(user: currentUser) { (result) in
             JTAssertNetworkClientResultFails(result)
         }

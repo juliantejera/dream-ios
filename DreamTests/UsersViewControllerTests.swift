@@ -20,7 +20,7 @@ class UsersViewControllerTests: XCTestCase {
         super.setUp()
         controller = createUsersViewController()
         client = MockNetworkClient()
-        client.response = arrayFixture(name: "user_network_manager_find_all_success")
+        client.response = try? jsonData(from: "user_network_manager_find_all_success")
         userNetworkManager = UserNetworkManager(client: client)
         controller.userNetworkManager = userNetworkManager
         window = UIWindow()

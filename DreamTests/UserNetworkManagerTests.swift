@@ -20,8 +20,8 @@ class UserNetworkManagerTests: XCTestCase {
         manager = UserNetworkManager(client: client)
     }
     
-    func test_findAll_whenTheRequestSucceeds_itReturnsUsers() {
-        client.response = arrayFixture(name: "user_network_manager_find_all_success")
+    func test_findAll_whenTheRequestSucceeds_itReturnsUsers() throws {
+        client.response = try jsonData(from: "user_network_manager_find_all_success")
         
         manager.findAll(limit: 2, radius: 100) { (result) in
             switch result {
@@ -34,7 +34,7 @@ class UserNetworkManagerTests: XCTestCase {
     }
     
     func test_findAll_whenTheRequestSucceedsButTheResponseCannotBeParsed_itFails() {
-        client.response = [:]
+        client.response = nil
         manager.findAll(limit: 1, radius: 100) { (result) in
             JTAssertNetworkClientResultFails(result)
         }

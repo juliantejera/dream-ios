@@ -10,6 +10,7 @@ import Foundation
 @testable import Dream
 
 class MockURLSessionTaskProtocol: URLSessionTaskProtocol {
+    var taskIdentifier: Int = 0
     var state: URLSessionTask.State = .running
 
     var cancelCallCount = 0

@@ -7,67 +7,74 @@
 //
 
 import Foundation
-import Alamofire
 
 enum DreamNetworkClientError: Error {
     case unparsableModel
 }
 
 class DreamNetworkClient: NetworkClient {
-    
-    let basePath = "http://localhost:3000/"
-    private let sessionManager: SessionManager
+    var basePath: String {
+        return baseUrl.absoluteString
+    }
+
+    let baseUrl = URL(string: "http://localhost:3000/")!
+    private let session: URLSessionProtocol
     private let authenticationController: AuthenticationController
     
-    init() {
-        let config = URLSessionConfiguration.default
-        config.httpShouldSetCookies = false
-        config.httpCookieAcceptPolicy = .never
-        sessionManager = SessionManager(configuration: config)
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
         authenticationController = AuthenticationController()
     }
     
-    func request(method: HTTPMethod, path: String, parameters: [String : Any]?, callback: @escaping (NetworkClientResult<Any>) -> Void) {
-        let request = self.sessionManager.request(path, method: method, parameters: parameters, headers: headers)
-        request.responseJSON { (dataResponse) in
-            self.updateBearerToken(dataResponse: dataResponse)
-            switch dataResponse.result {
-            case .success(let value):
-                callback(self.result(for: value))
+    func request(method: HttpMethod, path: String, parameters: [String : Any]? = nil, httpBody: Data? = nil, callback: @escaping (NetworkClientResult<Data>) -> Void) {
+        
+        guard let url = URL(string: path, relativeTo: baseUrl) else {
+            return
+        }
+        do {
+            let request = try JSONURLRequestFactory().create(url: url, httpMethod: method, parameters: parameters)
+            let task = session.task(with: request) { (data, response, error) in
+                let httpResponse = response as! HTTPURLResponse
+                self.updateBearerToken(httpHeaders: httpResponse.allHeaderFields)
+                DispatchQueue.main.async {
+                    if let data = data, (200..<300).contains(httpResponse.statusCode) {
+                        callback(.success(data))
+                    } else if let error = error {
+                        callback(.failure([error.localizedDescription]))
+                    }
+                }
+                
+            }
+            
+            task.resume()
+        } catch let error {
+            callback(.failure([error.localizedDescription]))
+        }
+
+    }
+    
+    func request<T>(method: HttpMethod, path: String, parameters: [String : Any]? = nil, httpBody: Data? = nil, callback: @escaping (NetworkClientResult<T>) -> Void) where T : Decodable, T : Encodable {
+        request(method: method, path: path, parameters: parameters, httpBody: httpBody) { (dataResult) in
+            switch dataResult {
+            case .success(let data):
+                do {
+                    let codable = try JSONDecoder().decode(T.self, from: data)
+                    callback(.success(codable))
+                } catch let error {
+                    callback(.failure([error.localizedDescription]))
+                }
             case .failure(let error):
-                callback(.failure([error.localizedDescription]))
+                callback(.failure(error))
             }
         }
     }
     
-    private func updateBearerToken(dataResponse: DataResponse<Any>) {
-        guard let httpHeaders = dataResponse.response?.allHeaderFields,
-              let token = RFC6750BearerTokenParser().parse(from: httpHeaders) else {
+    private func updateBearerToken(httpHeaders: [AnyHashable: Any]) {
+        guard let token = RFC6750BearerTokenParser().parse(from: httpHeaders) else {
             return
         }
         
         authenticationController.persist(token: token)
-    }
-    
-    private func result(for value: Any) -> NetworkClientResult<Any> {
-        if let dictionary = value as? [AnyHashable: Any], let errors = ErrorsParser().parse(from: dictionary) {
-            return .failure(errors)
-        } else {
-            return .success(value)
-        }
-    }
-    
-    var headers: [String: String] {
-        var dictionary = SessionManager.defaultHTTPHeaders
-        dictionary["Accept"] = "application/json"
-
-        guard let token = authenticationController.extractToken(), let tokenHeaders = RFC6750BearerTokenSerializer().serialize(from: token) as? [String: String] else {
-            return dictionary
-        }
-        
-        dictionary.add(dictionary: tokenHeaders)
-
-        return dictionary
     }
     
 }

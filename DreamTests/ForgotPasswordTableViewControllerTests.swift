@@ -25,7 +25,7 @@ class ForgotPasswordTableViewControllerTests: XCTestCase {
         navigationController = MockUINavigationController(rootViewController: controller)
         window.rootViewController = navigationController
         client = MockNetworkClient()
-        client.response = self.fixture(name: "authentication_network_manager_forgot_password_success")
+        client.response = try? jsonData(from: "authentication_network_manager_forgot_password_success")
         controller.manager = AuthenticationNetworkManager(client: client)
         controller.email = "jt@gmail.com"
         controller.loadView()
