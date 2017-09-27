@@ -12,7 +12,7 @@ import Foundation
 extension RFC6750BearerToken {
     
     static func create() -> RFC6750BearerToken {
-        return RFC6750BearerToken(accessToken: "4P9fHIJ5eX6v1PYJI4iF8Q", tokenType: "Bearer", client: "3XmvWP5VZ7J4VbxTa0Wp0w", expiry: 1497673221, uid: "jtejera27@gmail.com")
+        return RFC6750BearerToken(accessToken: "4P9fHIJ5eX6v1PYJI4iF8Q", tokenType: "Bearer", client: "3XmvWP5VZ7J4VbxTa0Wp0w", expiry: "1497673221", uid: "jtejera27@gmail.com")
     }
     
 }

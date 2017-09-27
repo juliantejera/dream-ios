@@ -12,7 +12,7 @@ struct RFC6750BearerToken: Codable {
     let accessToken: String
     let tokenType: String
     let client: String
-    let expiry: Int
+    let expiry: String
     let uid: String
 }
 

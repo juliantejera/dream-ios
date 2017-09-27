@@ -11,6 +11,11 @@ import KeychainAccess.Swift
 
 struct AuthenticationController {
     
+    struct Keys {
+        static let token = "token"
+        static let currentUser = "current_user"
+    }
+    
     private let keychain: KeychainProtocol
     private let userDefaults: UserDefaults
     
@@ -26,11 +31,8 @@ struct AuthenticationController {
     
     func persist(token: RFC6750BearerToken) {
         do {
-            try keychain.set(token.accessToken, key: RFC6750BearerTokenParser.Keys.accessToken)
-            try keychain.set(token.tokenType, key: RFC6750BearerTokenParser.Keys.tokenType)
-            try keychain.set(token.client, key: RFC6750BearerTokenParser.Keys.client)
-            try keychain.set(token.expiry.description, key: RFC6750BearerTokenParser.Keys.expiry)
-            try keychain.set(token.uid, key: RFC6750BearerTokenParser.Keys.uid)
+            let data = try JSONEncoder().encode(token)
+            try keychain.set(data, key: Keys.token)
         } catch let error {
             print("Keychain error: \(error)")
         }
@@ -39,14 +41,14 @@ struct AuthenticationController {
     func persist(user: CurrentUser) {
         do {
             let data = try JSONEncoder().encode(user)
-            userDefaults.set(data, forKey: "current_user")
+            userDefaults.set(data, forKey: Keys.currentUser)
         } catch {
             
         }
     }
     
     func extractUser() -> CurrentUser? {
-        guard let data = userDefaults.value(forKey: "current_user") as? Data else {
+        guard let data = userDefaults.value(forKey: Keys.currentUser) as? Data else {
             return nil
         }
         
@@ -54,16 +56,12 @@ struct AuthenticationController {
     }
     
     func removeUser() {
-        userDefaults.set(nil, forKey: "current_user")
+        userDefaults.set(nil, forKey: Keys.currentUser)
     }
     
     func removeToken() {
         do {
-            try keychain.remove(RFC6750BearerTokenParser.Keys.accessToken)
-            try keychain.remove(RFC6750BearerTokenParser.Keys.tokenType)
-            try keychain.remove(RFC6750BearerTokenParser.Keys.client)
-            try keychain.remove(RFC6750BearerTokenParser.Keys.expiry)
-            try keychain.remove(RFC6750BearerTokenParser.Keys.uid)
+            try keychain.remove(Keys.token)
         } catch let error {
             print("Keychain error: \(error)")
         }
@@ -71,16 +69,11 @@ struct AuthenticationController {
     }
     
     func extractToken() -> RFC6750BearerToken? {
-        do {
-            let dictionary = [
-                RFC6750BearerTokenParser.Keys.accessToken: try keychain.get(RFC6750BearerTokenParser.Keys.accessToken),
-                RFC6750BearerTokenParser.Keys.tokenType: try keychain.get(RFC6750BearerTokenParser.Keys.tokenType),
-                RFC6750BearerTokenParser.Keys.client: try keychain.get(RFC6750BearerTokenParser.Keys.client),
-                RFC6750BearerTokenParser.Keys.expiry: try keychain.get(RFC6750BearerTokenParser.Keys.expiry),
-                RFC6750BearerTokenParser.Keys.uid: try keychain.get(RFC6750BearerTokenParser.Keys.uid)
-            ]
-            
-            return RFC6750BearerTokenParser().parse(from: dictionary)
+        do {            
+            guard let data = try keychain.getData(Keys.token) else {
+                return nil
+            }
+            return try JSONDecoder().decode(RFC6750BearerToken.self, from: data)
         } catch let error {
             print("Keychain error: \(error)")
             return nil

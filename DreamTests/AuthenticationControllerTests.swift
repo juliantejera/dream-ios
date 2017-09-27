@@ -25,18 +25,17 @@ class AuthenticationControllerTests: XCTestCase {
     }
     
     func test_persistToken_whenItSucceeds() throws {
-        authenticationController.persist(token: RFC6750BearerToken.create())
-        let actual = keychain.attributes
-        let expected = try JTAssertNotNilAndUnwrap(fixture(name: "bearer_token") as? [String: String])
+        let token = RFC6750BearerToken.create()
+        authenticationController.persist(token: token)
+        let actual = keychain.attributes[AuthenticationController.Keys.token]
+        let expected = try JSONEncoder().encode(token)
         XCTAssertEqual(actual, expected)
     }
     
     func test_persistToken_whenItFails() {
         keychain.state = .failure
         authenticationController.persist(token: RFC6750BearerToken.create())
-        let actual = keychain.attributes
-        let expected = [String: String]()
-        XCTAssertEqual(actual, expected)
+        XCTAssertNil(keychain.attributes[AuthenticationController.Keys.token])
     }
     
     func test_extractToken_whenItSucceeds() {
@@ -76,7 +75,7 @@ class AuthenticationControllerTests: XCTestCase {
     func test_persistCurrentUser_savesToUserDefaults() {
         let user = CurrentUser.create()
         authenticationController.persist(user: user)
-        let dictionary = UserDefaults.standard.value(forKey: "current_user")
+        let dictionary = UserDefaults.standard.value(forKey: AuthenticationController.Keys.currentUser)
         XCTAssertNotNil(dictionary)
     }
     
@@ -88,7 +87,7 @@ class AuthenticationControllerTests: XCTestCase {
     }
     
     func test_extractCurrentUser_whenThereIsNotAPersistedUser_itReturnsNil() {
-        UserDefaults.standard.set(nil, forKey: "current_user")
+        UserDefaults.standard.set(nil, forKey: AuthenticationController.Keys.currentUser)
         XCTAssertNil(authenticationController.extractUser())
     }
     

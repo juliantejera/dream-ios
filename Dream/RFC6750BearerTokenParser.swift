@@ -21,8 +21,7 @@ struct RFC6750BearerTokenParser: Parser {
         guard let accessToken = dictionary[Keys.accessToken] as? String,
             let tokenType = dictionary[Keys.tokenType] as? String,
             let client = dictionary[Keys.client] as? String,
-            let expiryString = dictionary[Keys.expiry] as? String,
-            let expiry = Int(expiryString),
+            let expiry = dictionary[Keys.expiry] as? String,
             let uid = dictionary[Keys.uid] as? String else {
                 return nil
         }

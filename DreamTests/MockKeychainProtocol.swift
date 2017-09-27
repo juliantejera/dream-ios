@@ -16,10 +16,11 @@ enum MockKeychainProtocolState: Error {
 
 class MockKeychainProtocol: KeychainProtocol {
  
-    var attributes: [String: String] = [:]
+    var attributes: [String: Data] = [:]
     var state = MockKeychainProtocolState.none
     
-    func get(_ key: String) throws -> String? {
+    
+    func getData(_ key: String) throws -> Data? {
         switch state {
         case .failure:
             throw state
@@ -28,7 +29,7 @@ class MockKeychainProtocol: KeychainProtocol {
         }
     }
     
-    func set(_ value: String, key: String) throws {
+    func set(_ value: Data, key: String) throws {
         switch state {
         case .failure:
             throw state
