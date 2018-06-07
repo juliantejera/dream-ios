@@ -18,6 +18,7 @@
 		B90AC44C1EC76904007C0FA4 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC44B1EC76904007C0FA4 /* XCTestCaseExtension.swift */; };
 		B90AC44F1EC76D2A007C0FA4 /* errors_parser_valid.json in Resources */ = {isa = PBXBuildFile; fileRef = B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */; };
 		B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */; };
+		B91FF4231F7BD45800447688 /* RFC6750BearerTokenParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FF4221F7BD45800447688 /* RFC6750BearerTokenParser.swift */; };
 		B9224C7E1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224C7D1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift */; };
 		B9224C801EECD052005DBEED /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9224C7F1EECD052005DBEED /* UIViewControllerExtension.swift */; };
 		B9224C821EECDDAA005DBEED /* authentication_network_manager_sign_in_success.json in Resources */ = {isa = PBXBuildFile; fileRef = B9224C811EECDDAA005DBEED /* authentication_network_manager_sign_in_success.json */; };
@@ -136,7 +137,6 @@
 		B9E75B501EE1141800A137FF /* SignInViewModelSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B4F1EE1141800A137FF /* SignInViewModelSerializer.swift */; };
 		B9E75B521EE1147400A137FF /* SignInViewModelSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B511EE1147400A137FF /* SignInViewModelSerializerTests.swift */; };
 		B9E75B541EE18ED500A137FF /* RFC6750BearerToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B531EE18ED500A137FF /* RFC6750BearerToken.swift */; };
-		B9E75B561EE18F3500A137FF /* RFC6750BearerTokenParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B551EE18F3500A137FF /* RFC6750BearerTokenParser.swift */; };
 		B9E75B581EE2627E00A137FF /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B571EE2627E00A137FF /* AuthenticationController.swift */; };
 		B9E75B5B1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E75B5A1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift */; };
 		B9E75B5D1EE26FF500A137FF /* bearer_token.json in Resources */ = {isa = PBXBuildFile; fileRef = B9E75B5C1EE26FF500A137FF /* bearer_token.json */; };
@@ -177,6 +177,7 @@
 		B90AC44B1EC76904007C0FA4 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
 		B90AC44E1EC76D2A007C0FA4 /* errors_parser_valid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = errors_parser_valid.json; sourceTree = "<group>"; };
 		B90AC4521EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRegistrationViewModelSerializer.swift; sourceTree = "<group>"; };
+		B91FF4221F7BD45800447688 /* RFC6750BearerTokenParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC6750BearerTokenParser.swift; sourceTree = "<group>"; };
 		B9224C7D1EE8FF86005DBEED /* RFC6750BearerTokenSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC6750BearerTokenSerializerTests.swift; sourceTree = "<group>"; };
 		B9224C7F1EECD052005DBEED /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		B9224C811EECDDAA005DBEED /* authentication_network_manager_sign_in_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = authentication_network_manager_sign_in_success.json; sourceTree = "<group>"; };
@@ -299,7 +300,6 @@
 		B9E75B4F1EE1141800A137FF /* SignInViewModelSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModelSerializer.swift; sourceTree = "<group>"; };
 		B9E75B511EE1147400A137FF /* SignInViewModelSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModelSerializerTests.swift; sourceTree = "<group>"; };
 		B9E75B531EE18ED500A137FF /* RFC6750BearerToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC6750BearerToken.swift; sourceTree = "<group>"; };
-		B9E75B551EE18F3500A137FF /* RFC6750BearerTokenParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC6750BearerTokenParser.swift; sourceTree = "<group>"; };
 		B9E75B571EE2627E00A137FF /* AuthenticationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		B9E75B591EE26D7300A137FF /* Dream.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dream.entitlements; sourceTree = "<group>"; };
 		B9E75B5A1EE26FB200A137FF /* RFC6750BearerTokenParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC6750BearerTokenParserTests.swift; sourceTree = "<group>"; };
@@ -696,7 +696,7 @@
 		B9FD3B611EA0342F0018BEE6 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				B9E75B551EE18F3500A137FF /* RFC6750BearerTokenParser.swift */,
+				B91FF4221F7BD45800447688 /* RFC6750BearerTokenParser.swift */,
 				B977785F1EEDDDD700A6E250 /* ForgotPasswordParser.swift */,
 			);
 			name = Parsers;
@@ -737,7 +737,6 @@
 				B98652ED1E2B1D87004CCC50 /* Frameworks */,
 				B98652EE1E2B1D87004CCC50 /* Resources */,
 				8411A2400B59F1CBDFA5F41C /* [CP] Embed Pods Frameworks */,
-				E2BEE6C7D81980B4B91E2C4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -756,8 +755,6 @@
 				B98653001E2B1D87004CCC50 /* Sources */,
 				B98653011E2B1D87004CCC50 /* Frameworks */,
 				B98653021E2B1D87004CCC50 /* Resources */,
-				13CFEBEAF80D220EDBE73B66 /* [CP] Embed Pods Frameworks */,
-				57DDE878B6E1B1D05D6C187E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -776,13 +773,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Julian Tejera";
 				TargetAttributes = {
 					B98652EF1E2B1D87004CCC50 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = VDYWQG4YL7;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -793,7 +790,7 @@
 					B98653031E2B1D87004CCC50 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = VDYWQG4YL7;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B98652EF1E2B1D87004CCC50;
 					};
@@ -854,21 +851,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13CFEBEAF80D220EDBE73B66 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DreamTests/Pods-DreamTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3ED3DCFC33BD77E41D22D4F9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -885,21 +867,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		57DDE878B6E1B1D05D6C187E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DreamTests/Pods-DreamTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8411A2400B59F1CBDFA5F41C /* [CP] Embed Pods Frameworks */ = {
@@ -938,21 +905,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E2BEE6C7D81980B4B91E2C4A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dream/Pods-Dream-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -981,6 +933,7 @@
 				B97778761EF014A200A6E250 /* HomeViewController.swift in Sources */,
 				B94677C81F2AE25A00F35AEB /* Cancellable.swift in Sources */,
 				B9B250FF1F0FEBA900F1EA23 /* LocationObserver.swift in Sources */,
+				B91FF4231F7BD45800447688 /* RFC6750BearerTokenParser.swift in Sources */,
 				B977787A1EF0CFEC00A6E250 /* AuthStoryboard.swift in Sources */,
 				B924DAE81EA3B82D009F1FF8 /* PasswordConfirmationValidator.swift in Sources */,
 				B9E75B391EE105FA00A137FF /* SignInTableViewControllerSections.swift in Sources */,
@@ -1033,7 +986,6 @@
 				B9B250D21EF7F4BE00F1EA23 /* ImageNetworkManager.swift in Sources */,
 				B97DC6B01F119FE400EDDD77 /* LocationObserverError.swift in Sources */,
 				B90AC4531EC77059007C0FA4 /* AccountRegistrationViewModelSerializer.swift in Sources */,
-				B9E75B561EE18F3500A137FF /* RFC6750BearerTokenParser.swift in Sources */,
 				B9B250D61EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1130,6 +1082,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1137,6 +1090,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1186,6 +1140,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1193,6 +1148,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1233,8 +1189,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.Dream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1249,8 +1204,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.Dream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -1265,8 +1219,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.DreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dream.app/Dream";
 			};
 			name = Debug;
@@ -1282,8 +1235,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.DreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dream.app/Dream";
 			};
 			name = Release;

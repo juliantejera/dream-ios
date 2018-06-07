@@ -80,7 +80,7 @@ struct AuthenticationController {
                 RFC6750BearerTokenParser.Keys.uid: try keychain.get(RFC6750BearerTokenParser.Keys.uid)
             ]
             
-            return RFC6750BearerTokenParser().parse(from: dictionary)
+            return RFC6750BearerTokenParser().parse(from: dictionary as [AnyHashable : Any])
         } catch let error {
             print("Keychain error: \(error)")
             return nil

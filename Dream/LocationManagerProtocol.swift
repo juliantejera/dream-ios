@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 protocol LocationManagerProtocol: class {
-    weak var delegate: CLLocationManagerDelegate? { get set }
+    var delegate: CLLocationManagerDelegate? { get set }
     var desiredAccuracy: CLLocationAccuracy { get set }
     var distanceFilter: CLLocationDistance { get set }
     func requestWhenInUseAuthorization()

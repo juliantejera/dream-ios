@@ -15,7 +15,7 @@ class ForgotPasswordTableViewController: UITableViewController {
             emailTextField.keyboardType = .emailAddress
             emailTextField.autocorrectionType = .no
             emailTextField.returnKeyType = .send
-            emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+            emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
         }
     }
     

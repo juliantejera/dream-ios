@@ -18,7 +18,7 @@ class PasswordValidator: Validator {
     
     var isValid: Bool {
         errors.removeAll()
-        if password.characters.count < 8 {
+        if password.count < 8 {
             errors.append("Your password should have at least 8 characters")
         }
         return errors.isEmpty

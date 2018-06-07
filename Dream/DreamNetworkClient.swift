@@ -34,10 +34,11 @@ class DreamNetworkClient: NetworkClient {
         do {
             let request = try JSONURLRequestFactory().create(url: url, httpMethod: method, parameters: parameters)
             let task = session.task(with: request) { (data, response, error) in
-                let httpResponse = response as! HTTPURLResponse
-                self.updateBearerToken(httpHeaders: httpResponse.allHeaderFields)
+//                let httpResponse = response as! HTTPURLResponse
+//                self.updateBearerToken(httpHeaders: httpResponse.allHeaderFields)
                 DispatchQueue.main.async {
-                    if let data = data, (200..<300).contains(httpResponse.statusCode) {
+                    //  (200..<300).contains(httpResponse.statusCode)
+                    if let data = data {
                         callback(.success(data))
                     } else if let error = error {
                         callback(.failure([error.localizedDescription]))

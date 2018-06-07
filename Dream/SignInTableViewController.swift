@@ -107,7 +107,7 @@ extension SignInTableViewController: UITextFieldDelegate {
     
     fileprivate func configure(textField: UITextField) {
         textField.delegate = self
-        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {

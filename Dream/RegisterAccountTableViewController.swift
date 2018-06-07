@@ -50,7 +50,7 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
             birthdateTextField.delegate = self
             let datePicker = UIDatePicker()
             datePicker.datePickerMode = .date
-            datePicker.addTarget(self, action: #selector(birthdateChanged(datePicker:)), for: .valueChanged)
+            datePicker.addTarget(self, action: #selector(birthdateChanged(datePicker:)), for: UIControl.Event.valueChanged)
             birthdateTextField.inputView = datePicker
         }
     }
@@ -63,7 +63,7 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         textField.autocorrectionType = .no
         textField.delegate = self
         textField.returnKeyType = .next
-        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControl.Event.editingChanged)
     }
     
     override func viewDidLoad() {

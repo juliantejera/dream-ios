@@ -38,9 +38,10 @@ struct LocationPermissionAlertControllerFactory {
     }
     
     func openAppSettings() {
-        guard let url = URL(string: UIApplicationOpenSettingsURLString), application.canOpenURL(url) else {
+        guard let url = URL(string: UIApplication.openSettingsURLString), application.canOpenURL(url) else {
             return
         }
+        
         application.open(url, options: [:], completionHandler: nil)
     }
 }

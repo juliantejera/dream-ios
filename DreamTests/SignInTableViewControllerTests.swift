@@ -33,7 +33,7 @@ class SignInTableViewControllerTests: XCTestCase {
     
     func testTableViewKeyboardDismissMode() {
         let actual = controller.tableView.keyboardDismissMode
-        let expected = UIScrollViewKeyboardDismissMode.onDrag
+        let expected = UIScrollView.KeyboardDismissMode.onDrag
         XCTAssertEqual(actual, expected)
     }
     

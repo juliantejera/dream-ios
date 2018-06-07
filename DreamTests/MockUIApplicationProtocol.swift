@@ -21,8 +21,8 @@ class MockUIApplication: UIApplicationProtocol {
         return canOpenUrl
     }
     
-    var openUrlCallCount = 0
-    func open(_ url: URL, options: [String : Any], completionHandler completion: ((Bool) -> Void)?) {
+    var openUrlCallCount = 0    
+    func open(_ url: URL, options: [UIApplication.OpenExternalURLOptionsKey : Any], completionHandler completion: ((Bool) -> Void)?) {
         openUrlCallCount += 1
     }
 }

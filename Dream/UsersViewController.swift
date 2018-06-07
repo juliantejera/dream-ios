@@ -19,7 +19,7 @@ class UsersViewController: UIViewController {
         didSet {
             collectionView?.alwaysBounceVertical = true
             let refreshControl = UIRefreshControl()
-            refreshControl.addTarget(self, action: #selector(fetchUsers), for: .valueChanged)
+            refreshControl.addTarget(self, action: #selector(fetchUsers), for: UIControl.Event.valueChanged)
             collectionView?.refreshControl = refreshControl
         }
     }

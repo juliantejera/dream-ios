@@ -46,7 +46,7 @@ struct SignOutAlertControllerFactory {
         }
         
         authenticationController.removeToken()
-        let options: UIViewAnimationOptions = [.curveEaseInOut, .transitionCrossDissolve]
+        let options: UIView.AnimationOptions = [UIView.AnimationOptions.curveEaseInOut, UIView.AnimationOptions.transitionCrossDissolve]
         UIView.transition(with: window, duration: 0.3, options: options, animations: {
             window.rootViewController = UIStoryboard.auth.instantiateInitialViewController()
         }, completion: nil)
