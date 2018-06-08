@@ -615,15 +615,15 @@
 		B9CC9BC71E2DD83F00153BBE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */,
-				B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */,
-				B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */,
-				B977785D1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift */,
-				B977786F1EF007B100A6E250 /* UsersViewController.swift */,
-				B97778751EF014A200A6E250 /* HomeViewController.swift */,
-				B97778831EF21E2500A6E250 /* SettingsViewController.swift */,
 				B97778941EF2BCDD00A6E250 /* AuthNavigationController.swift */,
+				B977785D1EEDD40100A6E250 /* ForgotPasswordTableViewController.swift */,
+				B924DAF11EAD8A05009F1FF8 /* HomeAuthTableViewController.swift */,
+				B97778751EF014A200A6E250 /* HomeViewController.swift */,
+				B9CC9BC81E2E492000153BBE /* RegisterAccountTableViewController.swift */,
+				B97778831EF21E2500A6E250 /* SettingsViewController.swift */,
+				B9E75B361EDEF2CA00A137FF /* SignInTableViewController.swift */,
 				B9B250E21F035B7900F1EA23 /* UserProfileViewController.swift */,
+				B977786F1EF007B100A6E250 /* UsersViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -705,22 +705,22 @@
 		B9FD3B641EA034470018BEE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B9E75B571EE2627E00A137FF /* AuthenticationController.swift */,
-				B9B250FE1F0FEBA900F1EA23 /* LocationObserver.swift */,
-				B9B250F61F0818BB00F1EA23 /* PhotoCollectionViewDataSource.swift */,
-				B9B250D51EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift */,
-				B9B250E81F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift */,
-				B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */,
-				B9B251021F1046B000F1EA23 /* LocationPermissionAlertControllerFactory.swift */,
-				B97778851EF2219900A6E250 /* SettingsItem.swift */,
-				B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */,
-				B9E75B531EE18ED500A137FF /* RFC6750BearerToken.swift */,
 				B977787B1EF0DE3D00A6E250 /* ActivityIndicatorViewFactory.swift */,
-				B9B250AC1EF62AB700F1EA23 /* Photo.swift */,
-				B9B250B91EF6BEEF00F1EA23 /* User.swift */,
+				B9E75B571EE2627E00A137FF /* AuthenticationController.swift */,
 				B9A573B51F1935CB0081F291 /* CurrentUser.swift */,
-				B95AAAF81F78B81000BD0762 /* SignInResponseContainer.swift */,
 				B95AAAFA1F78C36E00BD0762 /* ForgotPasswordModel.swift */,
+				B9B250FE1F0FEBA900F1EA23 /* LocationObserver.swift */,
+				B9B251021F1046B000F1EA23 /* LocationPermissionAlertControllerFactory.swift */,
+				B9B250AC1EF62AB700F1EA23 /* Photo.swift */,
+				B9B250E81F04AA1E00F1EA23 /* PhotoCollectionViewCellConfigurer.swift */,
+				B9B250F61F0818BB00F1EA23 /* PhotoCollectionViewDataSource.swift */,
+				B9E75B531EE18ED500A137FF /* RFC6750BearerToken.swift */,
+				B97778851EF2219900A6E250 /* SettingsItem.swift */,
+				B95AAAF81F78B81000BD0762 /* SignInResponseContainer.swift */,
+				B9E75B381EE105FA00A137FF /* SignInTableViewControllerSections.swift */,
+				B97778961EF375B600A6E250 /* SignOutAlertControllerFactory.swift */,
+				B9B250B91EF6BEEF00F1EA23 /* User.swift */,
+				B9B250D51EF7FEDB00F1EA23 /* UserCollectionViewCellConfigurer.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -737,6 +737,7 @@
 				B98652ED1E2B1D87004CCC50 /* Frameworks */,
 				B98652EE1E2B1D87004CCC50 /* Resources */,
 				8411A2400B59F1CBDFA5F41C /* [CP] Embed Pods Frameworks */,
+				E2BEE6C7D81980B4B91E2C4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -755,6 +756,8 @@
 				B98653001E2B1D87004CCC50 /* Sources */,
 				B98653011E2B1D87004CCC50 /* Frameworks */,
 				B98653021E2B1D87004CCC50 /* Resources */,
+				13CFEBEAF80D220EDBE73B66 /* [CP] Embed Pods Frameworks */,
+				57DDE878B6E1B1D05D6C187E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -851,6 +854,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		13CFEBEAF80D220EDBE73B66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DreamTests/Pods-DreamTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3ED3DCFC33BD77E41D22D4F9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -867,6 +885,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57DDE878B6E1B1D05D6C187E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DreamTests/Pods-DreamTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8411A2400B59F1CBDFA5F41C /* [CP] Embed Pods Frameworks */ = {
@@ -903,6 +936,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2BEE6C7D81980B4B91E2C4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dream/Pods-Dream-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

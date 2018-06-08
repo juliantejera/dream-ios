@@ -22,6 +22,9 @@ class SignInTableViewController: UITableViewController {
             emailTextField.keyboardType = .emailAddress
             emailTextField.returnKeyType = .next
             configure(textField: emailTextField)
+            if #available(iOS 11.0, *) {
+                emailTextField.textContentType = .username
+            }
         }
     }
     
@@ -30,6 +33,9 @@ class SignInTableViewController: UITableViewController {
             passwordTextField.isSecureTextEntry = true
             passwordTextField.returnKeyType = .send
             configure(textField: passwordTextField)
+            if #available(iOS 11.0, *) {
+                passwordTextField.textContentType = .password
+            }
         }
     }
     

@@ -26,7 +26,11 @@ class DreamNetworkClient: NetworkClient {
         authenticationController = AuthenticationController()
     }
     
-    func request(method: HttpMethod, path: String, parameters: [String : Any]? = nil, httpBody: Data? = nil, callback: @escaping (NetworkClientResult<Data>) -> Void) {
+    func request(method: HttpMethod,
+                 path: String,
+                 parameters: [String : Any]? = nil,
+                 httpBody: Data? = nil,
+                 callback: @escaping (NetworkClientResult<Data>) -> Void) {
         
         guard let url = URL(string: path, relativeTo: baseUrl) else {
             return
@@ -34,11 +38,15 @@ class DreamNetworkClient: NetworkClient {
         do {
             let request = try JSONURLRequestFactory().create(url: url, httpMethod: method, parameters: parameters)
             let task = session.task(with: request) { (data, response, error) in
-//                let httpResponse = response as! HTTPURLResponse
-//                self.updateBearerToken(httpHeaders: httpResponse.allHeaderFields)
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    DispatchQueue.main.async {
+                        callback(.failure([]))
+                    }
+                    return
+                }
+                self.updateBearerToken(httpHeaders: httpResponse.allHeaderFields)
                 DispatchQueue.main.async {
-                    //  (200..<300).contains(httpResponse.statusCode)
-                    if let data = data {
+                    if let data = data, (200..<300).contains(httpResponse.statusCode) {
                         callback(.success(data))
                     } else if let error = error {
                         callback(.failure([error.localizedDescription]))
@@ -54,7 +62,10 @@ class DreamNetworkClient: NetworkClient {
 
     }
     
-    func request<T>(method: HttpMethod, path: String, parameters: [String : Any]? = nil, httpBody: Data? = nil, callback: @escaping (NetworkClientResult<T>) -> Void) where T : Decodable, T : Encodable {
+    func request<T>(method: HttpMethod, path: String,
+                    parameters: [String : Any]? = nil,
+                    httpBody: Data? = nil,
+                    callback: @escaping (NetworkClientResult<T>) -> Void) where T : Decodable, T : Encodable {
         request(method: method, path: path, parameters: parameters, httpBody: httpBody) { (dataResult) in
             switch dataResult {
             case .success(let data):

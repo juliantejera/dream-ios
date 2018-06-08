@@ -8,14 +8,8 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Equatable {
     let id: Int
     let distance: Double 
     let photos: [Photo]
-}
-
-extension User: Equatable {
-    static func == (lhs: User, rhs: User) -> Bool {
-        return lhs.id == rhs.id && lhs.distance == rhs.distance && lhs.photos == rhs.photos
-    }
 }

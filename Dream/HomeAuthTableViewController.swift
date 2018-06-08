@@ -54,8 +54,9 @@ class HomeAuthTableViewController: UITableViewController {
 
 extension HomeAuthTableViewController: RegisterAccountTableViewControllerDelegate {
     
-    func registerAccountTableViewControllerDidCreateAccount(controller: RegisterAccountTableViewController) {
-        _ = self.navigationController?.popViewController(animated: false)
+    func registerAccountTableViewController(_ controller: RegisterAccountTableViewController, didCreateAccount account: AccountRegistrationViewModel) {
+        _ = navigationController?.popViewController(animated: false)
+        performSegue(withIdentifier: Segues.signInTableViewController, sender: nil)
     }
     
 }

@@ -9,12 +9,15 @@
 import UIKit
 
 protocol RegisterAccountTableViewControllerDelegate: class {
-    func registerAccountTableViewControllerDidCreateAccount(controller: RegisterAccountTableViewController)
+    func registerAccountTableViewController(_ controller: RegisterAccountTableViewController, didCreateAccount account: AccountRegistrationViewModel)
 }
 
-class RegisterAccountTableViewController: UITableViewController, UITextFieldDelegate {
+class RegisterAccountTableViewController: UITableViewController {
 
-    var viewModel = AccountRegistrationViewModel(email: "", password: "", passwordConfirmation: "", birthdate: Date())
+    var viewModel = AccountRegistrationViewModel(email: "",
+                                                 password: "",
+                                                 passwordConfirmation: "",
+                                                 birthdate: Date())
     var manager = AuthenticationNetworkManager(client: DreamNetworkClient())
     weak var delegate: RegisterAccountTableViewControllerDelegate?
     
@@ -26,6 +29,9 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
             configure(textField: emailTextField)
             emailTextField.keyboardType = .emailAddress
             emailTextField.text = viewModel.email
+            if #available(iOS 11.0, *) {
+                emailTextField.textContentType = .username
+            }
         }
     }
     
@@ -34,6 +40,9 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
             configure(textField: passwordTextField)
             passwordTextField.isSecureTextEntry = true
             passwordTextField.text = viewModel.password
+            if #available(iOS 12.0, *) {
+                passwordTextField.textContentType = .newPassword
+            }
         }
     }
     
@@ -42,6 +51,9 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
             configure(textField: passwordConfirmationTextField)
             passwordConfirmationTextField.isSecureTextEntry = true
             passwordConfirmationTextField.text = viewModel.passwordConfirmation
+            if #available(iOS 12.0, *) {
+                passwordConfirmationTextField.textContentType = .newPassword
+            }
         }
     }
     
@@ -92,7 +104,7 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         manager.register(user: viewModel) { (result) in
             switch result {
             case .success(_):
-                self.delegate?.registerAccountTableViewControllerDidCreateAccount(controller: self)
+                self.delegate?.registerAccountTableViewController(self, didCreateAccount: self.viewModel)
             case .failure(let errors):
                 self.presentAlertController(title: "🙈", errors: errors)
             }
@@ -107,8 +119,9 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         return 4
     }
     
-    
-    // MARK: - UITextFieldDelegate
+}
+
+extension RegisterAccountTableViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
@@ -137,5 +150,5 @@ class RegisterAccountTableViewController: UITableViewController, UITextFieldDele
         self.birthdateTextField.text = formatter.string(from: datePicker.date)
         self.viewModel.birthdate = datePicker.date
     }
+    
 }
-

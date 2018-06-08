@@ -11,10 +11,10 @@ import CoreLocation
 
 class CurrentUser: Codable {
     let id: Int
-    var latitude: Double
-    var longitude: Double
+    var latitude: Double?
+    var longitude: Double?
     
-    init(id: Int, latitude: Double, longitude: Double) {
+    init(id: Int, latitude: Double?, longitude: Double?) {
         self.id = id
         self.latitude = latitude
         self.longitude = longitude
